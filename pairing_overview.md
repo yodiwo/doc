@@ -27,7 +27,7 @@ The technical details of this process is seen in the following sequence diagram,
 
 The following sequence diagram describes the pairing procedure in detail:
 
-![Alt Sequence diagram of secure pairing of a GUIless node](/assets/images/yodi-tech-doc-pairing_v2.0.png)
+![Alt Sequence diagram of secure pairing of a GUIless node](/doc/assets/images/yodi-tech-doc-pairing_v2.0.png)
 <center><figcaption>Sequence diagram of secure pairing of a GUIless node</figcaption></center>
 
 Upon receiving a pairing request (an HTTP Request for <deviceid>/pairing/start) the Node (without yet sending a Response) securely (over an SSL/TLS channel) sends capabilities, configuration and its UUID to the Cloud Server. The cloud server generates two tokens and a secret key and securely sends the 2 tokens (but not the secret key) back to the Node.
@@ -73,5 +73,5 @@ If everything is in order, the Server securely sends the Node Key and Secret API
 The main difference is that GUIful nodes usually shed the limitation of having a 3rd party GUI (e.g. a browser web page) act as mediator and communicate insecurely with the node and securely with the Yodiwo servers.
 Hence they could in theory POST a start pairing request with configuration, get redirected to log in to the Yodiwo service and then immediately exchange Node and Secret keys. Currently these nodes still exchange tokens and the pairing backend in Yodiwo servers remains the same, resulting in the following sequence diagram:
 
-![Alt Sequence diagram of secure pairing for a Node with a GUI](/assets/images/yodi-tech-doc-pairing_v2.0_withgui.png)
+![Alt Sequence diagram of secure pairing for a Node with a GUI](/doc/assets/images/yodi-tech-doc-pairing_v2.0_withgui.png)
 <center><figcaption>Sequence diagram of secure pairing for a Node with a GUI</figcaption></center>

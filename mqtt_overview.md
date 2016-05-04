@@ -69,4 +69,4 @@ where
 
 Summarizing for both publishing and subscribing directions:
 
-![ALT](/assets/images/mqtt-pubsub.png)
+![ALT](/doc/assets/images/mqtt-pubsub.png)

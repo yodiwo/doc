@@ -7,7 +7,7 @@ permalink: /docs/getting-started
 
 Welcome to the Yodiwo Platform! We are an IoT Platform-as-a-Service (PaaS) provider with a unique connectivity framework, based on the first IoT Editor that uses graphs to codelessly interconnect models of Devices and existing Apps with each other.
 
-![Alt our Cyan environment](/assets/images/simplegraph-smaller.png)
+![Alt our Cyan environment](/doc/assets/images/simplegraph-smaller.png)
 <center><figcaption>our Cyan environment</figcaption></center>
 
 ## Nodes and Things
@@ -35,7 +35,7 @@ Among the reasons for an end device to require a gateway:
 
 The purpose of this API guide is to help you make your node show up and present itself and its Things here:
 
-!(/assets/images/stencil-node.png)
+!(/doc/assets/images/stencil-node.png)
 
 After that Users will be able to place said Things from this Node into their graphical stories and have the Yodiwo Cloud exchange messages between them
 

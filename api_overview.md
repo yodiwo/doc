@@ -24,7 +24,7 @@ Plus:
     * throttling, flow control
     * extensible via IEs
 
-![ALT ](/assets/images/api_block_diagram.png)
+![ALT ](/doc/assets/images/api_block_diagram.png)
 
 In the future we plan to support more methods for developers to reach the Yodiwo Cloud, such as RabbitMQ (a powerful AMQP based protocol) and Google Cloud Messaging.
 
