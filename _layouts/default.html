@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    <body class="layout page-docs body-overlap theme-solid header-overlay header-bg-size-auto header-bg-pos-tl header-overlay-triangles lumosity-normal undefined theme-threes ng-scope os-osx">
+
+        {% include header.html %}
+
+        <div class="container body-container">
+            <div class="main-content">
+                <div class="main-head">
+                    <div class="row">
+
+                        {% include sidemenu.html %}
+
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+
+    </body>
+
+</html>
