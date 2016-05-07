@@ -6,14 +6,22 @@ permalink: /docs/message-format
 
 In order to support synchronous (blocking) messages with MQTT -which doesn't inherently provide this capability- there needs to be a way to match new messages (Responses) to previous ones (Requests). To that end a very simple message wrapper is introduced:
 
-[any language]
-
-    public class MqttMsg
+<div id="code1_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="any" class="tab on">
+            <a href="javascript: showCode('code1_container', 'any');"><span>[any language]</span></a><span>.</span>
+          </div>
+        </div>
+<pre id="any"><code>public class MqttMsg
     {
         public eMsgFlags Flags;
         public int SyncId;
         public string Payload;
-    }
+    }</code></pre>
+    </div>
+</div>
+
 
 * `Flags`: this field distinguishes between:
     * Request-type messages (Get or Req) that mandate a response (Rsp or Set)

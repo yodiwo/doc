@@ -7,9 +7,14 @@ permalink: /docs/ws-overview
 
 You can also interface with our cloud servers via Web Sockets. All previous conventions about messaging with the Plegma API also stand here. The wrapper class that carries all Websocket messages is the following:
 
-[any language]
-
-    public class WebSocketMsg
+<div id="code1_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="any" class="tab on">
+            <a href="javascript: showCode('code1_container', 'any');"><span>[any language]</span></a><span>.</span>
+          </div>
+        </div>
+<pre id="any"><code>public class WebSocketMsg
     {
         public eWSAPIType Id;
         public string Subid;
@@ -17,7 +22,9 @@ You can also interface with our cloud servers via Web Sockets. All previous conv
         public eMsgFlags Flags;
         public int SyncId;
         public string Payload;
-    }
+    }</code></pre>
+    </div>
+</div>
 
 * `Id`: this field distinguishes between initial Pairing messages (which follow the logic described in [Pairing](https://yodiwo.readme.io/v1.0/docs/pairing-overview)) and API messages. This is needed since unlike the rest of the supported protocols where HTTPS is used for the pairing procedure, here it is also carried out over Websockets
 

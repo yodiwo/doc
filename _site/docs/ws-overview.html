@@ -222,18 +222,23 @@ ga('custom.send', 'pageview');
             <div class="docs-body">
                 <p>You can also interface with our cloud servers via Web Sockets. All previous conventions about messaging with the Plegma API also stand here. The wrapper class that carries all Websocket messages is the following:</p>
 
-<p>[any language]</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>public class WebSocketMsg
-{
-    public eWSAPIType Id;
-    public string Subid;
-    
-    public eMsgFlags Flags;
-    public int SyncId;
-    public string Payload;
-}
-</code></pre>
+<div id="code1_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="any" class="tab on">
+            <a href="javascript: showCode('code1_container', 'any');"><span>[any language]</span></a><span>.</span>
+          </div>
+        </div>
+<pre id="any"><code>public class WebSocketMsg
+    {
+        public eWSAPIType Id;
+        public string Subid;
+        
+        public eMsgFlags Flags;
+        public int SyncId;
+        public string Payload;
+    }</code></pre>
+    </div>
 </div>
 
 <ul>
