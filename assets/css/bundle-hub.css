@@ -2678,7 +2678,7 @@ div.disabled {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   vertical-align: middle;
-  background-image: url("/img/pg-types.png");
+  background-image: url("/doc/img/pg-types.png");
   background-repeat: no-repeat;
   background-position: 6px 4px;
   text-indent: -9000px;
@@ -2699,7 +2699,7 @@ div.disabled {
 .chooser-parent .closed .pg-type.chosen:before {
   width: 6px;
   height: 3px;
-  background-image: url("/img/pg-types.png?");
+  background-image: url("/doc/img/pg-types.png?");
   background-position: 0px -97px;
   content: " ";
   display: block;
@@ -2709,7 +2709,7 @@ div.disabled {
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .chooser-parent .closed .pg-type.chosen:before {
-    background-image: url("/img/pg-types@2x.png");
+    background-image: url("/doc/img/pg-types@2x.png");
     -webkit-background-size: 19px auto;
     -moz-background-size: 19px auto;
     background-size: 19px auto;
@@ -2717,7 +2717,7 @@ div.disabled {
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .pg-type {
-    background-image: url("/img/pg-types@2x.png");
+    background-image: url("/doc/img/pg-types@2x.png");
     -webkit-background-size: 19px auto;
     -moz-background-size: 19px auto;
     background-size: 19px auto;
@@ -3584,19 +3584,19 @@ div.disabled {
   margin-top: -30px;
 }
 .theme-solid.header-overlay.header-overlay-triangles header {
-  background-image: url("/img/bgs/triangles.png");
+  background-image: url("/doc/img/bgs/triangles.png");
 }
 .theme-solid.header-overlay.header-overlay-blueprint header {
-  background-image: url("/img/bgs/blueprint.png");
+  background-image: url("/doc/img/bgs/blueprint.png");
 }
 .theme-solid.header-overlay.header-overlay-grain header {
-  background-image: url("/img/bgs/grain.png");
+  background-image: url("/doc/img/bgs/grain.png");
 }
 .theme-solid.header-overlay.header-overlay.header-overlay-map header {
-  background-image: url("/img/bgs/map.png");
+  background-image: url("/doc/img/bgs/map.png");
 }
 .theme-solid.header-overlay.header-overlay-circuits header {
-  background-image: url("/img/bgs/circuits.png");
+  background-image: url("/doc/img/bgs/circuits.png");
 }
 .theme-solid.header-custom header {
   background-repeat: no-repeat;
@@ -5725,13 +5725,13 @@ footer .poweredby {
   display: block;
   width: 185px;
   height: 42px;
-  background-image: url("/img/poweredby.png?1");
+  background-image: url("/doc/img/poweredby.png?1");
   text-indent: -99999px;
   margin: 25px 0;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   footer .poweredby {
-    background-image: url("/img/poweredby@2x.png?1");
+    background-image: url("/doc/img/poweredby@2x.png?1");
     -webkit-background-size: 185px 84px;
     -moz-background-size: 185px 84px;
     background-size: 185px 84px;
@@ -6124,11 +6124,11 @@ body.page-password footer,
   width: 90px;
   height: 65px;
   margin: 80px auto 45px;
-  background-image: url("/img/logo-errorpage.png");
+  background-image: url("/doc/img/logo-errorpage.png");
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5/1), (min-device-pixel-ratio: 1.5), (min-resolution: 138dpi), (min-resolution: 1.5dppx) {
   #error-page .logo {
-    background-image: url("/img/logo-errorpage@2x.png");
+    background-image: url("/doc/img/logo-errorpage@2x.png");
     -webkit-background-size: 90px 65px;
     -moz-background-size: 90px 65px;
     background-size: 90px 65px;
