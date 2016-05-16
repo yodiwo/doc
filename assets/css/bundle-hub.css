@@ -3867,7 +3867,7 @@ body {
   width: auto;
   max-width: 1100px;
 }
-code {
+/*code {
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -3894,7 +3894,7 @@ code:after {
 pre code:before,
 pre code:after {
   display: none;
-}
+}*/
 scope,
 [scope-scoop] {
   display: none;
@@ -5472,7 +5472,7 @@ a:hover {
 }
 .block-show-callout.type-warning,
 .magic-block-callout.type-warning {
-  background-color: #fcf8f2;
+/*  background-color: #fcf8f2;*/
   border-color: #f0ad4e;
 }
 .block-show-callout.type-warning h3,
