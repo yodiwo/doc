@@ -99,8 +99,8 @@ However, even if you implement sequence numbering for messages, you can bypass i
 * <b>Set</b> is either the reply to a previous Get-type message, or a new message that directly sends new information. The latter case still expects an ACK which is usually a `GenericRsp` message.
 * <b>Msg</b> is an asynchronous message originating at any time from the Node or from the Cloud that does not expect an answer. There are precious few of those, currently limited to status-updated events
 
-<div ng-switch-when="callout">
-    <div class="block-callout block-show-callout  type-info block-show-callout  type-info" type="section.type" ng-model="section.data">
+<div>
+    <div class="block-callout block-show-callout  type-info block-show-callout  type-info" type="section.type">
         <h3>
             <i class="fa fa-info-circle on" title="Info"></i>
             <span>Node-to-Cloud RPC</span>
@@ -112,8 +112,8 @@ However, even if you implement sequence numbering for messages, you can bypass i
 </div>
 
 
-<div ng-switch-when="callout">
-    <div class="block-callout block-show-callout  type-info block-show-callout  type-warning" type="section.type" ng-model="section.data">
+<div>
+    <div class="block-callout block-show-callout  type-info block-show-callout  type-warning" type="section.type">
         <h3>
             <i class="fa fa-exclamation-circle on" title="Warning"></i>
             <span>Synchronous requests</span>
@@ -132,7 +132,7 @@ As mentioned, synchronous request-type messages require responses, and sometimes
 
 
 <div id="code2_container">
-<div class="block-code block-show-code" type="section.type" ng-model="section.data">
+<div class="block-code block-show-code" type="section.type">
   <div class="code-tabs">
     <div data-lang="csharp" class="tab on">
       <a href="javascript: showCode('code2_container', 'csharp');">
