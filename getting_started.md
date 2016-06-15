@@ -42,6 +42,7 @@ After that Users will be able to place said Things from this Node into their gra
 A Node is assigned to a known Yodiwo user and given a globally unique Node Key and a Secret Key via a process known as [Pairing](https://yodiwo.readme.io/docs/pairing-overview). The Node and Secret keys are used to authenticate the Node to connection-based protocols and are included in all REST messages.
 
 After pairing is successfully completed, the Node is free to start exchanging Plegma API messages with the Cloud. A Node may use the Plegma API to:
+
 * present itself, its configuration and capabilities to the Yodiwo Cloud service
 * encapsulate and present one or more Things to the Yodiwo Cloud, and allows the Cloud to access those Things
 * send and receive events, from and toward its encapsulated Things. These events are fed into Logic Graphs created by the Cyan Story Creator and can generate new events, either towards the same or other Yodiwo Nodes, or towards 3rd party services
@@ -51,6 +52,7 @@ After pairing is successfully completed, the Node is free to start exchanging Pl
 As mentioned Nodes present one or more Things to the Cloud Service. Things encapsulate and represent “bundles” of related functionality, e.g. a Thing may be a thermostat which has an output (its temperature reading) and one or more inputs (for controlling and configuring it).
 
 A Thing may have any number of these inputs and outputs, which are called Ports. A Port holds and is used to exchange the minimum unit of information between a Node and the Cloud server:
+
 * Things react to environment conditions generating events related to individual ports. The connection (transient as in REST or persistent) of their parent Node to the Yodiwo Cloud triggers the latter with those events
 * The Yodiwo Cloud triggers events towards the Node, causing it to act on these events
 
