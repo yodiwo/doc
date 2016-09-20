@@ -5,7 +5,7 @@ permalink: /docs/things-set
 ---
 
 ## Definition
-https://api.yodiwo.com/api/1.0/:nodekey/:secretkey/thingsset
+https://api.yodiwo.com/api/1.0/<nodekey>/<secretkey>/thingsset
 
 - - - -
 

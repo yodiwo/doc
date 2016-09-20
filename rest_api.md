@@ -5,7 +5,7 @@ permalink: /docs/rest-api
 ---
 
 ## Definition
-https://api.yodiwo.com/api/1.0/:nodekey/:secretkey/
+https://api.yodiwo.com/api/1.0/<nodekey>/<secretkey>/
 - - - -
 
 ## Result Format
