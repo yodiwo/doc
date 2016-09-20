@@ -5,7 +5,7 @@ permalink: /docs/port-states-request
 ---
 
 ## Definition
-https://api.yodiwo.com/api/1.0/<nodekey>/<secretkey>/portstatereq
+https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/portstatereq
 
 - - - -
 

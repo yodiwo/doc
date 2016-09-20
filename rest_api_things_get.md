@@ -5,7 +5,7 @@ permalink: /docs/request-things-related-action
 ---
 
 ## Definition
-https://api.yodiwo.com/api/1.0/<nodekey>/<secretkey>/thingsget
+https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/thingsget
 
 - - - -
 

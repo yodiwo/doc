@@ -5,7 +5,7 @@ permalink: /docs/post-single-message
 ---
 
 ## Definition
-https://api.yodiwo.com/api/1.0/<nodekey>/<secretkey>/porteventmsg
+https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/porteventmsg
 
 - - - -
 
