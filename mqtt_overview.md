@@ -23,7 +23,7 @@ Specifically:
 - - - -
 Payload of the published messages as well as of the messages received via subscriptions is exactly the same as previously described in REST.
 
-However messages are encapsulated in a wrapper that aims to provide support for synchronous operations. For more information see the [next section](/message-format)
+However messages are encapsulated in a wrapper that aims to provide support for synchronous operations. For more information see the [next section](/docs/message-format)
 
 Message encoding is in JSON although binary encoding may be supported at a later time.
 
@@ -69,4 +69,4 @@ where
 
 Summarizing for both publishing and subscribing directions:
 
-![ALT](/doc/assets/images/mqtt-pubsub.png)
+![ALT]({{site.url}}/assets/images/mqtt-pubsub.png)
