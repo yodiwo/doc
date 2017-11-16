@@ -6,7 +6,7 @@ permalink: /docs/api-overview
 
 Our Cloud Services support a plethora of protocols to carry Plegma API messages, which aids communication between yodiwo-aware nodes and our servers.
 
-The Plegma API is publicly accessible and freely available (formal reference found [here](https://yodiwo.github.io/)). Example implementations of the API are [freely provided here](https://github.com/yodiwo/plegma) for popular languages such as C, C#, Java, Javascript and others.
+The Plegma API is publicly accessible and freely available (formal reference found [here](https://yodiwo.github.io/plegma)). Example implementations of the API are [freely provided here](https://github.com/yodiwo/plegma) for popular languages such as C, C#, Java, Javascript and others.
 
 Currently available industry-standard protocols:
 
@@ -24,7 +24,7 @@ Plus:
     * throttling, flow control
     * extensible via IEs
 
-![ALT ](/doc/assets/images/api_block_diagram.png)
+![ALT ](/assets/images/api_block_diagram.png)
 
 In the future we plan to support more methods for developers to reach the Yodiwo Cloud, such as RabbitMQ (a powerful AMQP based protocol) and Google Cloud Messaging.
 
@@ -33,7 +33,7 @@ In the future we plan to support more methods for developers to reach the Yodiwo
 The messages in Plegma roughly fall into the following categories (further analyzed in the following pages):
 
 1. [Message & event passing](/docs/message-event-passing) which carry event triggers from points (Ports of Things in Nodes) to the Yodiwo servers and vice-versa, or between points themselves
-1. [Things management & control](/docs/things-management-control) via which Nodes present and manage the Things they encapsulate
+1. [Things management & control](/docs/things-mgmt-ctrl) via which Nodes present and manage the Things they encapsulate
 1. [Node info & discovery](/docs/node-info) where Nodes present themselves and their capabilites and learn about other Yodiwo-aware Nodes
 1. Messages that relate to the automatic graph splitting and inter-node synchronization and discovery (currently out of scope for these pages)
 1. Messages that aid the Application Agnostic Smart End Devices (currently out of scope for these pages)

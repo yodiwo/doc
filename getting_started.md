@@ -7,7 +7,7 @@ permalink: /docs/getting-started
 
 Welcome to the Yodiwo Platform! We are an IoT Platform-as-a-Service (PaaS) provider with a unique connectivity framework, based on the first IoT Editor that uses graphs to codelessly interconnect models of Devices and existing Apps with each other.
 
-![Alt our Cyan environment](/doc/assets/images/simplegraph-smaller.png)
+![Alt our Cyan environment](/assets/images/simplegraph-smaller.png)
 <center><figcaption>our Cyan environment</figcaption></center>
 
 ## Nodes and Things
@@ -21,7 +21,7 @@ The Yodiwo Cloud Platform interacts with Edge devices by sending messages to and
             <span>API reference:</span>
         </h3>
         <div marked="data.body" class="ng-isolate-scope">
-            <p>The complete up-to-date API reference in doxygen format can be <a href="https://yodiwo.github.io/plegma/doxygen">found here</a></p>
+            <p>The complete up-to-date API reference in doxygen format can be <a href="https://yodiwo.github.io/plegma/Plegma/Doxygen">found here</a></p>
         </div>
     </div>
 </div>
@@ -35,11 +35,11 @@ Among the reasons for an end device to require a gateway:
 
 The purpose of this API guide is to help you make your node show up and present itself and its Things here:
 
-!(/doc/assets/images/stencil-node.png)
+!(/assets/images/stencil-node.png)
 
 After that Users will be able to place said Things from this Node into their graphical stories and have the Yodiwo Cloud exchange messages between them
 
-A Node is assigned to a known Yodiwo user and given a globally unique Node Key and a Secret Key via a process known as [Pairing](https://yodiwo.readme.io/docs/pairing-overview). The Node and Secret keys are used to authenticate the Node to connection-based protocols and are included in all REST messages.
+A Node is assigned to a known Yodiwo user and given a globally unique Node Key and a Secret Key via a process known as [Pairing](http://docs.yodiwo.com/docs/pairing-overview). The Node and Secret keys are used to authenticate the Node to connection-based protocols and are included in all REST messages.
 
 After pairing is successfully completed, the Node is free to start exchanging Plegma API messages with the Cloud. A Node may use the Plegma API to:
 
