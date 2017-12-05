@@ -2678,7 +2678,7 @@ div.disabled {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     vertical-align: middle;
-    background-image: url("/doc/img/pg-types.png");
+    background-image: url("/img/pg-types.png");
     background-repeat: no-repeat;
     background-position: 6px 4px;
     text-indent: -9000px;
@@ -2699,7 +2699,7 @@ div.disabled {
 .chooser-parent .closed .pg-type.chosen:before {
     width: 6px;
     height: 3px;
-    background-image: url("/doc/img/pg-types.png?");
+    background-image: url("/img/pg-types.png?");
     background-position: 0px -97px;
     content: " ";
     display: block;
@@ -2709,7 +2709,7 @@ div.disabled {
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     .chooser-parent .closed .pg-type.chosen:before {
-        background-image: url("/doc/img/pg-types@2x.png");
+        background-image: url("/img/pg-types@2x.png");
         -webkit-background-size: 19px auto;
         -moz-background-size: 19px auto;
         background-size: 19px auto;
@@ -2717,7 +2717,7 @@ div.disabled {
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     .pg-type {
-        background-image: url("/doc/img/pg-types@2x.png");
+        background-image: url("/img/pg-types@2x.png");
         -webkit-background-size: 19px auto;
         -moz-background-size: 19px auto;
         background-size: 19px auto;
