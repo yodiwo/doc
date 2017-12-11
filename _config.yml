@@ -11,8 +11,8 @@ title: yodiwo
 email: info@yodiwo.com
 description: > # this means to ignore newlines until "baseurl:"
   The leading IoT Application enablement for Enterprises.
-baseurl: "/doc" # the subpath of your site, e.g. /blog
-url: "https://yodiwo.github.io" # the base hostname & protocol for your site
+baseurl: "/docs/getting-started" # the subpath of your site, e.g. /blog
+url: "https://yodiwo.github.io/doc" # the base hostname & protocol for your site
 twitter_username: yodiwo_iot
 github_username:  yodiwo
 
