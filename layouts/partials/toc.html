@@ -1,0 +1,15 @@
+<!-- TOC -->
+<ul>
+{{ range $element := findRE "<h[1,4].*?>(.|\n)*?<" .Content }}
+<li class="dd-item"> 
+{{ $title := $element | plainify }}
+{{ $a := strings.TrimPrefix "<h1 id=\"" $element }}
+{{ $a := strings.TrimPrefix "<h4 id=\"" $a }}
+{{ $b := strings.TrimSuffix "<" $a }}
+{{ $c := strings.TrimSuffix $title $b }}
+{{ $id := strings.TrimSuffix "\">" $c }}
+<a href="#{{ $id }}">{{ htmlUnescape $title }}</a>
+</li>
+{{ end}}
+</ul>
+<!-- /TOC -->

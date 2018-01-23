@@ -1,0 +1,5 @@
+<div class="panel {{with .Get "theme" }}panel-{{.}}{{else}}panel-primary{{end}}">
+	{{ with .Get "header" }}<div class="panel-heading">{{ with $.Get "icon" }}<i class="fa {{ htmlUnescape . | markdownify }}" aria-hidden="true"></i>{{end}}&ensp;{{ htmlUnescape . | markdownify}}</div>{{end}}
+	<div class="panel-body">{{.Inner}}</div>
+	{{ with .Get "footer" }}<div class="panel-footer">{{ with $.Get "icon" }}<i class="fa {{ htmlUnescape . | markdownify }}" aria-hidden="true"></i>{{end}}&ensp;{{ htmlUnescape . | markdownify}}</div>{{end}}
+</div>

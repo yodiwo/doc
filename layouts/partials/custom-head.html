@@ -1,0 +1,86 @@
+<!--lang picker code-->
+<style>
+div.code-tabs {
+  position: relative;
+  margin-top: -1px;
+  z-index: 10;
+  margin-bottom: -20px;
+}
+
+div.tab {
+  font-size: 13px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.tab.on a {
+  color: #009999;
+}
+
+.tab.off a {
+  color: grey;
+}
+</style>
+<script>
+    function showCode(codeContainer, language) {
+        var container = document.getElementById(codeContainer);
+        var codes = container.getElementsByTagName('pre');
+        for (var i = 0; i < codes.length; i++) {
+            codes[i].style.display = 'none';
+            if (codes[i].id == language) {
+                codes[i].style.display = '';
+            }
+        }
+
+        var tabs = container.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].className = "tab off";
+            if (tabs[i].getAttribute("data-lang") == language) {
+                tabs[i].className = 'tab on';
+            }
+        }
+    }
+</script>
+
+<!--Fix footer-->
+<style>
+.main {
+min-height: calc(100vh - 40px);
+}
+</style>
+
+<!--Back to top button-->
+<style>
+
+.my-float{
+        position:fixed;
+        width:50px;
+        height:45px;
+        bottom:20px;
+        right:40px;
+        background-color: #012a3c;
+        color:#FFF;
+        border-radius: 60px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        font-weight: bold;
+        opacity: 0.45;
+        font-size: 30px;
+        margin-top:30px;
+}
+
+
+.my-float:hover {
+        background-color: #012a3c;
+        opacity: 0.8;
+        color: white;
+}
+
+</style>
+
+<!-- Fix anchors position -->
+<style>
+h4 {
+padding-top: 71px;
+}
+</style>

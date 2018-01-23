@@ -1,0 +1,7 @@
+<!-- TOC -->
+<ul>
+{{ range $element := findRE "<a.*?>(.|\n)*?</a>" .TableOfContents }}
+<li class="dd-item"> {{ htmlUnescape $element | safeHTML }} </li>
+{{ end}}
+</ul>
+<!-- /TOC -->

@@ -1,0 +1,46 @@
+baseURL = "https://docs.yodiwo.com/doc/"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+title = "Yodiwo SDK & API Documentation"
+theme = "docdock"
+
+[params]
+editURL = "https://github.com/yodiwo/doc/edit/master/"
+showVisitedLinks = false # default is false
+themeStyle = "flex" # "original" or "flex" # default "original"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
+enableGitInfo = false
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-globe'></i> <label>Yodiwo</label>"
+url = "https://www.yodiwo.com"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-cloud'></i> <label>Cyan</label>"
+url = "https://tcyan.yodiwo.com"
+weight = 2
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-comments'></i> <label>Community</label>"
+identifier = "community"
+url = "https://discuss.yodiwo.com"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-github'></i> <label>Github repo</label>"
+identifier = "ds"
+url = "https://github.com/yodiwo"
+weight = 10
+
