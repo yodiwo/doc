@@ -4,169 +4,192 @@
   
   <url>
     <loc>https://docs.yodiwo.com/doc/cyan/</loc>
-    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/wisper/</loc>
-    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/</loc>
-    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/integrators/</loc>
-    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/cyan/apis/</loc>
-    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/wisper/wisper-families/wisper-pro/</loc>
-    <lastmod>2017-12-20T16:11:44+02:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/api-overview/</loc>
-    <lastmod>2017-12-14T12:02:09+02:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/getting-started/</loc>
-    <lastmod>2017-12-14T12:02:09+02:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/wisper/yodiwo-wisper/</loc>
-    <lastmod>2017-12-14T11:28:12+02:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/</loc>
-    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/integrators/direct-connection/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/mqtt/mqtt-overview/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/wisper/wisper-families/</loc>
-    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/base-api-message-class/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-get/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/mqtt/message-format/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/pairing-overview/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/</loc>
-    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-set/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/things-ports/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/</loc>
-    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-events/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/things-mgmt-ctrl/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/mqtt/</loc>
-    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/message-event-passing/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-port-states-request/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/apis/plegma/websockets-overview/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/snippets/</loc>
-    <lastmod>2018-01-15T15:03:34+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/_footer/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/_header/</loc>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
   </url>
   
   <url>
@@ -176,18 +199,18 @@
   
   <url>
     <loc>https://docs.yodiwo.com/doc/categories/cyan/</loc>
-    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/</loc>
-    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-24T11:08:13+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://docs.yodiwo.com/doc/categories/plegma/</loc>
-    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -198,7 +221,7 @@
   
   <url>
     <loc>https://docs.yodiwo.com/doc/categories/wisper/</loc>
-    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   
