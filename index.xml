@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homepage on Yodiwo SDK &amp; API Documentation</title>
+    <link>https://docs.yodiwo.com/doc/</link>
+    <description>Recent content in Homepage on Yodiwo SDK &amp; API Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://docs.yodiwo.com/doc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using RESTful HTTP requests</title>
+      <link>https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/</guid>
+      <description>Any entity can send HTTPS requests towards cyan and if a proper graph exists, the requests will trigger it and have it executed.
+API keys for REST Authentication happens via the use of API keys, created by the user in Cyan’s User Profile Manager:
+Each created API key is globally unique, tied to the account of user that created it, and can be individually enabled and disabled or have its quota tracked and/or enforced.</description>
+    </item>
+    
+    <item>
+      <title>Interconnection Concepts and Topology</title>
+      <link>https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/</guid>
+      <description>Introduction An abstract block diagram of the platform’s components and logical interconnections is shown here:
+The following block diagram shows the various entities that make up the Yodiwo ecosystem in more detail:
+It can be summarized as follows:
+ YCP (Alcyone) which includes:  one or more backend workers API frontends which Nodes connect to using avariety of industry standard protocols the UI frontend  Yodiwo Nodes, which communicate with Alcyone via the open Plegma API.</description>
+    </item>
+    
+    <item>
+      <title>APIs</title>
+      <link>https://docs.yodiwo.com/doc/cyan/apis/</link>
+      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/cyan/apis/</guid>
+      <description>Plegma The Plegma API, from the greek “πλέγμα” meaning grid, mesh or lattice, is the main inter connection API between Alcyone and Nodes of all types.
+It provides the usual functions one would expect from such an API such as:
+ bidirectional declaration and configuration of Things and Nodes bidirectional event passing and triggering  In addition, it includes extensions that allow:
+ media(audio and video) streaming IoT processor virtualization (where device high-level drivers run on the cloud) automatic partitioning of Execution Rules between Cloud and Fog servers uploading of binary files  A high level walkthrough of the API can be found at https://www.</description>
+    </item>
+    
+    <item>
+      <title>Wisper Pro</title>
+      <link>https://docs.yodiwo.com/doc/wisper/wisper-families/wisper-pro/</link>
+      <pubDate>Wed, 20 Dec 2017 16:11:44 +0200</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/wisper/wisper-families/wisper-pro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>API Overview</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/messages/api-overview/</link>
+      <pubDate>Thu, 14 Dec 2017 12:02:09 +0200</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/messages/api-overview/</guid>
+      <description>Our Cloud Services support a plethora of protocols to carry Plegma API messages, which aids communication between yodiwo-aware nodes and our servers.
+The Plegma API is publicly accessible and freely available (formal reference found here). Example implementations of the API are freely provided here for popular languages such as C, C#, Java, Javascript and others.
+Currently available industry-standard protocols:
+ HTTP/REST MQTT Web Sockets  Plus:
+ YPC (Yodiwo Protocol Channel), a custom, flexible, layered, protocol designed and implemented by Yodiwo that supports:  multiple payload serialization (currently MSGPACK or JSON) multiple transports (currently pure TCP Sockets or AMQP/RabbitMQ) asynchronous or synchronous (blocking RPC) message passing between nodes automatic packing/unpacking both of pre-agreed message types and of unknown members (C# / Java only) throttling, flow control extensible via IEs   In the future we plan to support more methods for developers to reach the Yodiwo Cloud, such as RabbitMQ (a powerful AMQP based protocol) and Google Cloud Messaging.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/getting-started/</link>
+      <pubDate>Thu, 14 Dec 2017 12:02:09 +0200</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/getting-started/</guid>
+      <description>Welcome to the Yodiwo Platform! We are an IoT Platform-as-a-Service (PaaS) provider with a unique connectivity framework, based on the first IoT Editor that uses graphs to codelessly interconnect models of Devices and existing Apps with each other.
+our Cyan environment
+Nodes and Things The Yodiwo Cloud Platform interacts with Edge devices by sending messages to and receiving messages from them, via a multitude of supported protocols. These messages follow the Plegma framework and API which is described in these pages.</description>
+    </item>
+    
+    <item>
+      <title>Yodiwo Wisper</title>
+      <link>https://docs.yodiwo.com/doc/wisper/yodiwo-wisper/</link>
+      <pubDate>Thu, 14 Dec 2017 11:28:12 +0200</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/wisper/yodiwo-wisper/</guid>
+      <description>Overview This code is split into 2 main sections: - mNodeCore: main code that generates the mNode base package - Plugins: contains Plugin sample code which showcases the Plugin API
+Both open under a single Visual Studio (2015) solution.
+mNodeCore It includes all necessary dependencies to build a complete mNode package that: - is identical to the mNode package downloaded as a package from Yodiwo - can autonomously connect to the Yodiwo cloud - can be detected by the Yodiwo Wisper Remote Control Android app - can present, manage and install Plugins which are published at the Yodiwo Package Manager</description>
+    </item>
+    
+    <item>
+      <title>Get available routes</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api/</guid>
+      <description>Definition https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/
+Result Format  200 OK.   {&amp;lt;list of available REST API routes&amp;gt;}   Documentation Returns a simple JSON array of all available API routes</description>
+    </item>
+    
+    <item>
+      <title>MQTT support</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/mqtt/mqtt-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/mqtt/mqtt-overview/</guid>
+      <description>Overview MQTT doesn&amp;rsquo;t really need an introduction, as it&amp;rsquo;s a well-known, low-latency, simple and lightweight publish-subscribe protocol with implementations for most platforms, including Android, iOS, Linux, minimal embedded systems
+Yodiwo’s custom MQTT broker accepts connections from Nodes at api.yodiwo.com (port 8883 for SSL/TLS encrypted connections).
+Nodes are expected to have completed Pairing when attempting a connection to the Yodiwo MQTT broker since the assigned Node and Secret Keys will be used for the connection to the broker.</description>
+    </item>
+    
+    <item>
+      <title>Plegma Nodes Credentials</title>
+      <link>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/</guid>
+      <description>Plegma Nodes must be assigned a Node Key and a Secret Key, using either of the following:
+ a pairing process
+ a platform-aided provisioning process
+ direct key generation from Cyan’s UI
+ custom use of the Warlock API
+  This should be the integrator’s choice that is dependent on the intended final application:
+ Pairing implies that each end-user is a separate Yodiwo account holder, i.e. the end device (node) is the same for multiple end-users, each of which must pair it to their own Yodiwo account.</description>
+    </item>
+    
+    <item>
+      <title>Using 3rd party MQTT brokers</title>
+      <link>https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/</guid>
+      <description>Yodiwo already provides its 1st party MQTT broker (at api.yodiwo.com:8883) for Plegma API connections, but any existing 3rd party broker can be used instead.
+So to publish any message, the MQTT out block can be configured and used:
+Conversely, to subscribe to topics, listen to messages and have them trigger graphs, insert and configure use the MQTT input block:</description>
+    </item>
+    
+    <item>
+      <title>Plegma Things Creation and Handling</title>
+      <link>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/</guid>
+      <description>A node’s main purpose is to maintain and present a list of Things, each of which models and virtualizes a real digital function, either physical or logical.
+Upon a successful connection the Node sends their list of Things (each with a globally unique Thing Key) to the cloud, while it can also retrieve the Cloud’s previously synced Thing lists along with their configurations. As a result of this process, Cyan’s Designer Toolbox automatically presents the Node in its green section, populated with the latest version of the Node’s virtualized Things:</description>
+    </item>
+    
+    <item>
+      <title>Yodiwo Fog Gateway</title>
+      <link>https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/</guid>
+      <description>Description The Fog gateway is a Yodiwo Node, as previously defined, with special features and capabilities.
+It is cross platform software based on the Microsoft .Net frame work and can run on any Windows PC, Linux, Android, iOS, or embedded ARM-based devices such as the Raspberry Pi running Linux or Windows IOT. It can also be provided as final hardware, either branded as Yodiwo or with the customer’s brand.</description>
+    </item>
+    
+    <item>
+      <title>Base API message class</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/messages/base-api-message-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/messages/base-api-message-class/</guid>
+      <description>ApiMsg Virtually all Plegma API messages inherit from this ApiMsg abstract class:
+ C#   .   Java   .   C  ·   Objective-C      namespace Yodiwo.API.Plegma { public abstract class ApiMsg { public int SeqNo; } }    package com.yodiwo.PlegmaApi; public abstract class ApiMsg { public int SeqNo; }    typedef struct Yodiwo_API_Plegma_ApiMsg { int32_t SeqNo; } Yodiwo_API_Plegma_ApiMsg_t;    @interface APIMsg : JSONModel @property (nonatomic) NSInteger SeqNo; @end     This base class contains just the sequence number of the message:</description>
+    </item>
+    
+    <item>
+      <title>Get Things</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-get/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-get/</guid>
+      <description>Definition https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/thingsget
+Parameters    Name Type     nodekey  required string n/a  NodeKey (received during Node pairing)   secretkey  required string n/a  SecretKey (received during Node pairing)    Documentation Sends a Things Get request to the cloud server. Route parameters include the Node and Secret keys received during the Node&amp;rsquo;s pairing. The body of the message is expected to be a JSON-serialized message of the ThingsGet class.</description>
+    </item>
+    
+    <item>
+      <title>Message format</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/mqtt/message-format/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/mqtt/message-format/</guid>
+      <description>In order to support synchronous (blocking) messages with MQTT -which doesn&amp;rsquo;t inherently provide this capability- there needs to be a way to match new messages (Responses) to previous ones (Requests). To that end a very simple message wrapper is introduced:
+[any language].   public class MqttMsg { public eMsgFlags Flags; public int SyncId; public string Payload; }    Flags: this field distinguishes between:
+ Request-type messages (Get or Req) that mandate a response (Rsp or Set) Response-type messages to previous requests simple asynchronous messages  Specifically Flags is:</description>
+    </item>
+    
+    <item>
+      <title>Pairing Overview</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/pairing-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/pairing-overview/</guid>
+      <description>All Nodes need to go through a “pairing” process in order for them to be allowed to exchange data with the Yodiwo cloud. This process is also known as Provisioning or Commissioning.
+Pairing assigns a Key and a secret token to the node, both of which are used to later establish connections to the Yodiwo Cloud Platform over secure channels.
+The pairing process is defined for two classes of Node devices, those that do not have a GUI of their own and those that do.</description>
+    </item>
+    
+    <item>
+      <title>Set Things</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-set/</guid>
+      <description>Definition https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/thingsset
+Parameters    Name Type     nodekey  required string n/a  NodeKey (received during Node pairing)   secretkey  required string n/a  SecretKey (received during Node pairing)    Documentation Sends a Things Set request to the cloud server. Route parameters include the Node and Secret keys received during the Node&amp;rsquo;s pairing. The body of the message is expected to be a JSON-serialized message of the ThingsSet class.</description>
+    </item>
+    
+    <item>
+      <title>Things &amp; Ports</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/messages/things-ports/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/messages/things-ports/</guid>
+      <description>Nodes implement the Plegma API to allow communication and interaction with our cloud, but their main purpose is to expose and manage Things, the entities that actually do stuff. In this section we describe how to create them and the Ports they enclose, while in the Things management &amp;amp; control section we&amp;rsquo;ll talk about how to sync them with our cloud.
+So without further delay..
+Things ..a Thing is this:</description>
+    </item>
+    
+    <item>
+      <title>Post events</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-events/</guid>
+      <description>Definition https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/porteventmsg
+Parameters    Name Type     nodekey  required string n/a  NodeKey (received during Node pairing)   secretkey  required string n/a  SecretKey (received during Node pairing)    Examples C#.    public void PostRestMsg(Tupletarget_msg) { try { //add base route string worker = &#34;https://&#34; + ActiveCfg.RestServer + &#34;:443/api/&#34;; //add API ver worker += &#34;v1.0/&#34;; //add nodekey worker += ActiveCfg.</description>
+    </item>
+    
+    <item>
+      <title>Things management &amp; control</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/messages/things-mgmt-ctrl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/messages/things-mgmt-ctrl/</guid>
+      <description>The main way for Nodes and the Cloud to exchange information about Nodes&amp;rsquo; Things are the Things Get/Set messages
+THINGS GET A Things Get request can be used by either the Cloud or Nodes to request information from the receiver. Its contents are:
+C#.  Java.  C·  Objective-C    public class ThingsGet : ApiMsg { public eThingsOperation Operation; public string ThingKey public int RevNum; public ThingsGet() : base() { } }    package com.</description>
+    </item>
+    
+    <item>
+      <title>Message &amp; event passing</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/messages/message-event-passing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/messages/message-event-passing/</guid>
+      <description>All event exchanges, i.e. asynchronous triggers, calls to action, state updates, etc, between Nodes and the Cloud exclusively happen through the PortEventMsg API message:
+PORTEVENTMSG C#.  Java.  C·  Objective-C    public class PortEventMsg : ApiMsg { public PortEvent[] PortEvents; public PortEventMsg() : base() { } }    package com.yodiwo.plegma; public class PortEventMsg extends ApiMsg { public PortEvent[] PortEvents; public PortEventMsg() { } }    typedef struct Yodiwo_Plegma_PortEventMsg { int32_t SeqNo; Array_Yodiwo_Plegma_PortEvent_t PortEvents; } Yodiwo_Plegma_PortEventMsg_t; typedef struct Array_Yodiwo_Plegma_PortEvent { int num; struct Yodiwo_Plegma_PortEvent* elems; } Array_Yodiwo_Plegma_PortEvent_t; } Yodiwo_Plegma_ThingsSet_t;    @interface PortEventMsg : APIMsg @property (strong, nonatomic) NSMutableArray&amp;lt;PortEvent&amp;gt; *PortEvents; @end     Each message contains an array of simple PortEvent entries:</description>
+    </item>
+    
+    <item>
+      <title>Sync with server&#39;s Port States</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-port-states-request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-port-states-request/</guid>
+      <description>Definition https://api.yodiwo.com/api/1.0/NODEKEY/SECRETKEY/portstatereq
+Parameters    Name Type     nodekey  required string n/a  NodeKey (received during Node pairing)   secretkey  required string n/a  SecretKey (received during Node pairing)    Documentation Sends a Port States request to the cloud server. Route parameters include the Node and Secret keys received during the Node&amp;rsquo;s pairing. The body of the message is expected to be a JSON-serialized message of the PortStateReq class.</description>
+    </item>
+    
+    <item>
+      <title>Web Sockets Overview</title>
+      <link>https://docs.yodiwo.com/doc/apis/plegma/websockets-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/apis/plegma/websockets-overview/</guid>
+      <description>You can also interface with our cloud servers via Web Sockets. All previous conventions about messaging with the Plegma API also stand here. The wrapper class that carries all Websocket messages is the following:
+[any language].   public class WebSocketMsg { public eWSAPIType Id; public string Subid; public eMsgFlags Flags; public int SyncId; public string Payload; }    Id: this field distinguishes between initial Pairing messages (which follow the logic described in Pairing) and API messages.</description>
+    </item>
+    
+    <item>
+      <title>Snippets</title>
+      <link>https://docs.yodiwo.com/doc/snippets/</link>
+      <pubDate>Mon, 15 Jan 2018 15:03:34 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/snippets/</guid>
+      <description>Blue A notice disclaimer
+   Show source code   {{% notice note %}} A notice disclaimer {{% /notice %}}   
+this is a text   Show source code   {{% alert info %}}**this** is a text{{% /alert %}}   
+  API reference:  The complete up-to-date API reference in doxygen format can be found here
+   panel title this is a panel text    Show source code   {{% panel theme=&amp;quot;info&amp;quot; header=&amp;quot;panel title&amp;quot; %}}this is a panel text{{% /panel %}}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://docs.yodiwo.com/doc/_footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/_footer/</guid>
+      <description>Contact us at : info@yodiwo.com</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://docs.yodiwo.com/doc/_header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/_header/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yodiwo SDK &amp; API Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.34" />
+<title>Message &amp; event passing :: Yodiwo SDK &amp; API Documentation</title>
+<link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
+<link href="/doc/css/font-awesome.min.css" rel="stylesheet">
+<link href="/doc/css/nucleus.css" rel="stylesheet">
+<link href="/doc/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/doc/css/bootstrap.min.css">
+<script src="/doc/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+</script>
+
+<style>
+div.code-tabs {
+  position: relative;
+  margin-top: -1px;
+  z-index: 10;
+  margin-bottom: -20px;
+}
+
+div.tab {
+  font-size: 13px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.tab.on a {
+  color: #009999;
+}
+
+.tab.off a {
+  color: grey;
+}
+</style>
+<script>
+    function showCode(codeContainer, language) {
+        var container = document.getElementById(codeContainer);
+        var codes = container.getElementsByTagName('pre');
+        for (var i = 0; i < codes.length; i++) {
+            codes[i].style.display = 'none';
+            if (codes[i].id == language) {
+                codes[i].style.display = '';
+            }
+        }
+
+        var tabs = container.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].className = "tab off";
+            if (tabs[i].getAttribute("data-lang") == language) {
+                tabs[i].className = 'tab on';
+            }
+        }
+    }
+</script>
+
+
+<style>
+.main {
+min-height: calc(100vh - 40px);
+}
+</style>
+
+
+<style>
+
+.my-float{
+        position:fixed;
+        width:50px;
+        height:45px;
+        bottom:20px;
+        right:40px;
+        background-color: #012a3c;
+        color:#FFF;
+        border-radius: 60px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        font-weight: bold;
+        opacity: 0.45;
+        font-size: 30px;
+        margin-top:30px;
+}
+
+
+.my-float:hover {
+        background-color: #012a3c;
+        opacity: 0.8;
+        color: white;
+}
+
+</style>
+
+
+<style>
+h4 {
+padding-top: 71px;
+}
+</style>
+
+    
+  </head>
+  <body data-url="/doc/apis/plegma/messages/message-event-passing/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a id="logo" href="/">
+<img src="/assets/images/logo.png" alt="Yodiwo">
+</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://www.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-globe'></i> <label>Yodiwo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://tcyan.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-cloud'></i> <label>Cyan</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/yodiwo"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://discuss.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-comments'></i> <label>Community</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/doc/" class="dd-item">
+          <a href="/doc/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/doc/cyan/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/cyan/">Cyan</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/cyan/interconnection-concepts-and-topology/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/interconnection-concepts-and-topology/">
+            Interconnection Concepts and Topology
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/cyan/apis/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/apis/">
+            APIs
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/cyan/yodiwo-fog-gateway/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/yodiwo-fog-gateway/">
+            Yodiwo Fog Gateway
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/wisper/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/">Wisper</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/yodiwo-wisper/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/yodiwo-wisper/">
+            Yodiwo Wisper
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/wisper/wisper-families/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/wisper-families/">Wisper Families</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/wisper-families/wisper-pro/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/wisper-families/wisper-pro/">
+            Wisper Pro
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/doc/apis/">Yodiwo APIs</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/apis/plegma/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/">Plegma</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/getting-started/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/getting-started/">
+            Getting Started
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/pairing-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/pairing-overview/">
+            Pairing Overview
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/apis/plegma/messages/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/messages/">API Messages</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/messages/api-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/api-overview/">
+            API Overview
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/base-api-message-class/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/base-api-message-class/">
+            Base API message class
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-ports/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-ports/">
+            Things &amp; Ports
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-mgmt-ctrl/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-mgmt-ctrl/">
+            Things management &amp; control
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/message-event-passing/" class="dd-item active">
+        <div>
+          <a href="/doc/apis/plegma/messages/message-event-passing/">
+            Message &amp; event passing
+          </a>
+        </div> 
+<ul>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#porteventmsg">PORTEVENTMSG</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#synchronising-states-between-nodes-and-the-cloud">Synchronising states between Nodes and the Cloud</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#portstatereq">PORTSTATEREQ</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#portstatersp">PORTSTATERSP</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#activeportkeysmsg">ACTIVEPORTKEYSMSG</a>
+</li>
+
+</ul>
+
+ </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/rest/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/rest/">Rest API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api/">
+            Get available routes
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-get/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-get/">
+            Get Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-set/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-set/">
+            Set Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-events/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-events/">
+            Post events
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-port-states-request/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-port-states-request/">
+            Sync with server&#39;s Port States
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/mqtt/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/mqtt/">MQTT</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/mqtt/mqtt-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/mqtt-overview/">
+            MQTT support
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/mqtt/message-format/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/message-format/">
+            Message format
+          </a>
+        </div></li>
+        </ul>
+    </li>
+      <li data-nav-id="/doc/apis/plegma/websockets-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/websockets-overview/">
+            Web Sockets Overview
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/">Integrators</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/integrators/direct-connection/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/direct-connection/">Direct Connection to Alcyone</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/direct-connection/using-restful-http-requests/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-restful-http-requests/">
+            Using RESTful HTTP requests
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/">
+            Using 3rd party MQTT brokers
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/connection-via-plegma-api/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/connection-via-plegma-api/">Via the Plegma API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/">
+            Plegma Nodes Credentials
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/">
+            Plegma Things Creation and Handling
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/doc/cyan/" >
+   Cyan</option>
+    <option value="/doc/wisper/" >
+   Wisper</option>
+    <option value="/doc/apis/" >
+   Yodiwo APIs</option> 
+    <option value="/doc/apis/plegma/" >
+  - 
+   Plegma</option> 
+      <option value="/doc/apis/plegma/getting-started/" >-- Getting Started</option>
+      <option value="/doc/apis/plegma/pairing-overview/" >-- Pairing Overview</option>
+    <option value="/doc/apis/plegma/messages/" >
+  -- 
+   API Messages</option> 
+      <option value="/doc/apis/plegma/messages/api-overview/" >--- API Overview</option>
+      <option value="/doc/apis/plegma/messages/base-api-message-class/" >--- Base API message class</option>
+      <option value="/doc/apis/plegma/messages/things-ports/" >--- Things &amp; Ports</option>
+      <option value="/doc/apis/plegma/messages/things-mgmt-ctrl/" >--- Things management &amp; control</option>
+      <option value="/doc/apis/plegma/messages/message-event-passing/"  selected>--- Message &amp; event passing</option>
+  
+    <option value="/doc/apis/plegma/rest/" >
+  -- 
+   Rest API</option>
+    <option value="/doc/apis/plegma/mqtt/" >
+  -- 
+   MQTT</option>
+      <option value="/doc/apis/plegma/websockets-overview/" >-- Web Sockets Overview</option>
+  
+  
+    <option value="/doc/integrators/" >
+   Integrators</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/doc/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/doc/js/auto-complete.js"></script>
+        <link href="/doc/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+          
+        </script>
+        <script type="text/javascript" src="/doc/js/search.js"></script>
+      </div>
+    
+
+    <h1>Message &amp; event passing</h1>
+    
+    
+    
+    
+
+<p>All event exchanges, i.e. asynchronous triggers, calls to action, state updates, etc, between Nodes and the Cloud exclusively happen through the PortEventMsg API message:</p>
+
+<h4 id="porteventmsg">PORTEVENTMSG</h4>
+
+<div id="code1_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="csharp" class="tab on">
+            <a href="javascript: showCode('code1_container', 'csharp');"><span>C#</span></a><span>.</span>
+          </div>
+          <div data-lang="java" class="tab off">
+            <a href="javascript: showCode('code1_container', 'java');"><span>Java</span></a><span>.</span>
+          </div>
+          <div data-lang="c" class="tab off">
+            <a href="javascript: showCode('code1_container', 'c');"><span>C</span></a><span class="">·</span>
+          </div>
+          <div data-lang="objc" class="tab off">
+            <a href="javascript: showCode('code1_container', 'objc');"><span>Objective-C</span></a>
+          </div>
+        </div>
+        <pre id="csharp">
+            <code>
+public class PortEventMsg : ApiMsg
+{
+    public PortEvent[] PortEvents;
+
+    public PortEventMsg() : base() { }
+}
+            </code>
+        </pre>
+        <pre id="java" style="display:none;">
+            <code>
+package com.yodiwo.plegma;
+
+public class PortEventMsg extends ApiMsg {
+
+    public PortEvent[] PortEvents;
+
+    public PortEventMsg() {
+    }
+}
+            </code>
+        </pre>
+        <pre id="c" style="display:none;">
+            <code>
+typedef struct Yodiwo_Plegma_PortEventMsg
+{
+    int32_t SeqNo;
+
+    Array_Yodiwo_Plegma_PortEvent_t PortEvents;
+} Yodiwo_Plegma_PortEventMsg_t;
+
+typedef struct Array_Yodiwo_Plegma_PortEvent
+{
+    int num;
+    struct Yodiwo_Plegma_PortEvent* elems;
+} Array_Yodiwo_Plegma_PortEvent_t;
+} Yodiwo_Plegma_ThingsSet_t;
+            </code>
+        </pre>
+        <pre id="objc" style="display:none;">
+            <code>
+@interface PortEventMsg : APIMsg
+
+@property (strong, nonatomic) NSMutableArray&lt;PortEvent&gt; *PortEvents;
+
+@end
+            </code>
+        </pre>
+    </div>
+</div>
+
+<p>Each message contains an array of simple PortEvent entries:</p>
+
+<div id="code2_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="csharp" class="tab on">
+            <a href="javascript: showCode('code2_container', 'csharp');"><span>C#</span></a><span>.</span>
+          </div>
+          <div data-lang="java" class="tab off">
+            <a href="javascript: showCode('code2_container', 'java');"><span>Java</span></a><span>.</span>
+          </div>
+          <div data-lang="c" class="tab off">
+            <a href="javascript: showCode('code2_container', 'c');"><span>C</span></a><span class="">·</span>
+          </div>
+          <div data-lang="objc" class="tab off">
+            <a href="javascript: showCode('code2_container', 'objc');"><span>Objective-C</span></a>
+          </div>
+        </div>
+        <pre id="csharp">
+            <code>
+public class PortEvent
+{
+    public string PortKey;
+    public string State;
+    public uint RevNum;
+    public ulong Timestamp;
+}
+            </code>
+        </pre>
+        <pre id="java" style="display:none;">
+            <code>
+public class PortEvent
+{
+    public String PortKey;
+    public String State;
+    public int RevNum;
+    public long Timestamp; 
+}
+            </code>
+        </pre>
+        <pre id="c" style="display:none;">
+            <code>
+typedef struct Yodiwo_Plegma_PortEvent
+{
+    char* PortKey;
+    char* State;
+    uint32_t RevNum;
+    uint64_t Timestamp;
+} Yodiwo_Plegma_PortEvent_t;
+            </code>
+        </pre>
+        <pre id="objc" style="display:none;">
+            <code>
+@interface PortEvent : JSONModel
+
+@property (strong, nonatomic) NSString *PortKey;
+@property (strong, nonatomic) NSString&lt;Optional^gt; *State;
+@property (nonatomic) NSUInteger RevNum;
+@property (nonatomic) NSUInteger Timestamp;
+
+@end
+            </code>
+        </pre>
+    </div>
+</div>
+
+<ul>
+<li><code>PortKey</code>: the key to identify which Port (in which Thing of which Node) this event refers to</li>
+<li><code>State</code>: the message of event, encoded as a string, as discussed here</li>
+<li><code>RevNum</code>: revision number of this update. If non-zero duplicate rejection can be performed. For the cloud servers, if this is zero, all events are treated as valid</li>
+<li><code>Timestamp</code>: event&rsquo;s timestamp in milliseconds since Unix epoch. For the cloud servers, if this is zero, the time at reception is stamped</li>
+</ul>
+
+<div class="panel panel-warning">
+	<div class="panel-heading"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&ensp;Port Events for inactive ports</div>
+	<div class="panel-body">To aid power consumption on the Node side, and also save channel bandwidth, it is advised that Nodes do not send Port Event messages for Ports that are inactive.<br>See below at <code>ActivePortKeys</code> for what active/inactive means, and how to check</div>
+	
+</div>
+
+
+<h4 id="synchronising-states-between-nodes-and-the-cloud">Synchronising states between Nodes and the Cloud</h4>
+
+<hr />
+
+<p>In the case where states of Ports between the Cloud and Nodes get out-of-sync, some tools are offered to rectify this, in the form of Port State messages. These messages exchange similar information about states as Port Events but do not trigger any action on the receiver apart from an update of their internal house-keeping.</p>
+
+<h4 id="portstatereq">PORTSTATEREQ</h4>
+
+<p>This Request is sent from either the Node or the Cloud Server to ask for an update, according to the message&rsquo;s <code>Operation</code> field. The receiving end must respond with a <code>PortStateRsp</code> in an RPC-compliant way.</p>
+
+<div id="code3_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="csharp" class="tab on">
+            <a href="javascript: showCode('code3_container', 'csharp');"><span>C#</span></a><span>.</span>
+          </div>
+          <div data-lang="java" class="tab off">
+            <a href="javascript: showCode('code3_container', 'java');"><span>Java</span></a><span>.</span>
+          </div>
+          <div data-lang="c" class="tab off">
+            <a href="javascript: showCode('code3_container', 'c');"><span>C</span></a><span class="">·</span>
+          </div>
+          <div data-lang="objc" class="tab off">
+            <a href="javascript: showCode('code3_container', 'objc');"><span>Objective-C</span></a>
+          </div>
+        </div>
+        <pre id="csharp">
+            <code>
+public class PortStateReq : ApiMsg
+{
+    public ePortStateOperation Operation;
+    public string[] PortKeys;
+    
+    public PortStateRsp() : base()
+    {
+        this.Id = eApiType.PortStateReq;
+    }
+}
+            </code>
+        </pre>
+        <pre id="java" style="display:none;">
+            <code>
+package com.yodiwo.plegma;
+
+import java.util.ArrayList;
+
+public class PortStateReq extends ApiMsg
+{
+    public ePortStateOperation Operation;
+    public String[] PortKeys;
+    
+    public PortStateReq() {
+        this.Id = eApiType.PortStateReq;
+    }
+}
+            </code>
+        </pre>
+        <pre id="c" style="display:none;">
+            <code>
+typedef struct Yodiwo_Plegma_PortStateReq
+{
+    //[ApiMsg]
+    Yodiwo_Plegma_eApiType Id;
+    int32_t Version;
+    int32_t SeqNo;
+    int32_t ResponseToSeqNo;
+    
+    Yodiwo_Plegma_ePortStateOperation Operation;
+    Array_char* PortKeys;
+} Yodiwo_Plegma_PortStateReq_t;
+            </code>
+        </pre>
+        <pre id="objc" style="display:none;">
+            <code>
+@interface ThingsReq : APIMsg
+
+@property (nonatomic) EnumThingsOperation Operation;
+@property (strong, nonatomic) NSString&lt;Optional&gt; *ThingKey;
+@property (strong, nonatomic) NSMutableArray&lt;Thing, Optional&gt; *Data; // of Thing
+
+@end
+            </code>
+        </pre>
+    </div>
+</div>
+
+<ul>
+<li><code>Operation</code>: the Type of operation requested. Can be one of:
+    enum ePortStateOperation
+    {
+      SpecificKeys = 1,     //get states for the PortKeys specified in this msg&rsquo;s Keys array
+      ActivePortStates = 2, //get  current states only for currently deployed Ports
+      AllPortStates = 3,    //get current states for all ports of this Node
+    }</li>
+<li><code>PortKeys</code>: Array of PortKeys that the server should send an update for (to be used in conjuction with <code>ePortStateOperation.SpecificKeys</code>. Must be set if <code>Operation</code> is set to <code>SpecificKeys</code>, shall be ignored otherwise.</li>
+</ul>
+
+<h4 id="portstatersp">PORTSTATERSP</h4>
+
+<p>This message is the response to the previous PortStateReq message. As always, the message&rsquo;s <code>ResponseToSeqNo</code> will be set to the original request&rsquo;s <code>SeqNo</code></p>
+
+<p>In detail the message is:</p>
+
+<div id="code4_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="csharp" class="tab on">
+            <a href="javascript: showCode('code4_container', 'csharp');"><span>C#</span></a><span>.</span>
+          </div>
+          <div data-lang="java" class="tab off">
+            <a href="javascript: showCode('code4_container', 'java');"><span>Java</span></a><span>.</span>
+          </div>
+          <div data-lang="c" class="tab off">
+            <a href="javascript: showCode('code4_container', 'c');"><span>C</span></a><span class="">·</span>
+          </div>
+          <div data-lang="objc" class="tab off">
+            <a href="javascript: showCode('code4_container', 'objc');"><span>Objective-C</span></a>
+          </div>
+        </div>
+        <pre id="csharp">
+            <code>
+public class PortStateRsp : ApiMsg
+{
+    public ePortStateOperation Operation;
+    public PortState[] PortStates;
+    
+    public PortStateRsp() : base()
+    {
+        this.Id = eApiType.PortStateRsp;
+    }
+}
+            </code>
+        </pre>
+        <pre id="java" style="display:none;">
+            <code>
+package com.yodiwo.plegma;
+
+import java.util.ArrayList;
+
+public class PortStateRsp extends ApiMsg
+{
+    public ePortStateOperation Operation;
+    public PortState[] PortStates;
+    
+    public PortStateRsp() {
+        this.Id = eApiType.PortStateRsp;
+    }
+}
+            </code>
+        </pre>
+        <pre id="c" style="display:none;">
+            <code>
+typedef struct Yodiwo_Plegma_PortStateRsp
+{
+    //[ApiMsg]
+    Yodiwo_Plegma_eApiType Id;
+    int32_t Version;
+    int32_t SeqNo;
+    int32_t ResponseToSeqNo;
+    
+    Yodiwo_Plegma_ePortStateOperation Operation;
+    Array_Yodiwo_Plegma_PortState_t PortStates;
+} Yodiwo_Plegma_PortStateRsp_t;
+
+typedef struct Array_Yodiwo_Plegma_PortState
+{
+    int num;
+    struct Yodiwo_Plegma_PortState* elems;
+} Array_Yodiwo_Plegma_PortState_t;
+            </code>
+        </pre>
+        <pre id="objc" style="display:none;">
+            <code>
+@interface PortStateRsp : APIMsg
+
+@property (nonatomic) EnumStateOperation Operation;
+@property (strong, nonatomic) NSMutableArray&lt;PortState&gt; *PortStates;
+
+@end
+            </code>
+        </pre>
+    </div>
+</div>
+
+<p>The message&rsquo;s fields are:</p>
+
+<ul>
+<li><p><code>Operation</code>: Type of operation requested and this message is responding to. The type will affect which of the two other fields is populated with data</p></li>
+
+<li><p><code>PortStates</code>: Array of requested Port states</p></li>
+</ul>
+
+<div class="panel panel-info">
+	<div class="panel-heading"><i class="fa fa-info-circle" aria-hidden="true"></i>&ensp;&lsquo;Active&rsquo; Port</div>
+	<div class="panel-body"> A port is considered <em>active</em> when:<ul><li>its parent Thing is placed in at least one Graph that is currently <strong>deployed</strong> (not just saved)</li> <li>the port itself is actually connected to another block's port</li></ul></div>
+	
+</div>
+
+
+<p>As expected, the <code>PortState</code> class is very similar to the previously described PortEvent class, with a simple addition:</p>
+
+<div id="code5_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="csharp" class="tab on">
+            <a href="javascript: showCode('code5_container', 'csharp');"><span>C#</span></a><span>.</span>
+          </div>
+          <div data-lang="java" class="tab off">
+            <a href="javascript: showCode('code5_container', 'java');"><span>Java</span></a><span>.</span>
+          </div>
+          <div data-lang="c" class="tab off">
+            <a href="javascript: showCode('code5_container', 'c');"><span>C</span></a><span class="">·</span>
+          </div>
+          <div data-lang="objc" class="tab off">
+            <a href="javascript: showCode('code5_container', 'objc');"><span>Objective-C</span></a>
+          </div>
+        </div>
+        <pre id="csharp">
+            <code>
+public class PortState
+{
+    public string PortKey;
+    public string State;
+    public int RevNum;
+      
+    public bool IsDeployed; //&lt;-- this one!
+}
+            </code>
+        </pre>
+        <pre id="java" style="display:none;">
+            <code>
+package com.yodiwo.plegma;
+
+import java.util.ArrayList;
+
+public class PortState 
+{
+    public String PortKey;
+    public String State;
+    public int RevNum;
+      
+    public Boolean IsDeployed; //this one
+}
+            </code>
+        </pre>
+        <pre id="c" style="display:none;">
+            <code>
+typedef struct Yodiwo_Plegma_PortState
+{
+    char* PortKey;
+    char* State;
+    int32_t RevNum;
+      
+    bool_t IsDeployed;  //this one
+} Yodiwo_Plegma_PortState_t;
+            </code>
+        </pre>
+        <pre id="objc" style="display:none;">
+            <code>
+@interface PortState : JSONModel
+
+@property (strong, nonatomic) NSString *PortKey;
+@property (strong, nonatomic) NSString&lt;Optional&gt; *State;
+@property (nonatomic) NSInteger RevNum;
+
+@property (nonatomic) BOOL IsDeployed;  //this one
+
+@end
+            </code>
+        </pre>
+    </div>
+</div>
+
+<p>The extra field <code>IsDeployed</code> specifies whether the referenced port is currently active and connected in deployed graphs.</p>
+
+<p>The rest of the field convey the same information as in a Port Event, but without acting/triggering any actions on this data.</p>
+
+<h4 id="activeportkeysmsg">ACTIVEPORTKEYSMSG</h4>
+
+<p>This message is an asynchronous message from the Cloud to a Node to inform the latter of which Ports are currently active. This usually happens because the user deployed or undeployed a graph (hence adding/removing Things or changing Port connections) through the Cyan environment.</p>
+
+<p>The contents of the message are extremely simple, as the Node is expected to simply discard its old set of active PortKey values and replace it with the one specified by this message:</p>
+
+<div id="code6_container">
+    <div class="block-code block-show-code" type="section.type">
+        <div class="code-tabs">
+          <div data-lang="csharp" class="tab on">
+            <a href="javascript: showCode('code6_container', 'csharp');"><span>C#</span></a><span>.</span>
+          </div>
+          <div data-lang="java" class="tab off">
+            <a href="javascript: showCode('code6_container', 'java');"><span>Java</span></a><span>.</span>
+          </div>
+          <div data-lang="c" class="tab off">
+            <a href="javascript: showCode('code6_container', 'c');"><span>C</span></a><span class="">·</span>
+          </div>
+          <div data-lang="objc" class="tab off">
+            <a href="javascript: showCode('code6_container', 'objc');"><span>Objective-C</span></a>
+          </div>
+        </div>
+        <pre id="csharp">
+            <code>
+public class ActivePortKeysMsg : ApiMsg
+{
+    public String[] ActivePortKeys;
+
+    public ActivePortKeysMsg() : base()
+    {
+        this.Id = eApiType.ActivePortKeysMsg;
+    }
+}
+            </code>
+        </pre>
+        <pre id="java" style="display:none;">
+            <code>
+package com.yodiwo.plegma;
+
+import java.util.ArrayList;
+
+public class ActivePortKeysMsg extends ApiMsg
+{
+    public String[] ActivePortKeys;
+
+    public ActivePortKeysMsg()
+    {
+      this.Id = eApiType.ActivePortKeysMsg;
+    }
+}
+            </code>
+        </pre>
+        <pre id="c" style="display:none;">
+            <code>
+typedef struct Yodiwo_Plegma_ActivePortKeysMsg
+{
+    Yodiwo_Plegma_eApiType Id;
+    int32_t Version;
+    int32_t SeqNo;
+    int32_t ResponseToSeqNo;
+    
+    Array_char* ActivePortKeys;
+} Yodiwo_Plegma_ActivePortKeysMsg_t;
+            </code>
+        </pre>
+        <pre id="objc" style="display:none;">
+            <code>
+@interface ActivePortKeysMsg : APIMsg
+
+@property (strong, nonatomic) NSMutableArray&lt;Optional&gt; *ActivePortKeys;
+
+@end
+            </code>
+        </pre>
+    </div>
+</div>
+
+<p>Nodes are expected to keep track of, and only send events for those Ports that are currently active, thus reducing power consumption on the node and traffic on the medium.</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/doc/apis/plegma/messages/things-mgmt-ctrl/" title="Things management &amp; control"> <i class="fa fa-chevron-left"></i><label>Things management &amp; control</label></a>
+    <a class="nav nav-next" href="/doc/apis/plegma/rest/" title="Rest API" style="margin-right: 0px;"><label>Rest API</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/yodiwo/doc/edit/master/apis/plegma/messages/message_event_passing.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p><center> Contact us at : info@yodiwo.com </center></p>
+
+<p><a href="#" class="float"></p>
+
+<p><i class="fa fa-arrow-circle-up my-float"></i></p>
+
+<p></a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/doc/js/clipboard.min.js"></script>
+
+<link href="/doc/css/featherlight.min.css" rel="stylesheet">
+<script src="/doc/js/featherlight.min.js"></script>
+
+
+
+<script src="/doc/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yodiwo SDK &amp; API Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.34" />
+<title>Base API message class :: Yodiwo SDK &amp; API Documentation</title>
+<link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
+<link href="/doc/css/font-awesome.min.css" rel="stylesheet">
+<link href="/doc/css/nucleus.css" rel="stylesheet">
+<link href="/doc/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/doc/css/bootstrap.min.css">
+<script src="/doc/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+</script>
+
+<style>
+div.code-tabs {
+  position: relative;
+  margin-top: -1px;
+  z-index: 10;
+  margin-bottom: -20px;
+}
+
+div.tab {
+  font-size: 13px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.tab.on a {
+  color: #009999;
+}
+
+.tab.off a {
+  color: grey;
+}
+</style>
+<script>
+    function showCode(codeContainer, language) {
+        var container = document.getElementById(codeContainer);
+        var codes = container.getElementsByTagName('pre');
+        for (var i = 0; i < codes.length; i++) {
+            codes[i].style.display = 'none';
+            if (codes[i].id == language) {
+                codes[i].style.display = '';
+            }
+        }
+
+        var tabs = container.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].className = "tab off";
+            if (tabs[i].getAttribute("data-lang") == language) {
+                tabs[i].className = 'tab on';
+            }
+        }
+    }
+</script>
+
+
+<style>
+.main {
+min-height: calc(100vh - 40px);
+}
+</style>
+
+
+<style>
+
+.my-float{
+        position:fixed;
+        width:50px;
+        height:45px;
+        bottom:20px;
+        right:40px;
+        background-color: #012a3c;
+        color:#FFF;
+        border-radius: 60px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        font-weight: bold;
+        opacity: 0.45;
+        font-size: 30px;
+        margin-top:30px;
+}
+
+
+.my-float:hover {
+        background-color: #012a3c;
+        opacity: 0.8;
+        color: white;
+}
+
+</style>
+
+
+<style>
+h4 {
+padding-top: 71px;
+}
+</style>
+
+    
+  </head>
+  <body data-url="/doc/apis/plegma/messages/base-api-message-class/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a id="logo" href="/">
+<img src="/assets/images/logo.png" alt="Yodiwo">
+</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://www.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-globe'></i> <label>Yodiwo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://tcyan.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-cloud'></i> <label>Cyan</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/yodiwo"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://discuss.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-comments'></i> <label>Community</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/doc/" class="dd-item">
+          <a href="/doc/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/doc/cyan/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/cyan/">Cyan</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/cyan/interconnection-concepts-and-topology/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/interconnection-concepts-and-topology/">
+            Interconnection Concepts and Topology
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/cyan/apis/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/apis/">
+            APIs
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/cyan/yodiwo-fog-gateway/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/yodiwo-fog-gateway/">
+            Yodiwo Fog Gateway
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/wisper/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/">Wisper</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/yodiwo-wisper/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/yodiwo-wisper/">
+            Yodiwo Wisper
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/wisper/wisper-families/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/wisper-families/">Wisper Families</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/wisper-families/wisper-pro/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/wisper-families/wisper-pro/">
+            Wisper Pro
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/doc/apis/">Yodiwo APIs</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/apis/plegma/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/">Plegma</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/getting-started/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/getting-started/">
+            Getting Started
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/pairing-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/pairing-overview/">
+            Pairing Overview
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/apis/plegma/messages/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/messages/">API Messages</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/messages/api-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/api-overview/">
+            API Overview
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/base-api-message-class/" class="dd-item active">
+        <div>
+          <a href="/doc/apis/plegma/messages/base-api-message-class/">
+            Base API message class
+          </a>
+        </div> 
+<ul>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#apimsg">ApiMsg</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#genericrsp">GenericRsp</a>
+</li>
+
+</ul>
+
+ </li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-ports/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-ports/">
+            Things &amp; Ports
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-mgmt-ctrl/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-mgmt-ctrl/">
+            Things management &amp; control
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/message-event-passing/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/message-event-passing/">
+            Message &amp; event passing
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/rest/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/rest/">Rest API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api/">
+            Get available routes
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-get/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-get/">
+            Get Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-set/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-set/">
+            Set Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-events/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-events/">
+            Post events
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-port-states-request/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-port-states-request/">
+            Sync with server&#39;s Port States
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/mqtt/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/mqtt/">MQTT</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/mqtt/mqtt-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/mqtt-overview/">
+            MQTT support
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/mqtt/message-format/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/message-format/">
+            Message format
+          </a>
+        </div></li>
+        </ul>
+    </li>
+      <li data-nav-id="/doc/apis/plegma/websockets-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/websockets-overview/">
+            Web Sockets Overview
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/">Integrators</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/integrators/direct-connection/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/direct-connection/">Direct Connection to Alcyone</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/direct-connection/using-restful-http-requests/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-restful-http-requests/">
+            Using RESTful HTTP requests
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/">
+            Using 3rd party MQTT brokers
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/connection-via-plegma-api/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/connection-via-plegma-api/">Via the Plegma API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/">
+            Plegma Nodes Credentials
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/">
+            Plegma Things Creation and Handling
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/doc/cyan/" >
+   Cyan</option>
+    <option value="/doc/wisper/" >
+   Wisper</option>
+    <option value="/doc/apis/" >
+   Yodiwo APIs</option> 
+    <option value="/doc/apis/plegma/" >
+  - 
+   Plegma</option> 
+      <option value="/doc/apis/plegma/getting-started/" >-- Getting Started</option>
+      <option value="/doc/apis/plegma/pairing-overview/" >-- Pairing Overview</option>
+    <option value="/doc/apis/plegma/messages/" >
+  -- 
+   API Messages</option> 
+      <option value="/doc/apis/plegma/messages/api-overview/" >--- API Overview</option>
+      <option value="/doc/apis/plegma/messages/base-api-message-class/"  selected>--- Base API message class</option>
+      <option value="/doc/apis/plegma/messages/things-ports/" >--- Things &amp; Ports</option>
+      <option value="/doc/apis/plegma/messages/things-mgmt-ctrl/" >--- Things management &amp; control</option>
+      <option value="/doc/apis/plegma/messages/message-event-passing/" >--- Message &amp; event passing</option>
+  
+    <option value="/doc/apis/plegma/rest/" >
+  -- 
+   Rest API</option>
+    <option value="/doc/apis/plegma/mqtt/" >
+  -- 
+   MQTT</option>
+      <option value="/doc/apis/plegma/websockets-overview/" >-- Web Sockets Overview</option>
+  
+  
+    <option value="/doc/integrators/" >
+   Integrators</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/doc/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/doc/js/auto-complete.js"></script>
+        <link href="/doc/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+          
+        </script>
+        <script type="text/javascript" src="/doc/js/search.js"></script>
+      </div>
+    
+
+    <h1>Base API message class</h1>
+    
+    
+    
+    
+
+<h4 id="apimsg">ApiMsg</h4>
+
+<hr />
+
+<p>Virtually all Plegma API messages inherit from this <code>ApiMsg</code> abstract class:</p>
+
+<div id="code1_container">
+<div class="block-code block-show-code" type="section.type">
+  <div class="code-tabs">
+    <div data-lang="csharp" class="tab on">
+      <a href="javascript: showCode('code1_container', 'csharp');">
+        <span>
+          C#
+        </span>
+      </a>
+      <span>.</span>
+    </div>
+    <div data-lang="java" class="tab off">
+      <a href="javascript: showCode('code1_container', 'java');">
+        <span>
+          Java
+        </span>
+      </a>
+      <span>.</span>
+    </div>
+    <div data-lang="c" class="tab off">
+      <a href="javascript: showCode('code1_container', 'c');">
+        <span>
+          C
+        </span>
+      </a><span class="">·</span>
+    </div>
+    <div data-lang="objc" class="tab off">
+      <a href="javascript: showCode('code1_container', 'objc');">
+        <span>
+          Objective-C
+        </span>
+      </a>
+    </div>
+  </div>
+  <pre id="csharp">
+    <code>
+namespace Yodiwo.API.Plegma
+{
+  public abstract class ApiMsg
+  {
+    public int SeqNo;
+  }
+}
+    </code>
+</pre>
+<pre id="java" style="display:none;">
+    <code>
+package com.yodiwo.PlegmaApi;
+
+public abstract class ApiMsg {
+    public int SeqNo;
+}
+    </code>
+</pre>
+<pre id="c" style="display:none;">
+    <code>
+typedef struct Yodiwo_API_Plegma_ApiMsg
+{
+  int32_t SeqNo;
+} Yodiwo_API_Plegma_ApiMsg_t;
+    </code>
+</pre>
+<pre id="objc" style="display:none;">
+    <code>
+@interface APIMsg : JSONModel
+
+@property (nonatomic) NSInteger SeqNo;
+
+@end
+    </code>
+</pre>
+</div>
+</div>
+
+<p>This base class contains just the sequence number of the message:</p>
+
+<ul>
+<li><code>SeqNo</code>: the unique Id of this particular message.
+
+<ul>
+<li>it is mandatory for the Cloud to set this to a unique, monotonically increasing number in every message towards Nodes, so that you can identify lost messages (after all, embedded Nodes are allowed to have their own sleep schedules)</li>
+<li>While it is not mandatory for Nodes to set this field in the messages they send to the Cloud, it is advised, so that cloud code can perform rejection of duplicate messages.
+However, even if you implement sequence numbering for messages, you can bypass it for individual messages by setting <code>SeqNo</code> to 0 for these messages. Those messages will always be handled by the cloud, without checking sequence numbers.</li>
+</ul></li>
+</ul>
+
+<p><i>Suffixes</i> in all Plegma API messages provide information about the kind of message. In message and with a singular exception, all messages are blocking ones and expect a response, even if the latter is a generic &ldquo;ack&rdquo;-type one.</p>
+
+<ul>
+<li><b>Req</b> means that the sender (either the node or the cloud server) sends actionable data and expects an answer in the form of an Rsp message.</li>
+<li><b>Rsp</b> means that the message is a response to a preceding message, either containing actual data or acting as an Acknowledge message.</li>
+<li><b>Get</b> is a call to action. It contains no actionable information itself but contains a request for the receiver to send something back. The sender blocks until the reply is received.</li>
+<li><b>Set</b> is either the reply to a previous Get-type message, or a new message that directly sends new information. The latter case still expects an ACK which is usually a <code>GenericRsp</code> message.</li>
+<li><b>Msg</b> is an asynchronous message originating at any time from the Node or from the Cloud that does not expect an answer. There are precious few of those, currently limited to status-updated events</li>
+</ul>
+
+<div class="panel panel-info">
+	<div class="panel-heading"><i class="fa fa-info-circle" aria-hidden="true"></i>&ensp;Node-to-Cloud RPC</div>
+	<div class="panel-body">You can also use RPC mechanisms towards our Cloud servers. Take a look at the reference RPC-over-MQTT example source code that you&rsquo;ll find in our <a href="https://github.com/yodiwo/plegma">github page</a></div>
+	
+</div>
+
+
+<div class="panel panel-warning">
+	<div class="panel-heading"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&ensp;Synchronous requests</div>
+	<div class="panel-body">For protocols that do not inherently support synchronous, blocking calls (like <a href="https://ndocs.yodiwo.com/apis/plegma/mqtt/mqtt-overview/">MQTT</a>) or , implementation of a synchronous Req/Rsp mechanism is left to a protocol wrapper instead. For more information have a look at the <a href="https://ndocs.yodiwo.com/apis/plegma/websockets-overview/">respective protocol help sections</a></div>
+	
+</div>
+
+
+<h4 id="genericrsp">GenericRsp</h4>
+
+<hr />
+
+<p>As mentioned, synchronous request-type messages require responses, and sometimes those are generic ACK-type response that offer little more than confirmation of whether a message was successfully parsed. For those there is the <code>GenericRsp</code> message:</p>
+
+<div id="code2_container">
+<div class="block-code block-show-code" type="section.type">
+  <div class="code-tabs">
+    <div data-lang="csharp" class="tab on">
+      <a href="javascript: showCode('code2_container', 'csharp');">
+        <span>
+          C#
+        </span>
+      </a>
+      <span>.</span>
+    </div>
+    <div data-lang="java" class="tab off">
+      <a href="javascript: showCode('code2_container', 'java');">
+        <span>
+          Java
+        </span>
+      </a>
+    </div>
+  </div>
+  <pre id="csharp">
+    <code>
+package com.yodiwo.PlegmaApi;
+
+public abstract class ApiMsg {
+    public int SeqNo;
+}
+    </code>
+</pre>
+<pre id="java" style="display:none;">
+    <code>
+    public class GenericRsp extends ApiMsg {
+    {
+        public Boolean IsSuccess;
+        public int StatusCode;
+        public String Message;
+    
+        public GenericRsp() {
+        }
+    } 
+   </code>
+</pre>
+</pre>
+</div>
+</div>
+
+<ul>
+<li><code>IsSuccess</code>: basic boolean (ok or not) feedbck on received message</li>
+<li><code>StatusCode</code>: generic integer, the meaning of which, if any, depends on actual message exchange</li>
+<li><code>Message</code>: human readable text containing status for received message</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/doc/apis/plegma/messages/api-overview/" title="API Overview"> <i class="fa fa-chevron-left"></i><label>API Overview</label></a>
+    <a class="nav nav-next" href="/doc/apis/plegma/messages/things-ports/" title="Things &amp; Ports" style="margin-right: 0px;"><label>Things &amp; Ports</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/yodiwo/doc/edit/master/apis/plegma/messages/base_api_message_class.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p><center> Contact us at : info@yodiwo.com </center></p>
+
+<p><a href="#" class="float"></p>
+
+<p><i class="fa fa-arrow-circle-up my-float"></i></p>
+
+<p></a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/doc/js/clipboard.min.js"></script>
+
+<link href="/doc/css/featherlight.min.css" rel="stylesheet">
+<script src="/doc/js/featherlight.min.js"></script>
+
+
+
+<script src="/doc/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

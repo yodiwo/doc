@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/cyan/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/wisper/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/</loc>
+    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/integrators/</loc>
+    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/cyan/apis/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/wisper/wisper-families/wisper-pro/</loc>
+    <lastmod>2017-12-20T16:11:44+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/api-overview/</loc>
+    <lastmod>2017-12-14T12:02:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/getting-started/</loc>
+    <lastmod>2017-12-14T12:02:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/wisper/yodiwo-wisper/</loc>
+    <lastmod>2017-12-14T11:28:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/integrators/direct-connection/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/mqtt/mqtt-overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/wisper/wisper-families/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/base-api-message-class/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-get/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/mqtt/message-format/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/pairing-overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-set/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/things-ports/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-events/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/things-mgmt-ctrl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/mqtt/</loc>
+    <lastmod>2017-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/messages/message-event-passing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-port-states-request/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/apis/plegma/websockets-overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/snippets/</loc>
+    <lastmod>2018-01-15T15:03:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/_footer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/_header/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/categories/cyan/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/</loc>
+    <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/categories/plegma/</loc>
+    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/categories/wisper/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

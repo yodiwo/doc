@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yodiwo SDK &amp; API Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.34" />
+<title>APIs :: Yodiwo SDK &amp; API Documentation</title>
+<link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
+<link href="/doc/css/font-awesome.min.css" rel="stylesheet">
+<link href="/doc/css/nucleus.css" rel="stylesheet">
+<link href="/doc/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/doc/css/bootstrap.min.css">
+<script src="/doc/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+</script>
+
+<style>
+div.code-tabs {
+  position: relative;
+  margin-top: -1px;
+  z-index: 10;
+  margin-bottom: -20px;
+}
+
+div.tab {
+  font-size: 13px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.tab.on a {
+  color: #009999;
+}
+
+.tab.off a {
+  color: grey;
+}
+</style>
+<script>
+    function showCode(codeContainer, language) {
+        var container = document.getElementById(codeContainer);
+        var codes = container.getElementsByTagName('pre');
+        for (var i = 0; i < codes.length; i++) {
+            codes[i].style.display = 'none';
+            if (codes[i].id == language) {
+                codes[i].style.display = '';
+            }
+        }
+
+        var tabs = container.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].className = "tab off";
+            if (tabs[i].getAttribute("data-lang") == language) {
+                tabs[i].className = 'tab on';
+            }
+        }
+    }
+</script>
+
+
+<style>
+.main {
+min-height: calc(100vh - 40px);
+}
+</style>
+
+
+<style>
+
+.my-float{
+        position:fixed;
+        width:50px;
+        height:45px;
+        bottom:20px;
+        right:40px;
+        background-color: #012a3c;
+        color:#FFF;
+        border-radius: 60px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        font-weight: bold;
+        opacity: 0.45;
+        font-size: 30px;
+        margin-top:30px;
+}
+
+
+.my-float:hover {
+        background-color: #012a3c;
+        opacity: 0.8;
+        color: white;
+}
+
+</style>
+
+
+<style>
+h4 {
+padding-top: 71px;
+}
+</style>
+
+    
+  </head>
+  <body data-url="/doc/cyan/apis/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a id="logo" href="/">
+<img src="/assets/images/logo.png" alt="Yodiwo">
+</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://www.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-globe'></i> <label>Yodiwo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://tcyan.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-cloud'></i> <label>Cyan</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/yodiwo"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://discuss.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-comments'></i> <label>Community</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/doc/" class="dd-item">
+          <a href="/doc/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/doc/cyan/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/doc/cyan/">Cyan</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/cyan/interconnection-concepts-and-topology/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/interconnection-concepts-and-topology/">
+            Interconnection Concepts and Topology
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/cyan/apis/" class="dd-item active">
+        <div>
+          <a href="/doc/cyan/apis/">
+            APIs
+          </a>
+        </div> 
+<ul>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#plegma">Plegma</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#warlock">Warlock</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#fog-apis">Fog Apis</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#platform-extensibility-apis">Platform Extensibility APIs</a>
+</li>
+
+</ul>
+
+ </li>
+      <li data-nav-id="/doc/cyan/yodiwo-fog-gateway/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/yodiwo-fog-gateway/">
+            Yodiwo Fog Gateway
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/wisper/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/">Wisper</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/yodiwo-wisper/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/yodiwo-wisper/">
+            Yodiwo Wisper
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/wisper/wisper-families/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/wisper-families/">Wisper Families</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/wisper-families/wisper-pro/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/wisper-families/wisper-pro/">
+            Wisper Pro
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/">Yodiwo APIs</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/apis/plegma/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/">Plegma</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/getting-started/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/getting-started/">
+            Getting Started
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/pairing-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/pairing-overview/">
+            Pairing Overview
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/apis/plegma/messages/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/messages/">API Messages</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/messages/api-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/api-overview/">
+            API Overview
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/base-api-message-class/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/base-api-message-class/">
+            Base API message class
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-ports/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-ports/">
+            Things &amp; Ports
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-mgmt-ctrl/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-mgmt-ctrl/">
+            Things management &amp; control
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/message-event-passing/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/message-event-passing/">
+            Message &amp; event passing
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/rest/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/rest/">Rest API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api/">
+            Get available routes
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-get/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-get/">
+            Get Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-set/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-set/">
+            Set Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-events/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-events/">
+            Post events
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-port-states-request/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-port-states-request/">
+            Sync with server&#39;s Port States
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/mqtt/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/mqtt/">MQTT</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/mqtt/mqtt-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/mqtt-overview/">
+            MQTT support
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/mqtt/message-format/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/message-format/">
+            Message format
+          </a>
+        </div></li>
+        </ul>
+    </li>
+      <li data-nav-id="/doc/apis/plegma/websockets-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/websockets-overview/">
+            Web Sockets Overview
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/">Integrators</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/integrators/direct-connection/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/direct-connection/">Direct Connection to Alcyone</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/direct-connection/using-restful-http-requests/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-restful-http-requests/">
+            Using RESTful HTTP requests
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/">
+            Using 3rd party MQTT brokers
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/connection-via-plegma-api/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/connection-via-plegma-api/">Via the Plegma API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/">
+            Plegma Nodes Credentials
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/">
+            Plegma Things Creation and Handling
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/doc/cyan/" >
+   Cyan</option> 
+      <option value="/doc/cyan/interconnection-concepts-and-topology/" >- Interconnection Concepts and Topology</option>
+      <option value="/doc/cyan/apis/"  selected>- APIs</option>
+      <option value="/doc/cyan/yodiwo-fog-gateway/" >- Yodiwo Fog Gateway</option>
+  
+    <option value="/doc/wisper/" >
+   Wisper</option>
+    <option value="/doc/apis/" >
+   Yodiwo APIs</option>
+    <option value="/doc/integrators/" >
+   Integrators</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/doc/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/doc/js/auto-complete.js"></script>
+        <link href="/doc/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+          
+        </script>
+        <script type="text/javascript" src="/doc/js/search.js"></script>
+      </div>
+    
+
+    <h1>APIs</h1>
+    
+    
+    
+    
+
+<h4 id="plegma">Plegma</h4>
+
+<p>The Plegma API, from the greek “πλέγμα” meaning grid, mesh or lattice, is the main inter connection API between Alcyone and Nodes of all types.</p>
+
+<p>It provides the usual functions one would expect from such an API such as:</p>
+
+<ul>
+<li>bidirectional declaration and configuration of Things and Nodes</li>
+<li>bidirectional event passing and triggering</li>
+</ul>
+
+<p>In addition, it includes extensions that allow:</p>
+
+<ul>
+<li>media(audio and video) streaming</li>
+<li>IoT processor virtualization (where device high-level drivers run on the cloud)</li>
+<li>automatic partitioning of Execution Rules between Cloud and Fog servers</li>
+<li>uploading of binary files</li>
+</ul>
+
+<p>A high level walkthrough of the API can be found at <a href="https://www.yodiwo.com/developers">https://www.yodiwo.com/developers</a>. The documentation itself is open-source and suggestions as well as improvements can be directed at github (<a href="https://github.com/yodiwo/doc/">https://github.com/yodiwo/doc/</a>).</p>
+
+<p>Automatically generated formal API reference is also provided at:</p>
+
+<ul>
+<li><a href="https://yodiwo.github.io/plegma/Plegma/Doxygen/index">https://yodiwo.github.io/plegma/Plegma/Doxygen/index</a> (Doxygen format)</li>
+<li><del><a href="https://yodiwo.github.io/plegma/msdn/">https://yodiwo.github.io/plegma/msdn/</a></del> (MSDN format)</li>
+</ul>
+
+<p>The API is of course transport and language agnostic and the following connection methods are currently supported for Plegma Nodes:</p>
+
+<p><img src="/assets/images/PlegmaNodesDiagram.png" alt="Alt Plegma Diagram" /></p>
+
+<p>The block diagram of the API frontend stack is shown below:</p>
+
+<p><img src="/assets/images/APIDiagram.png" alt="Alt API Diagram" /></p>
+
+<p>This is the message flow between Nodes and Alcyone, but it’s
+not necessary to only carry Plegma messages. Other Yodiwo APIs may be
+encapsulated within the Plegma link, and if the communicating Node is validated
+to have the appropriate permissions, the messages will be demultiplexed and
+sent to the proper handler.</p>
+
+<h4 id="warlock">Warlock</h4>
+
+<p>Apart from the Plegma API which allows communication for within-the-Node related tasks, the Warlock API is available to Yodiwo users and apps.</p>
+
+<p>Warlock allows internal control of the User’s context and operations that transcend specific Nodes or Things. It can be used to inquire about relationships with other users, create and deploy new applications, share Things with other users, etc.</p>
+
+<p>There is a permission system that specifies which aspects of the system each warlock client is allowed to control.</p>
+
+<p>Nodes can use their Plegma connection to carry Warlock API traffic if they declare the “IsWarlock” capability and have been given the proper permissions.</p>
+
+<h4 id="fog-apis">Fog Apis</h4>
+
+<p>These APIs specify the communication:</p>
+
+<ul>
+<li>between user-level software and the Node SDK</li>
+<li>between Fog gateway plugins and the gateway core</li>
+<li>between Fog gateway plugins themselves and allows installed plugin discovery, message exchange, RPC and versioning</li>
+</ul>
+
+<p>They are presented in more detail in the separate Fog SW section.</p>
+
+<h4 id="platform-extensibility-apis">Platform Extensibility APIs</h4>
+
+<p>Under current development are new APIs that allow extensibility of the internal platform.</p>
+
+<p>Alcyone already allows extensibility via the following methods</p>
+
+<ul>
+<li>External web services integration via REST
+
+<ul>
+<li>users can create API keys and can use them to create incoming web hooks towards the integrated YPC web server</li>
+<li>from within a Cyan story they can trigger specific HTTP routes and receive responses that further influence story progression</li>
+<li>with the use of a wizard they can specify full-fledged external REST APIs that will generate a new custom block that will include all possible (declared) routes and configurations</li>
+</ul></li>
+<li>Integration with generic external entities via MQTT (custom user-specified MQTT broker)</li>
+<li>Custom code blocks within Cyan</li>
+</ul>
+
+<p>These APIs will formalize the modeling of internal “Logic” blocks and allow external stakeholders to create and upload their own into an app-store like frontend.</p>
+
+<p>These blocks will be:</p>
+
+<ul>
+<li>private to the publisher</li>
+<li>shared within a publisher’s approved circle</li>
+<li>public and usable by anyone</li>
+</ul>
+
+<p>Custom user blocks:</p>
+
+<ul>
+<li>may just be “macro-blocks”, i.e. blocks that include a number of basic blocks or other macro-blocks</li>
+<li>may provide interfaces to full-fledged external server hosted applications</li>
+<li>may specify code that is to be executed locally with Alcyone in the user’s context</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/doc/cyan/interconnection-concepts-and-topology/" title="Interconnection Concepts and Topology"> <i class="fa fa-chevron-left"></i><label>Interconnection Concepts and Topology</label></a>
+    <a class="nav nav-next" href="/doc/cyan/yodiwo-fog-gateway/" title="Yodiwo Fog Gateway" style="margin-right: 0px;"><label>Yodiwo Fog Gateway</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 16/01/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/yodiwo/doc/edit/master/cyan/apis.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p><center> Contact us at : info@yodiwo.com </center></p>
+
+<p><a href="#" class="float"></p>
+
+<p><i class="fa fa-arrow-circle-up my-float"></i></p>
+
+<p></a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/doc/js/clipboard.min.js"></script>
+
+<link href="/doc/css/featherlight.min.css" rel="stylesheet">
+<script src="/doc/js/featherlight.min.js"></script>
+
+
+
+<script src="/doc/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

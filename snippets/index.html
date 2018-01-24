@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yodiwo SDK &amp; API Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.34" />
+<title>Snippets :: Yodiwo SDK &amp; API Documentation</title>
+<link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
+<link href="/doc/css/font-awesome.min.css" rel="stylesheet">
+<link href="/doc/css/nucleus.css" rel="stylesheet">
+<link href="/doc/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/doc/css/bootstrap.min.css">
+<script src="/doc/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+</script>
+
+<style>
+div.code-tabs {
+  position: relative;
+  margin-top: -1px;
+  z-index: 10;
+  margin-bottom: -20px;
+}
+
+div.tab {
+  font-size: 13px;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.tab.on a {
+  color: #009999;
+}
+
+.tab.off a {
+  color: grey;
+}
+</style>
+<script>
+    function showCode(codeContainer, language) {
+        var container = document.getElementById(codeContainer);
+        var codes = container.getElementsByTagName('pre');
+        for (var i = 0; i < codes.length; i++) {
+            codes[i].style.display = 'none';
+            if (codes[i].id == language) {
+                codes[i].style.display = '';
+            }
+        }
+
+        var tabs = container.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].className = "tab off";
+            if (tabs[i].getAttribute("data-lang") == language) {
+                tabs[i].className = 'tab on';
+            }
+        }
+    }
+</script>
+
+
+<style>
+.main {
+min-height: calc(100vh - 40px);
+}
+</style>
+
+
+<style>
+
+.my-float{
+        position:fixed;
+        width:50px;
+        height:45px;
+        bottom:20px;
+        right:40px;
+        background-color: #012a3c;
+        color:#FFF;
+        border-radius: 60px;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        font-weight: bold;
+        opacity: 0.45;
+        font-size: 30px;
+        margin-top:30px;
+}
+
+
+.my-float:hover {
+        background-color: #012a3c;
+        opacity: 0.8;
+        color: white;
+}
+
+</style>
+
+
+<style>
+h4 {
+padding-top: 71px;
+}
+</style>
+
+    
+  </head>
+  <body data-url="/doc/snippets/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><a id="logo" href="/">
+<img src="/assets/images/logo.png" alt="Yodiwo">
+</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://www.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-globe'></i> <label>Yodiwo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://tcyan.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-cloud'></i> <label>Cyan</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://github.com/yodiwo"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://discuss.yodiwo.com"  rel="noopener">
+                  <i class='fa fa-comments'></i> <label>Community</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/doc/" class="dd-item">
+          <a href="/doc/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/doc/cyan/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/cyan/">Cyan</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/cyan/interconnection-concepts-and-topology/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/interconnection-concepts-and-topology/">
+            Interconnection Concepts and Topology
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/cyan/apis/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/apis/">
+            APIs
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/cyan/yodiwo-fog-gateway/" class="dd-item">
+        <div>
+          <a href="/doc/cyan/yodiwo-fog-gateway/">
+            Yodiwo Fog Gateway
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/wisper/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/">Wisper</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/yodiwo-wisper/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/yodiwo-wisper/">
+            Yodiwo Wisper
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/wisper/wisper-families/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/wisper/wisper-families/">Wisper Families</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/wisper/wisper-families/wisper-pro/" class="dd-item">
+        <div>
+          <a href="/doc/wisper/wisper-families/wisper-pro/">
+            Wisper Pro
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/">Yodiwo APIs</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/apis/plegma/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/">Plegma</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/getting-started/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/getting-started/">
+            Getting Started
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/pairing-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/pairing-overview/">
+            Pairing Overview
+          </a>
+        </div></li>
+    <li data-nav-id="/doc/apis/plegma/messages/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/messages/">API Messages</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/messages/api-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/api-overview/">
+            API Overview
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/base-api-message-class/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/base-api-message-class/">
+            Base API message class
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-ports/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-ports/">
+            Things &amp; Ports
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/things-mgmt-ctrl/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/things-mgmt-ctrl/">
+            Things management &amp; control
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/messages/message-event-passing/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/messages/message-event-passing/">
+            Message &amp; event passing
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/rest/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/rest/">Rest API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api/">
+            Get available routes
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-get/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-get/">
+            Get Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-things-set/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-things-set/">
+            Set Things
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-events/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-events/">
+            Post events
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/rest/rest-api-port-states-request/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/rest/rest-api-port-states-request/">
+            Sync with server&#39;s Port States
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/apis/plegma/mqtt/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/apis/plegma/mqtt/">MQTT</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/apis/plegma/mqtt/mqtt-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/mqtt-overview/">
+            MQTT support
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/apis/plegma/mqtt/message-format/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/mqtt/message-format/">
+            Message format
+          </a>
+        </div></li>
+        </ul>
+    </li>
+      <li data-nav-id="/doc/apis/plegma/websockets-overview/" class="dd-item">
+        <div>
+          <a href="/doc/apis/plegma/websockets-overview/">
+            Web Sockets Overview
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/">Integrators</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/doc/integrators/direct-connection/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/direct-connection/">Direct Connection to Alcyone</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/direct-connection/using-restful-http-requests/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-restful-http-requests/">
+            Using RESTful HTTP requests
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/">
+            Using 3rd party MQTT brokers
+          </a>
+        </div></li>
+        </ul>
+    </li>
+    <li data-nav-id="/doc/integrators/connection-via-plegma-api/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/doc/integrators/connection-via-plegma-api/">Via the Plegma API</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/">
+            Plegma Nodes Credentials
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/" class="dd-item">
+        <div>
+          <a href="/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/">
+            Plegma Things Creation and Handling
+          </a>
+        </div></li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/doc/cyan/" >
+   Cyan</option>
+    <option value="/doc/wisper/" >
+   Wisper</option>
+    <option value="/doc/apis/" >
+   Yodiwo APIs</option>
+    <option value="/doc/integrators/" >
+   Integrators</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/doc/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/doc/js/auto-complete.js"></script>
+        <link href="/doc/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/docs.yodiwo.com\/doc\/";
+          
+        </script>
+        <script type="text/javascript" src="/doc/js/search.js"></script>
+      </div>
+    
+
+    <h1>Snippets</h1>
+    
+    
+    
+    
+
+<h3 id="blue">Blue</h3>
+
+<p><div class="notices note" ><p>A notice disclaimer</p>
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% notice note %}}
+A notice disclaimer
+{{% /notice %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="alert 
+	alert-info"
+ 
+role="alert"><strong>this</strong> is a text</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% alert info %}}**this** is a text{{% /alert %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<div ng-switch-when="callout">
+    <div class="block-callout block-show-callout  type-info block-show-callout  type-info" type="section.type" ng-model="section.data">
+        <h3>
+            <i class="fa fa-info-circle on" title="Info"></i>
+            <span>API reference:</span>
+        </h3>
+        <div marked="data.body" class="ng-isolate-scope">
+            <p>The complete up-to-date API reference in doxygen format can be <a href="https://yodiwo.github.io/plegma/Plegma/Doxygen">found here</a></p>
+        </div>
+    </div>
+</div>
+
+<p><div class="panel panel-info">
+	<div class="panel-heading">panel title</div>
+	<div class="panel-body">this is a panel text</div>
+	
+</div>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;info&quot; header=&quot;panel title&quot; %}}this is a panel text{{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<div class="panel panel-info">
+	<div class="panel-heading"><i class="fa fa-info-circle" aria-hidden="true"></i>&ensp;API Reference</div>
+	<div class="panel-body">The complete up-to-date API reference in doxygen format can be found <a href="https://yodiwo.github.io/plegma/Plegma/Doxygen">here</a></div>
+	
+</div>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% fa-panel theme=&quot;info&quot; header=&quot;API Reference&quot; icon=&quot;fa-info-circle&quot; %}}The complete up-to-date API reference in doxygen format can be found [here](https://yodiwo.github.io/plegma/Plegma/Doxygen){{% /fa-panel %}}
+</code></pre>
+
+    </div>
+</div>
+
+<h3 id="orange">Orange</h3>
+
+<p><div class="notices info" ><p>An information disclaimer</p>
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% notice info %}}
+An information disclaimer
+{{% /notice %}}
+
+</code></pre>
+
+    </div>
+</div></p>
+
+<div class="alert 
+	alert-warning"
+ 
+role="alert"><strong>Be carefull</strong> is a text</div>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% alert warning %}}**Be carefull** is a text{{% /alert %}}
+
+</code></pre>
+
+    </div>
+</div>
+
+<p><div class="panel panel-warning">
+	<div class="panel-heading">panel title</div>
+	<div class="panel-body">this is a panel text</div>
+	
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;warning&quot; header=&quot;panel title&quot; %}}this is a panel text{{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<div class="panel panel-warning">
+	<div class="panel-heading"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&ensp;panel title</div>
+	<div class="panel-body">Again, this is a panel text</div>
+	
+</div>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% fa-panel theme=&quot;warning&quot; header=&quot;panel title&quot; icon=&quot;fa-exclamation-circle&quot; %}}Again, this is a panel text{{% /fa-panel %}}
+</code></pre>
+
+    </div>
+</div>
+
+<h3 id="green">Green</h3>
+
+<p><div class="notices tip" ><p>A tip disclaimer</p>
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% notice tip %}}
+A tip disclaimer
+{{% /notice %}}
+
+</code></pre>
+
+    </div>
+</div></p>
+
+<div class="alert 
+	alert-success"
+ 
+role="alert"><strong>Yeahhh !</strong> is a text</div>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% alert success %}}Yeahhh ! is a text{{% /alert %}}
+</code></pre>
+
+    </div>
+</div>
+
+<div ng-switch-when="callout">
+    <div class="block-callout block-show-callout  type-info block-show-callout  type-success" type="section.type" ng-model="section.data">
+        <h3>
+            <i class="fa fa-check-square on" title="Success"></i>
+            <span>we come bearing gifts</span>
+        </h3>
+        <div marked="data.body">
+            <p>Look for our <a href="https://github.com/yodiwo/plegma">Github page</a> to download fully functional code examples of Node implementations in various popular languages!</p>
+        </div>
+    </div>
+</div>
+
+<p><div class="panel panel-success">
+	<div class="panel-heading">panel title</div>
+	<div class="panel-body">this is a panel text</div>
+	
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;success&quot; header=&quot;panel title&quot; %}}this is a panel text{{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<div class="panel panel-success">
+	<div class="panel-heading"><i class="fa fa-check-circle" aria-hidden="true"></i>&ensp;panel title</div>
+	<div class="panel-body">Again, this is a panel text</div>
+	
+</div>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% fa-panel theme=&quot;success&quot; header=&quot;panel title&quot; icon=&quot;fa-check-circle&quot; %}}Again, this is a panel text{{% /fa-panel %}}
+</code></pre>
+
+    </div>
+</div>
+
+<h3 id="red">Red</h3>
+
+<p><div class="notices warning" ><p>An warning disclaimer</p>
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% notice warning %}}
+An warning disclaimer
+{{% /notice %}}
+
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="alert 
+alert-danger"
+ 
+role="alert"><strong>Beware !</strong> is a text</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% alert theme=&quot;danger&quot; %}}Beware ! is a text{{% /alert %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="panel panel-danger">
+	<div class="panel-heading">panel title</div>
+	<div class="panel-body">this is a panel text</div>
+	
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;danger&quot; header=&quot;panel title&quot; %}}this is a panel text{{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<div class="panel panel-danger">
+	<div class="panel-heading"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&ensp;panel title</div>
+	<div class="panel-body">Again, this is a panel text</div>
+	
+</div>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% fa-panel theme=&quot;danger&quot; header=&quot;panel title&quot; icon=&quot;fa-exclamation-triangle&quot; %}}Again, this is a panel text{{% /fa-panel %}}
+</code></pre>
+
+    </div>
+</div>
+
+<h3 id="other-boxes">Other boxes</h3>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body">this is a panel text</div>
+	
+</div>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel %}} this is a panel text {{% /panel %}}
+</code></pre>
+
+    </div>
+</div>
+
+<p><div class="panel panel-default">
+	<div class="panel-heading">panel title</div>
+	<div class="panel-body">this is a panel text</div>
+	
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;default&quot; header=&quot;panel title&quot; %}} this is a panel text {{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="panel panel-primary">
+	<div class="panel-heading">panel title</div>
+	<div class="panel-body">this is a panel text</div>
+	
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;primary&quot; header=&quot;panel title&quot; %}} this is a panel text {{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="panel panel-default">
+	
+	<div class="panel-body">this is a panel text</div>
+	<div class="panel-footer">panel title</div>
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;default&quot; footer=&quot;panel title&quot; %}}this is a panel text{{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="panel panel-primary">
+	
+	<div class="panel-body">this is a panel text</div>
+	<div class="panel-footer">panel title</div>
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% panel theme=&quot;primary&quot; footer=&quot;panel title&quot; %}} this is a panel text {{% /panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="panel panel-primary">
+	<div class="panel-heading"><i class="fa fa-magic" aria-hidden="true"></i>&ensp;panel title</div>
+	<div class="panel-body">Again, this is a panel text</div>
+	
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% fa-panel theme=&quot;primary&quot; header=&quot;panel title&quot; icon=&quot;fa-magic&quot; %}}Again, this is a panel text{{% /fa-panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+<p><div class="panel panel-primary">
+	
+	<div class="panel-body">Again, this is a panel text</div>
+	<div class="panel-footer"><i class="fa fa-magic" aria-hidden="true"></i>&ensp;panel title</div>
+</div>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        show source code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>{{% fa-panel theme=&quot;primary&quot; footer=&quot;panel title&quot; icon=&quot;fa-magic&quot; %}}Again, this is a panel text{{% /fa-panel %}}
+</code></pre>
+
+    </div>
+</div></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-next" href="/doc/cyan/" title="Cyan" style="margin-right: 0px;"><label>Cyan</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 15/01/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/yodiwo/doc/edit/master/snippets.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p><center> Contact us at : info@yodiwo.com </center></p>
+
+<p><a href="#" class="float"></p>
+
+<p><i class="fa fa-arrow-circle-up my-float"></i></p>
+
+<p></a></p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/doc/js/clipboard.min.js"></script>
+
+<link href="/doc/css/featherlight.min.css" rel="stylesheet">
+<script src="/doc/js/featherlight.min.js"></script>
+
+
+
+<script src="/doc/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
