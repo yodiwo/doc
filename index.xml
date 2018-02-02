@@ -85,9 +85,10 @@ Nodes and Things The Yodiwo Cloud Platform interacts with Edge devices by sendin
       <pubDate>Thu, 14 Dec 2017 11:28:12 +0200</pubDate>
       
       <guid>https://docs.yodiwo.com/doc/wisper/yodiwo-wisper/</guid>
-      <description>Overview This code is split into 2 main sections: - mNodeCore: main code that generates the mNode base package - Plugins: contains Plugin sample code which showcases the Plugin API
-Both open under a single Visual Studio (2015) solution.
-mNodeCore It includes all necessary dependencies to build a complete mNode package that: - is identical to the mNode package downloaded as a package from Yodiwo - can autonomously connect to the Yodiwo cloud - can be detected by the Yodiwo Wisper Remote Control Android app - can present, manage and install Plugins which are published at the Yodiwo Package Manager</description>
+      <description>Overview This code is split into 2 main sections:
+ mNodeCore: main code that generates the mNode base package Plugins: contains Plugin sample code which showcases the Plugin API  Both open under a single Visual Studio (2015) solution.
+mNodeCore It includes all necessary dependencies to build a complete mNode package that:
+ is identical to the mNode package downloaded as a package from Yodiwo can autonomously connect to the Yodiwo cloud can be detected by the Yodiwo Wisper Remote Control Android app can present, manage and install Plugins which are published at the Yodiwo Package Manager  Through use of Plugins, mNode can:</description>
     </item>
     
     <item>

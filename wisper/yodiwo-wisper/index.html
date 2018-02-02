@@ -477,24 +477,33 @@ padding-top: 71px;
 
 <h4 id="overview">Overview</h4>
 
-<p>This code is split into 2 main sections:
-- mNodeCore: main code that generates the mNode base package
-- Plugins: contains Plugin sample code which showcases the Plugin API</p>
+<p>This code is split into 2 main sections:</p>
+
+<ul>
+<li>mNodeCore: main code that generates the mNode base package</li>
+<li>Plugins: contains Plugin sample code which showcases the Plugin API</li>
+</ul>
 
 <p>Both open under a single Visual Studio (2015) solution.</p>
 
 <h4 id="mnodecore">mNodeCore</h4>
 
-<p>It includes all necessary dependencies to build a complete mNode package that:
-- is identical to the mNode package <a href="https://cyan.yodiwo.com/Packages/GetPackage/Yodiwo.mNode.zip">downloaded as a package</a> from Yodiwo
-- can autonomously connect to the Yodiwo cloud
-- can be detected by the <a href="https://play.google.com/store/apps/details?id=com.yodiwo.mnode.rc">Yodiwo Wisper Remote Control</a> Android app
-- can present, manage and install Plugins which are published at the Yodiwo Package Manager</p>
+<p>It includes all necessary dependencies to build a complete mNode package that:</p>
 
-<p>Through use of Plugins, mNode can:
-- aggregate and terminate different connectivity protocols (such as Bluetooth, Z-Wave, Zigbee, LoRa, etc)
-- expose IP-unaware protocols to the Cloud
-- bridge full-scale 3rd party ecosystems such as OpenHab</p>
+<ul>
+<li>is identical to the mNode package <a href="https://cyan.yodiwo.com/Packages/GetPackage/Yodiwo.mNode.zip">downloaded as a package</a> from Yodiwo</li>
+<li>can autonomously connect to the Yodiwo cloud</li>
+<li>can be detected by the <a href="https://play.google.com/store/apps/details?id=com.yodiwo.mnode.rc">Yodiwo Wisper Remote Control</a> Android app</li>
+<li>can present, manage and install Plugins which are published at the Yodiwo Package Manager</li>
+</ul>
+
+<p>Through use of Plugins, mNode can:</p>
+
+<ul>
+<li>aggregate and terminate different connectivity protocols (such as Bluetooth, Z-Wave, Zigbee, LoRa, etc)</li>
+<li>expose IP-unaware protocols to the Cloud</li>
+<li>bridge full-scale 3rd party ecosystems such as OpenHab</li>
+</ul>
 
 <p>The built Node is also configurable to act as a local Fog Gateway providing automatic and manual local analytics, inter-mNode discovery and remote management.</p>
 
@@ -507,12 +516,15 @@ padding-top: 71px;
 <h4 id="plugins">Plugins</h4>
 
 <p>The included sample Plugins code is meant to showcase writing and embedding a Plugin for mNode.
-Currently the included plugins are:
-- <em>PInvoke</em>: allows using C code via a simple C# to C message exchange mechanism with message queues
-- <em>Serial Port</em>: exposes a serial port as input and output Things on Cyan
-- <em>Flic.io</em>: integrates with <a href="https://flic.io">Flic bluetooth buttons</a> and exposes each paired button as a separate Thing. Verified on Raspberry Pi <sup>2</sup>&frasl;<sub>3</sub> with <a href="https://github.com/50ButtonsEach/fliclib-linux-hci">Flic.io&rsquo;s hci library</a>
-- <em>ZWave</em>: integrates with <a href="https://razberry.z-wave.me/">Razberry</a> Z-Wave bridge for Raspberry Pi <sup>2</sup>&frasl;<sub>3</sub>
-- <em>CPP</em>: allows native C++11/C development without needing any custom C# glue code</p>
+Currently the included plugins are:</p>
+
+<ul>
+<li><em>PInvoke</em>: allows using C code via a simple C# to C message exchange mechanism with message queues</li>
+<li><em>Serial Port</em>: exposes a serial port as input and output Things on Cyan</li>
+<li><em>Flic.io</em>: integrates with <a href="https://flic.io">Flic bluetooth buttons</a> and exposes each paired button as a separate Thing. Verified on Raspberry Pi <sup>2</sup>&frasl;<sub>3</sub> with <a href="https://github.com/50ButtonsEach/fliclib-linux-hci">Flic.io&rsquo;s hci library</a></li>
+<li><em>ZWave</em>: integrates with <a href="https://razberry.z-wave.me/">Razberry</a> Z-Wave bridge for Raspberry Pi <sup>2</sup>&frasl;<sub>3</sub></li>
+<li><em>CPP</em>: allows native C++11/C development without needing any custom C# glue code</li>
+</ul>
 
 <p>After the Plugin is built, it must be placed in a new folder under /mNodeCore/mNode/bin/Release/Plugins/</p>
 
@@ -548,7 +560,7 @@ Currently the included plugins are:
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 23/01/2018
+        <i class='fa fa-calendar'></i> Last update on 02/02/2018
     </div>
     
 
