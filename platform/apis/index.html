@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.34" />
-<title>Cyan :: Yodiwo SDK &amp; API Documentation</title>
+<title>APIs :: Yodiwo SDK &amp; API Documentation</title>
 <link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
 <link href="/doc/css/font-awesome.min.css" rel="stylesheet">
 <link href="/doc/css/nucleus.css" rel="stylesheet">
@@ -106,7 +106,7 @@ padding-top: 71px;
 
     
   </head>
-  <body data-url="/doc/cyan/">
+  <body data-url="/doc/platform/apis/">
     
       <header>
   <div class="logo">
@@ -152,28 +152,73 @@ padding-top: 71px;
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/doc/cyan/" class="dd-item parent active haschildren
+    <li data-nav-id="/doc/platform/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/doc/cyan/">Cyan</a>
+      <a href="/doc/platform/">Platform</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/doc/cyan/interconnection-concepts-and-topology/" class="dd-item">
+      <li data-nav-id="/doc/platform/interconnection-concepts-and-topology/" class="dd-item">
         <div>
-          <a href="/doc/cyan/interconnection-concepts-and-topology/">
+          <a href="/doc/platform/interconnection-concepts-and-topology/">
             Interconnection Concepts and Topology
           </a>
         </div></li>
-      <li data-nav-id="/doc/cyan/apis/" class="dd-item">
+      <li data-nav-id="/doc/platform/apis/" class="dd-item active">
         <div>
-          <a href="/doc/cyan/apis/">
+          <a href="/doc/platform/apis/">
             APIs
           </a>
-        </div></li>
-      <li data-nav-id="/doc/cyan/yodiwo-fog-gateway/" class="dd-item">
+        </div> 
+<ul>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#plegma">Plegma</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#warlock">Warlock</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#fog-apis">Fog Apis</a>
+</li>
+
+<li class="dd-item"> 
+
+
+
+
+
+
+<a href="#platform-extensibility-apis">Platform Extensibility APIs</a>
+</li>
+
+</ul>
+
+ </li>
+      <li data-nav-id="/doc/platform/yodiwo-fog-gateway/" class="dd-item">
         <div>
-          <a href="/doc/cyan/yodiwo-fog-gateway/">
+          <a href="/doc/platform/yodiwo-fog-gateway/">
             Yodiwo Fog Gateway
           </a>
         </div></li>
@@ -399,11 +444,11 @@ padding-top: 71px;
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/doc/cyan/"  selected>
-   Cyan</option> 
-      <option value="/doc/cyan/interconnection-concepts-and-topology/" >- Interconnection Concepts and Topology</option>
-      <option value="/doc/cyan/apis/" >- APIs</option>
-      <option value="/doc/cyan/yodiwo-fog-gateway/" >- Yodiwo Fog Gateway</option>
+    <option value="/doc/platform/" >
+   Platform</option> 
+      <option value="/doc/platform/interconnection-concepts-and-topology/" >- Interconnection Concepts and Topology</option>
+      <option value="/doc/platform/apis/"  selected>- APIs</option>
+      <option value="/doc/platform/yodiwo-fog-gateway/" >- Yodiwo Fog Gateway</option>
   
     <option value="/doc/wisper/" >
    Wisper</option>
@@ -433,22 +478,120 @@ padding-top: 71px;
       </div>
     
 
-    <h1>Cyan</h1>
+    <h1>APIs</h1>
+    
     
     
     
 
-<p><strong>Cyan</strong> makes the life of IoT developers easier, by offering a graph based IoT application development and deployment
-environment, which allows dispersed network devices of diverse technologies to be seamlessly connected with analytics, storage systems, mobile and web applications. Imaging doing all these via a Graphical User Interface.</p>
+<h4 id="plegma">Plegma</h4>
 
+<p>The Plegma API, from the greek “πλέγμα” meaning grid, mesh or lattice, is the main inter connection API between Alcyone and Nodes of all types.</p>
+
+<p>It provides the usual functions one would expect from such an API such as:</p>
+
+<ul>
+<li>bidirectional declaration and configuration of Things and Nodes</li>
+<li>bidirectional event passing and triggering</li>
+</ul>
+
+<p>In addition, it includes extensions that allow:</p>
+
+<ul>
+<li>media(audio and video) streaming</li>
+<li>IoT processor virtualization (where device high-level drivers run on the cloud)</li>
+<li>automatic partitioning of Execution Rules between Cloud and Fog servers</li>
+<li>uploading of binary files</li>
+</ul>
+
+<p>A high level walkthrough of the API can be found at <a href="https://www.yodiwo.com/developers">https://www.yodiwo.com/developers</a>. The documentation itself is open-source and suggestions as well as improvements can be directed at github (<a href="https://github.com/yodiwo/doc/">https://github.com/yodiwo/doc/</a>).</p>
+
+<p>Automatically generated formal API reference is also provided at:</p>
+
+<ul>
+<li><a href="https://yodiwo.github.io/plegma/Plegma/Doxygen/index">https://yodiwo.github.io/plegma/Plegma/Doxygen/index</a> (Doxygen format)</li>
+<li><del><a href="https://yodiwo.github.io/plegma/msdn/">https://yodiwo.github.io/plegma/msdn/</a></del> (MSDN format)</li>
+</ul>
+
+<p>The API is of course transport and language agnostic and the following connection methods are currently supported for Plegma Nodes:</p>
+
+<p><img src="/assets/images/PlegmaNodesDiagram.png" alt="Alt Plegma Diagram" /></p>
+
+<p>The block diagram of the API frontend stack is shown below:</p>
+
+<p><img src="/assets/images/APIDiagram.png" alt="Alt API Diagram" /></p>
+
+<p>This is the message flow between Nodes and Alcyone, but it’s
+not necessary to only carry Plegma messages. Other Yodiwo APIs may be
+encapsulated within the Plegma link, and if the communicating Node is validated
+to have the appropriate permissions, the messages will be demultiplexed and
+sent to the proper handler.</p>
+
+<h4 id="warlock">Warlock</h4>
+
+<p>Apart from the Plegma API which allows communication for within-the-Node related tasks, the Warlock API is available to Yodiwo users and apps.</p>
+
+<p>Warlock allows internal control of the User’s context and operations that transcend specific Nodes or Things. It can be used to inquire about relationships with other users, create and deploy new applications, share Things with other users, etc.</p>
+
+<p>There is a permission system that specifies which aspects of the system each warlock client is allowed to control.</p>
+
+<p>Nodes can use their Plegma connection to carry Warlock API traffic if they declare the “IsWarlock” capability and have been given the proper permissions.</p>
+
+<h4 id="fog-apis">Fog Apis</h4>
+
+<p>These APIs specify the communication:</p>
+
+<ul>
+<li>between user-level software and the Node SDK</li>
+<li>between Fog gateway plugins and the gateway core</li>
+<li>between Fog gateway plugins themselves and allows installed plugin discovery, message exchange, RPC and versioning</li>
+</ul>
+
+<p>They are presented in more detail in the separate Fog SW section.</p>
+
+<h4 id="platform-extensibility-apis">Platform Extensibility APIs</h4>
+
+<p>Under current development are new APIs that allow extensibility of the internal platform.</p>
+
+<p>Alcyone already allows extensibility via the following methods</p>
+
+<ul>
+<li>External web services integration via REST
+
+<ul>
+<li>users can create API keys and can use them to create incoming web hooks towards the integrated YPC web server</li>
+<li>from within a Cyan story they can trigger specific HTTP routes and receive responses that further influence story progression</li>
+<li>with the use of a wizard they can specify full-fledged external REST APIs that will generate a new custom block that will include all possible (declared) routes and configurations</li>
+</ul></li>
+<li>Integration with generic external entities via MQTT (custom user-specified MQTT broker)</li>
+<li>Custom code blocks within Cyan</li>
+</ul>
+
+<p>These APIs will formalize the modeling of internal “Logic” blocks and allow external stakeholders to create and upload their own into an app-store like frontend.</p>
+
+<p>These blocks will be:</p>
+
+<ul>
+<li>private to the publisher</li>
+<li>shared within a publisher’s approved circle</li>
+<li>public and usable by anyone</li>
+</ul>
+
+<p>Custom user blocks:</p>
+
+<ul>
+<li>may just be “macro-blocks”, i.e. blocks that include a number of basic blocks or other macro-blocks</li>
+<li>may provide interfaces to full-fledged external server hosted applications</li>
+<li>may specify code that is to be executed locally with Alcyone in the user’s context</li>
+</ul>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/doc/" title="Homepage"> <i class="fa fa-chevron-left"></i><label>Homepage</label></a>
-    <a class="nav nav-next" href="/doc/cyan/interconnection-concepts-and-topology/" title="Interconnection Concepts and Topology" style="margin-right: 0px;"><label>Interconnection Concepts and Topology</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/doc/platform/interconnection-concepts-and-topology/" title="Interconnection Concepts and Topology"> <i class="fa fa-chevron-left"></i><label>Interconnection Concepts and Topology</label></a>
+    <a class="nav nav-next" href="/doc/platform/yodiwo-fog-gateway/" title="Yodiwo Fog Gateway" style="margin-right: 0px;"><label>Yodiwo Fog Gateway</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -463,12 +606,12 @@ environment, which allows dispersed network devices of diverse technologies to b
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 23/01/2018
+        <i class='fa fa-calendar'></i> Last update on 02/02/2018
     </div>
     
 
     <div class="github-link">
-      <a href="https://github.com/yodiwo/doc/edit/master/cyan/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/yodiwo/doc/edit/master/content/platform/apis.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.34" />
-<title>Yodiwo Fog Gateway :: Yodiwo SDK &amp; API Documentation</title>
+<title>Platform :: Yodiwo SDK &amp; API Documentation</title>
 <link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
 <link href="/doc/css/font-awesome.min.css" rel="stylesheet">
 <link href="/doc/css/nucleus.css" rel="stylesheet">
@@ -106,7 +106,7 @@ padding-top: 71px;
 
     
   </head>
-  <body data-url="/doc/cyan/yodiwo-fog-gateway/">
+  <body data-url="/doc/platform/">
     
       <header>
   <div class="logo">
@@ -152,66 +152,31 @@ padding-top: 71px;
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/doc/cyan/" class="dd-item parent haschildren
+    <li data-nav-id="/doc/platform/" class="dd-item parent active haschildren
         ">
       <div>
-      <a href="/doc/cyan/">Cyan</a>
+      <a href="/doc/platform/">Platform</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/doc/cyan/interconnection-concepts-and-topology/" class="dd-item">
+      <li data-nav-id="/doc/platform/interconnection-concepts-and-topology/" class="dd-item">
         <div>
-          <a href="/doc/cyan/interconnection-concepts-and-topology/">
+          <a href="/doc/platform/interconnection-concepts-and-topology/">
             Interconnection Concepts and Topology
           </a>
         </div></li>
-      <li data-nav-id="/doc/cyan/apis/" class="dd-item">
+      <li data-nav-id="/doc/platform/apis/" class="dd-item">
         <div>
-          <a href="/doc/cyan/apis/">
+          <a href="/doc/platform/apis/">
             APIs
           </a>
         </div></li>
-      <li data-nav-id="/doc/cyan/yodiwo-fog-gateway/" class="dd-item active">
+      <li data-nav-id="/doc/platform/yodiwo-fog-gateway/" class="dd-item">
         <div>
-          <a href="/doc/cyan/yodiwo-fog-gateway/">
+          <a href="/doc/platform/yodiwo-fog-gateway/">
             Yodiwo Fog Gateway
           </a>
-        </div> 
-<ul>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#description">Description</a>
-</li>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#architecture">Architecture</a>
-</li>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#installation-packaging">Installation &amp; Packaging</a>
-</li>
-
-</ul>
-
- </li>
+        </div></li>
         </ul>
     </li>
     <li data-nav-id="/doc/wisper/" class="dd-item haschildren
@@ -434,11 +399,11 @@ padding-top: 71px;
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/doc/cyan/" >
-   Cyan</option> 
-      <option value="/doc/cyan/interconnection-concepts-and-topology/" >- Interconnection Concepts and Topology</option>
-      <option value="/doc/cyan/apis/" >- APIs</option>
-      <option value="/doc/cyan/yodiwo-fog-gateway/"  selected>- Yodiwo Fog Gateway</option>
+    <option value="/doc/platform/"  selected>
+   Platform</option> 
+      <option value="/doc/platform/interconnection-concepts-and-topology/" >- Interconnection Concepts and Topology</option>
+      <option value="/doc/platform/apis/" >- APIs</option>
+      <option value="/doc/platform/yodiwo-fog-gateway/" >- Yodiwo Fog Gateway</option>
   
     <option value="/doc/wisper/" >
    Wisper</option>
@@ -468,100 +433,22 @@ padding-top: 71px;
       </div>
     
 
-    <h1>Yodiwo Fog Gateway</h1>
+    <h1>Platform</h1>
     
     
     
-    
 
-<h4 id="description">Description</h4>
+<p><strong>Cyan</strong> makes the life of IoT developers easier, by offering a graph based IoT application development and deployment
+environment, which allows dispersed network devices of diverse technologies to be seamlessly connected with analytics, storage systems, mobile and web applications. Imaging doing all these via a Graphical User Interface.</p>
 
-<p>The Fog gateway is a Yodiwo Node, as previously defined, with special features and capabilities.</p>
-
-<p>It is cross platform software based on the Microsoft .Net frame work and can run on any Windows PC, Linux, Android, iOS, or embedded ARM-based devices such as the Raspberry Pi running Linux or Windows IOT.
-It can also be provided as final hardware, either branded as Yodiwo or with the customer’s brand.</p>
-
-<h4 id="architecture">Architecture</h4>
-
-<p>A Yodiwo Node can be a monolithic entity created from scratch to provide specific features, or it can use a Plugin architecture to support live, on-the-fly, additions and removals of functionality bundles.</p>
-
-<p>Both cases are based on the Yodiwo Node SDK, which in turn is based on Microsoft’s .Net software platform.</p>
-
-<p>The Yodiwo Fog gateway ( Wisper ) uses many of the mentioned Node capabilities:</p>
-
-<ul>
-<li>acts as an IoT Fog server, automatically splitting functionality between Alcyone and Nodes</li>
-<li>identifies other Yodiwo nodes currently within its vicinity (for now this means with the same LAN) and link with them to directly exchange messages and if applicable bypass Yodiwo’s cloud, severely reducing latency</li>
-<li>acts as a gateway for devices that do not directly use the Plegma API</li>
-<li>acts as a proxy to Yodiwo’s cloud devices for Yodiwo-agnostic 3rd party cloud platforms or services (like OpenHAB, Apple Homekit, Google Nest, Samsung SmartThings, etc)</li>
-</ul>
-
-<p>The basic architecture of Wisper based on the Node SDK is as follows:</p>
-
-<p><img src="/assets/images/Architecture_NodeSDK.png" alt="Alt Architecture based on SDK node" /></p>
-
-<p><strong>Monolithic nodes</strong></p>
-
-<p>Developers (and Yodiwo) can choose to code directly against the Node SDK, resulting in monolithic, single-purpose applications, that may still use all of Yodiwo’s advanced features such as Graph Splitting, Cross-Node discovery, dynamic rerouting, etc.</p>
-
-<p>Examples of current applications which make direct use of this SDK are:</p>
-
-<ul>
-<li>ModBus slave &amp; master</li>
-<li>Z-Wave proxy</li>
-<li>BACnet proxy</li>
-<li>LoRa gateway</li>
-<li>3rd party ecosystem proxy (GoogleNest, Samsung SmartThings)</li>
-<li>3rd party IoT platform integrator(for IBM Bluemix, Amazon AWS, MS Azure)</li>
-<li>OpenHAB proxy</li>
-<li>Camera proxy</li>
-<li>Yodiwo integration with Dexter Industries’GrovePi kit</li>
-<li>etc</li>
-</ul>
-
-<p>Any of the above, and any Node SDK client in general, can be built with the “local Fog execution” option enabled, meaning that they can benefit from automatic scenario splitting and dynamic event rerouting.</p>
-
-<p>Through Microsoft Xamarin all of above can also run on Android and iOS, retaining all thus far mentioned benefits.</p>
-
-<p><strong>Extensible nodes</strong></p>
-
-<p>Yodiwo has also developed an open plugin framework and API on top of the Node SDK.</p>
-
-<p>Developers (and Yodiwo itself) can create new plugins against this framework, and users can download and on-the-fly install them on their gateway.</p>
-
-<p>These nodes, and all their plugins, retain all advanced features offered by Yodiwo, including splitting and dynamic rerouting.</p>
-
-<p>In addition, plugins can <em>directly address each other</em>, interoperate and execute <em>RPC</em> (Remote Procedure Calls), either synchronously (blocking until an answer is returned) or asynchronously.</p>
-
-<p>The framework automatically and without developer effort provides for <em>versioning</em>, compatibility checking for inter-plugin IPC, and <em>automatic updating</em> of plugins, as well as the core Gateway code.</p>
-
-<p>Existing plugins include:</p>
-
-<ul>
-<li>OpenHAB support (OpenHAB is provided as both a plugin and a monolithic Node)</li>
-<li>Audio and Video streaming support</li>
-<li>Camera discovery via the OnVIF protocol</li>
-<li>Google Nest</li>
-<li>Plugin to integrate with closed-source libraries provided as Windows .dll or Linux .so objects</li>
-</ul>
-
-<h4 id="installation-packaging">Installation &amp; Packaging</h4>
-
-<p>Fog SW and selected plugins can come preinstalled and preconfigured on Gateway hardware (such as the Raspberry Pi 1/2/3). From there users can administer and configure them either through a Web based GUI, a Windows WPF app, or mobile apps (Android, iOS, Xamarin Forms). They can also install new plugins through the same means.</p>
-
-<p>Additionally, for Linux-based gateways all Nodes and plugins are packaged, installable and upgradeable through the Debian’s Apt framework (# apt-get install<pkgname>), while a Windows msi installer is also provided for Windows systems.</p>
-
-<p>Core and plugins software can be updated automatically and without user intervention, if required.</p>
-
-<p>In the future, the up-and-coming cross-distribution Snap framework will also be used for packaging and installation.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/doc/cyan/apis/" title="APIs"> <i class="fa fa-chevron-left"></i><label>APIs</label></a>
-    <a class="nav nav-next" href="/doc/wisper/" title="Wisper" style="margin-right: 0px;"><label>Wisper</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/doc/" title="homepage"> <i class="fa fa-chevron-left"></i><label>homepage</label></a>
+    <a class="nav nav-next" href="/doc/platform/interconnection-concepts-and-topology/" title="Interconnection Concepts and Topology" style="margin-right: 0px;"><label>Interconnection Concepts and Topology</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -576,12 +463,12 @@ It can also be provided as final hardware, either branded as Yodiwo or with the 
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 23/01/2018
+        <i class='fa fa-calendar'></i> Last update on 02/02/2018
     </div>
     
 
     <div class="github-link">
-      <a href="https://github.com/yodiwo/doc/edit/master/cyan/yodiwo_fog_gateway.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/yodiwo/doc/edit/master/content/platform/_index.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

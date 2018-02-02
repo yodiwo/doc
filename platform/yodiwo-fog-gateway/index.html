@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.34" />
-<title>Interconnection Concepts and Topology :: Yodiwo SDK &amp; API Documentation</title>
+<title>Yodiwo Fog Gateway :: Yodiwo SDK &amp; API Documentation</title>
 <link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
 <link href="/doc/css/font-awesome.min.css" rel="stylesheet">
 <link href="/doc/css/nucleus.css" rel="stylesheet">
@@ -106,7 +106,7 @@ padding-top: 71px;
 
     
   </head>
-  <body data-url="/doc/cyan/interconnection-concepts-and-topology/">
+  <body data-url="/doc/platform/yodiwo-fog-gateway/">
     
       <header>
   <div class="logo">
@@ -152,17 +152,29 @@ padding-top: 71px;
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/doc/cyan/" class="dd-item parent haschildren
+    <li data-nav-id="/doc/platform/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/doc/cyan/">Cyan</a>
+      <a href="/doc/platform/">Platform</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/doc/cyan/interconnection-concepts-and-topology/" class="dd-item active">
+      <li data-nav-id="/doc/platform/interconnection-concepts-and-topology/" class="dd-item">
         <div>
-          <a href="/doc/cyan/interconnection-concepts-and-topology/">
+          <a href="/doc/platform/interconnection-concepts-and-topology/">
             Interconnection Concepts and Topology
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/platform/apis/" class="dd-item">
+        <div>
+          <a href="/doc/platform/apis/">
+            APIs
+          </a>
+        </div></li>
+      <li data-nav-id="/doc/platform/yodiwo-fog-gateway/" class="dd-item active">
+        <div>
+          <a href="/doc/platform/yodiwo-fog-gateway/">
+            Yodiwo Fog Gateway
           </a>
         </div> 
 <ul>
@@ -174,7 +186,7 @@ padding-top: 71px;
 
 
 
-<a href="#introduction">Introduction</a>
+<a href="#description">Description</a>
 </li>
 
 <li class="dd-item"> 
@@ -184,7 +196,7 @@ padding-top: 71px;
 
 
 
-<a href="#nodes">Nodes</a>
+<a href="#architecture">Architecture</a>
 </li>
 
 <li class="dd-item"> 
@@ -194,54 +206,12 @@ padding-top: 71px;
 
 
 
-<a href="#things">Things</a>
-</li>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#other-entities">Other Entities</a>
-</li>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#keys-and-addressing">Keys and Addressing</a>
-</li>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#thing-grouping-thing-sharing">Thing Grouping &amp; Thing Sharing</a>
+<a href="#installation-packaging">Installation &amp; Packaging</a>
 </li>
 
 </ul>
 
  </li>
-      <li data-nav-id="/doc/cyan/apis/" class="dd-item">
-        <div>
-          <a href="/doc/cyan/apis/">
-            APIs
-          </a>
-        </div></li>
-      <li data-nav-id="/doc/cyan/yodiwo-fog-gateway/" class="dd-item">
-        <div>
-          <a href="/doc/cyan/yodiwo-fog-gateway/">
-            Yodiwo Fog Gateway
-          </a>
-        </div></li>
         </ul>
     </li>
     <li data-nav-id="/doc/wisper/" class="dd-item haschildren
@@ -464,11 +434,11 @@ padding-top: 71px;
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/doc/cyan/" >
-   Cyan</option> 
-      <option value="/doc/cyan/interconnection-concepts-and-topology/"  selected>- Interconnection Concepts and Topology</option>
-      <option value="/doc/cyan/apis/" >- APIs</option>
-      <option value="/doc/cyan/yodiwo-fog-gateway/" >- Yodiwo Fog Gateway</option>
+    <option value="/doc/platform/" >
+   Platform</option> 
+      <option value="/doc/platform/interconnection-concepts-and-topology/" >- Interconnection Concepts and Topology</option>
+      <option value="/doc/platform/apis/" >- APIs</option>
+      <option value="/doc/platform/yodiwo-fog-gateway/"  selected>- Yodiwo Fog Gateway</option>
   
     <option value="/doc/wisper/" >
    Wisper</option>
@@ -498,272 +468,100 @@ padding-top: 71px;
       </div>
     
 
-    <h1>Interconnection Concepts and Topology</h1>
+    <h1>Yodiwo Fog Gateway</h1>
     
     
     
     
 
-<h4 id="introduction">Introduction</h4>
+<h4 id="description">Description</h4>
 
-<p>An abstract block diagram of the platform’s components and
-logical interconnections is shown here:</p>
+<p>The Fog gateway is a Yodiwo Node, as previously defined, with special features and capabilities.</p>
 
-<p><img src="/assets/images/Yodiwo_CloudPlatform2.1.png" alt="Alt Yodiwo Cloud Platform" /></p>
+<p>It is cross platform software based on the Microsoft .Net frame work and can run on any Windows PC, Linux, Android, iOS, or embedded ARM-based devices such as the Raspberry Pi running Linux or Windows IOT.
+It can also be provided as final hardware, either branded as Yodiwo or with the customer’s brand.</p>
 
-<p>The following block diagram shows the various entities that make
-up the Yodiwo ecosystem in more detail:</p>
-
-<p><img src="/assets/images/Yodiwo_Ecosystem2.1.png" alt="Alt Yodiwo Ecosystem" /></p>
-
-<p>It can be summarized as follows:</p>
-
-<ul>
-<li>YCP (<strong>Alcyone</strong>) which includes:
-
-<ul>
-<li>one or more backend workers</li>
-<li>API frontends which Nodes connect to using avariety of industry standard protocols</li>
-<li>the UI frontend</li>
-</ul></li>
-<li>Yodiwo Nodes, which communicate with Alcyone via the open Plegma API.
-Nodes are thoroughly analyzed in this document. In short they may be:
-
-<ul>
-<li>Fog Gateway Nodes (<strong>Wisper)</strong></li>
-<li>Single Nodes</li>
-<li>Proxies to 3rd party ecosystems, bridging them to Alcyone</li>
-</ul></li>
-<li>UI Clients
-
-<ul>
-<li>currently, this is Cyan, and it uses a combination of REST, AJAX and Web Socket requests to talk to Yodiwo front end servers.</li>
-<li>Frontend servers use an open API, “Warlock”, to talk to assigned Back end Workers. The same API can be be 3rd parties to bypass Cyan and implement a different UI client, not necessarily web-based, or even avoid a UI and configure / use the platform via code</li>
-<li>this API can be encapsulated inside Plegma and available to paired Nodes with the proper permissions, for them to control User context through external apps</li>
-</ul></li>
-<li>Message brokers, such as MQTT and AMQP, that aid communication with external devices</li>
-<li>Connections with 3rd party web services, usually though REST APIs of those services</li>
-<li>Databases
-
-<ul>
-<li>Either internal to the Yodiwo ecosystem(MongoDB, MySQL, InfluxDB)</li>
-<li>Or 3rd party ones that Users specify through Cyan and/or Warlock API</li>
-</ul></li>
-<li>Analytics, either 1st or 3rd party, connected either through message brokers, REST, etc.</li>
-<li>Federation proxies that connect Alcyone to 3rdparty ecosystems, like LoRa, SigFox, Skype, Facebook messenger, etc. This allows not just notification support, but also full control (sense and actuation) of other Things through their respective applications</li>
-</ul>
-
-<h4 id="nodes">Nodes</h4>
-
-<p>A <strong>Yodiwo Node</strong> is any IP-aware device or software entity that implements the Plegma API and can directly connect to Alcyone,regardless of protocol used</p>
-
-<p>Nodes can simultaneously mix and match several features:</p>
-
-<ul>
-<li>may or may not present Things of their own</li>
-<li>can act as IoT Fog server (Wisper), able to under take the execution of IoT App functionality and offload the cloud servers whenever the Alcyone’s engine activates the auto split function.</li>
-
-<li><p>can act as gateway for devices that do not directly use the Plegma API, such as:</p>
-
-<ul>
-<li>non-IP aware devices (Bluetooth, serial, etc)</li>
-</ul></li>
-
-<li><p>not capable of meeting Yodiwo’s security requirements</p></li>
-
-<li><p>devices that are as lightweight as possible (down to 4k of code) and that expect a gateway anyway (e.g. A2MCU nano agents)</p></li>
-
-<li><p>other Yodiwo Nodes that want to take advantage of the Fog server</p></li>
-
-<li><p>software proxies to Yodiwo-unaware devices, 3rdparty cloud platforms or services, etc</p></li>
-
-<li><p>home ecosystem proxies (OpenHAB, Apple Homekit, GoogleNest, Samsung SmartThings, etc)</p></li>
-</ul>
-
-<p><strong><em>Pairing</em></strong></p>
-
-<p>A Node must be assigned to a known Yodiwo user and given a globally unique Node Key and Secret Key via a process known as Pairing.</p>
-
-<p>API messages may only be exchanged with paired Nodes.</p>
-
-<p>After pairing the Yodiwo cloud service accepts, saves,maintains and presents (through Cyan) a list of <em>Things</em> from each Node. User state and context are retained across user sessions and can be used in Stories where they are interconnected with Services via Logic that the User defines and fine-tunes.</p>
-
-<p><strong><em>Types of nodes</em></strong></p>
+<h4 id="architecture">Architecture</h4>
 
 <p>A Yodiwo Node can be a monolithic entity created from scratch to provide specific features, or it can use a Plugin architecture to support live, on-the-fly, additions and removals of functionality bundles.</p>
 
-<p>Yodiwo makes extensive use of the cross-platform .Net framework to provide SDKs for both of the above scenarios.</p>
+<p>Both cases are based on the Yodiwo Node SDK, which in turn is based on Microsoft’s .Net software platform.</p>
 
-<p>Yodiwo also provides many Node examples in various other languages and platforms:</p>
+<p>The Yodiwo Fog gateway ( Wisper ) uses many of the mentioned Node capabilities:</p>
 
 <ul>
-<li>C for Linux and various embedded platforms (from NXP, Freescale, Atmel, Marvel, etc)</li>
-<li>Javascript with REST or WebSockets</li>
-<li>Java on Android</li>
-<li>Objective C and Swift on iOS</li>
+<li>acts as an IoT Fog server, automatically splitting functionality between Alcyone and Nodes</li>
+<li>identifies other Yodiwo nodes currently within its vicinity (for now this means with the same LAN) and link with them to directly exchange messages and if applicable bypass Yodiwo’s cloud, severely reducing latency</li>
+<li>acts as a gateway for devices that do not directly use the Plegma API</li>
+<li>acts as a proxy to Yodiwo’s cloud devices for Yodiwo-agnostic 3rd party cloud platforms or services (like OpenHAB, Apple Homekit, Google Nest, Samsung SmartThings, etc)</li>
 </ul>
 
-<p><strong><em>Execution environment</em></strong></p>
+<p>The basic architecture of Wisper based on the Node SDK is as follows:</p>
 
-<p>Nodes can run on:</p>
+<p><img src="/assets/images/Architecture_NodeSDK.png" alt="Alt Architecture based on SDK node" /></p>
+
+<h6 id="monolithic-nodes">Monolithic nodes</h6>
+
+<p>Developers (and Yodiwo) can choose to code directly against the Node SDK, resulting in monolithic, single-purpose applications, that may still use all of Yodiwo’s advanced features such as Graph Splitting, Cross-Node discovery, dynamic rerouting, etc.</p>
+
+<p>Examples of current applications which make direct use of this SDK are:</p>
 
 <ul>
-<li>any hardware, however lightweight (e.g. CortexM0, ESP8266, Arduino, wearables, etc)</li>
-<li>any Operating System (iOS, Android, Android Wear, Windows families (Win32, Win10 IoT, Win10 Universal, Windows Phone), Linux, minimal RTOS, etc)</li>
+<li>ModBus slave &amp; master</li>
+<li>Z-Wave proxy</li>
+<li>BACnet proxy</li>
+<li>LoRa gateway</li>
+<li>3rd party ecosystem proxy (GoogleNest, Samsung SmartThings)</li>
+<li>3rd party IoT platform integrator(for IBM Bluemix, Amazon AWS, MS Azure)</li>
+<li>OpenHAB proxy</li>
+<li>Camera proxy</li>
+<li>Yodiwo integration with Dexter Industries’GrovePi kit</li>
+<li>etc</li>
 </ul>
 
-<p>Obviously not all of the features mentioned in the previous paragraphs are available on all HW/SW combinations.</p>
+<p>Any of the above, and any Node SDK client in general, can be built with the “local Fog execution” option enabled, meaning that they can benefit from automatic scenario splitting and dynamic event rerouting.</p>
 
-<h4 id="things">Things</h4>
+<p>Through Microsoft Xamarin all of above can also run on Android and iOS, retaining all thus far mentioned benefits.</p>
 
-<p>A <strong>Yodiwo Thing</strong> is a model of a <em>physical</em> device or <em>virtual</em> service that virtualizes specific functionality.</p>
+<h6 id="extensible-nodes">Extensible nodes</h6>
 
-<p>In practical terms, Yodiwo Things encapsulate and represent “bundles” of related functionality, e.g. a Thing may be a thermostat which has an output (its temperature readout) and one or more inputs (for controlling and configuring it).</p>
+<p>Yodiwo has also developed an open plugin framework and API on top of the Node SDK.</p>
 
-<p>In general any Thing:</p>
+<p>Developers (and Yodiwo itself) can create new plugins against this framework, and users can download and on-the-fly install them on their gateway.</p>
 
-<ul>
-<li>must belong to a Node</li>
-<li>can have persistent, user or code editable, configuration</li>
-<li>can present read-only information</li>
-<li>may contain zero or more Ports:
+<p>These nodes, and all their plugins, retain all advanced features offered by Yodiwo, including splitting and dynamic rerouting.</p>
 
-<ul>
-<li>a Port holds the minimum amount of information that can be exchanged between Yodiwo and a device</li>
-<li>can be Input / Output / or bidirectional</li>
-<li>is the minimum individually addressable entity in Yodiwo topologies</li>
-<li>can hold and exchange:
+<p>In addition, plugins can <em>directly address each other</em>, interoperate and execute <em>RPC</em> (Remote Procedure Calls), either synchronously (blocking until an answer is returned) or asynchronously.</p>
+
+<p>The framework automatically and without developer effort provides for <em>versioning</em>, compatibility checking for inter-plugin IPC, and <em>automatic updating</em> of plugins, as well as the core Gateway code.</p>
+
+<p>Existing plugins include:</p>
 
 <ul>
-<li>Basic types (integer, floating point, boolean values), or</li>
-<li>encapsulate more complex values (e.g. vectors, or complex classes via JSON encoding)</li>
-</ul></li>
-</ul></li>
+<li>OpenHAB support (OpenHAB is provided as both a plugin and a monolithic Node)</li>
+<li>Audio and Video streaming support</li>
+<li>Camera discovery via the OnVIF protocol</li>
+<li>Google Nest</li>
+<li>Plugin to integrate with closed-source libraries provided as Windows .dll or Linux .so objects</li>
 </ul>
 
-<h4 id="other-entities">Other Entities</h4>
+<h4 id="installation-packaging">Installation &amp; Packaging</h4>
 
-<p><strong><em>Sub-nodes</em></strong></p>
+<p>Fog SW and selected plugins can come preinstalled and preconfigured on Gateway hardware (such as the Raspberry Pi 1/2/3). From there users can administer and configure them either through a Web based GUI, a Windows WPF app, or mobile apps (Android, iOS, Xamarin Forms). They can also install new plugins through the same means.</p>
 
-<p>Sub-nodes are groups of Things that belong to a Node but are in separate subcategory of it</p>
+<p>Additionally, for Linux-based gateways all Nodes and plugins are packaged, installable and upgradeable through the Debian’s Apt framework (# apt-get install<pkgname>), while a Windows msi installer is also provided for Windows systems.</p>
 
-<p>For example, they can be used:</p>
+<p>Core and plugins software can be updated automatically and without user intervention, if required.</p>
 
-<ul>
-<li>on nano agents which implement a minimal, easily portable API (called “Spike”) that provides non-IP communication with a Yodiwo Node</li>
-<li>to group Things inside a wearable that belong to a Node running on a Smartphone into a different category</li>
-</ul>
-
-<p><strong><em>Endpoints</em></strong></p>
-
-<p>Endpoints are identical but “physically” different Nodes. They share the same code, UUID and keys.</p>
-
-<p>Sensor-type events one of them sends are broadcast to all other Endpoints of the same Node. Actuation events are sent to all registered Endpoints.</p>
-
-<h4 id="keys-and-addressing">Keys and Addressing</h4>
-
-<p>Every single entity in the Yodiwo topology (Nodes,Endpoints, sub-Nodes, Things, Ports, etc) is uniquely and individually addressable via the Plegma API.</p>
-
-<p>There is clear and strictly defined hierarchy between them:</p>
-
-<ul>
-<li>a Port belongs to a Thing</li>
-<li>a Thing belongs to a sub-Node or directly to a Node</li>
-<li>sub-Nodes belong to Nodes</li>
-<li>a Node belongs to a User</li>
-</ul>
-
-<p>Each of them has a unique Key that is derived from the previous one in its hierarchy, i.e. a Node Key is used to create a Thing Key and this in turn is used to create a Port Key.</p>
-
-<p>Thus, receiving a message about a single Port (channel) indicates:</p>
-
-<ul>
-<li>the Thing it refers to</li>
-<li>the node (i.e. API connection) it should have come from</li>
-<li>the user it belongs to</li>
-</ul>
-
-<p>Any operation can be cross-checked and validated:</p>
-
-<ul>
-<li>does it come from the proper Node?</li>
-<li>does it try to access / alter resources that don’t belong to it?</li>
-<li>does it try to perform operations that it doesn’t have permissions to?</li>
-</ul>
-
-<p>“Broadcast” keys are also supported:</p>
-
-<ul>
-<li>special Port Key indicates all ports of Thing it belongs to</li>
-<li>special Thing Key indicates all things of Node it belongs to</li>
-</ul>
-
-<h4 id="thing-grouping-thing-sharing">Thing Grouping &amp; Thing Sharing</h4>
-
-<p><strong><em>Thing Grouping</em></strong></p>
-
-<p>A Yodiwo Thing may have a <strong><em>Type</em></strong> and belong in one or more <em>Hierachies</em>.</p>
-
-<p>A Type:</p>
-
-<ul>
-<li>defines semantics, min, max values of each Port, etc</li>
-<li>can have one or more <em>models</em>, which specify sets of Port semantics, so that the same type(e.g. a Lamp) can have multiple variants</li>
-<li>naming follows reverse domain name notation</li>
-</ul>
-
-<p>A multitude of basic types (button, location, NFC, BLE beacon, actuator, etc) are defined by Yodiwo. However, Types may also be defined by a 3rd party Node Publisher and provided to Yodiwo at Node connection (via the Plegma API).</p>
-
-<p>Users may also assign one or more Tags to Things via Cyan or the Warlock API.</p>
-
-<p>Things may be <em>grouped</em> per Type, Tag, Hierarchy or manually by the User, again either via Cyan or the Warlock client API.</p>
-
-<p>Each Group has a unique Group Key according to the rules defined in the previous section. Groups appear as a single entity in Cyan and can be used in “Stories” to apply the same logic to a bundle of Things.</p>
-
-<p>Events from any Thing in a Sensor-type Group (Input to Cloud) will trigger all stories the Group has been used in, while still retaining the Thing Key of the triggering device or service. This Thing Key may then be used as the key to database accesses, etc.</p>
-
-<p>An actuator-type group may also be placed into stories (Graphs) and the user may choose if the event should be propagated to all Things of the Group or a single one.</p>
-
-<p>Groups may also be used to perform large scale device management. A user may mass-apply configurations or set the state for a specific Port in all Things of a Group.</p>
-
-<p><strong><em>Thing Sharing</em></strong></p>
-
-<p>Users may share any Thing they own to other Users.</p>
-
-<p>Shared Things then appear on Cyan in a separate, per-sharer category, and can be used in Stories.</p>
-
-<p>Sensor-type Events from Shared Things trigger:</p>
-
-<ul>
-<li>Stories of ‘owner’ users, and</li>
-<li>of Users they have been shared to (sharees)</li>
-</ul>
-
-<p>Actuator-type shared Things may be triggered by:</p>
-
-<ul>
-<li>events generated in Stories by ‘owners’, and</li>
-<li>in Stories created and operated by sharees</li>
-</ul>
-
-<p>Sharing preferences may be defined by users via a UI client. Users (the “Sharees”) receiving the shared Things may have chosen to:</p>
-
-<ul>
-<li>automatically accept all such actions from anyone</li>
-<li>automatically accept only from known Users</li>
-<li>always be asked for confirmation, regardless of sender</li>
-<li>automatically deny every such request, regardless of sender</li>
-</ul>
-
-<p>Re-sharing a shared Thing is <strong>never</strong> allowed.</p>
+<p>In the future, the up-and-coming cross-distribution Snap framework will also be used for packaging and installation.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/doc/cyan/" title="Cyan"> <i class="fa fa-chevron-left"></i><label>Cyan</label></a>
-    <a class="nav nav-next" href="/doc/cyan/apis/" title="APIs" style="margin-right: 0px;"><label>APIs</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/doc/platform/apis/" title="APIs"> <i class="fa fa-chevron-left"></i><label>APIs</label></a>
+    <a class="nav nav-next" href="/doc/wisper/" title="Wisper" style="margin-right: 0px;"><label>Wisper</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -778,12 +576,12 @@ Nodes are thoroughly analyzed in this document. In short they may be:
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 23/01/2018
+        <i class='fa fa-calendar'></i> Last update on 02/02/2018
     </div>
     
 
     <div class="github-link">
-      <a href="https://github.com/yodiwo/doc/edit/master/cyan/interconnection_concepts_and_topology.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/yodiwo/doc/edit/master/content/platform/yodiwo_fog_gateway.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

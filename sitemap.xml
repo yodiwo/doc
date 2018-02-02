@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://docs.yodiwo.com/doc/cyan/</loc>
-    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
+    <loc>https://docs.yodiwo.com/doc/platform/</loc>
+    <lastmod>2018-02-02T11:51:15+00:00</lastmod>
   </url>
   
   <url>
@@ -28,13 +28,13 @@
   </url>
   
   <url>
-    <loc>https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/</loc>
-    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
+    <loc>https://docs.yodiwo.com/doc/platform/interconnection-concepts-and-topology/</loc>
+    <lastmod>2018-02-02T11:51:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.yodiwo.com/doc/cyan/apis/</loc>
-    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
+    <loc>https://docs.yodiwo.com/doc/platform/apis/</loc>
+    <lastmod>2018-02-02T11:25:45+00:00</lastmod>
   </url>
   
   <url>
@@ -98,8 +98,8 @@
   </url>
   
   <url>
-    <loc>https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/</loc>
-    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
+    <loc>https://docs.yodiwo.com/doc/platform/yodiwo-fog-gateway/</loc>
+    <lastmod>2018-02-02T11:51:15+00:00</lastmod>
   </url>
   
   <url>
@@ -199,13 +199,8 @@
   
   <url>
     <loc>https://docs.yodiwo.com/doc/categories/cyan/</loc>
-    <lastmod>2018-01-23T16:56:01+02:00</lastmod>
+    <lastmod>2018-02-02T11:51:15+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://docs.yodiwo.com/doc/</loc>
-    <lastmod>2018-01-24T11:08:13+02:00</lastmod>
   </url>
   
   <url>
@@ -223,6 +218,11 @@
     <loc>https://docs.yodiwo.com/doc/categories/wisper/</loc>
     <lastmod>2018-01-23T16:56:01+02:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.yodiwo.com/doc/</loc>
+    <lastmod>2018-02-02T13:01:18+00:00</lastmod>
   </url>
   
 </urlset>

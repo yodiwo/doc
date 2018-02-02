@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homepage on Yodiwo SDK &amp; API Documentation</title>
+    <title>homepage on Yodiwo SDK &amp; API Documentation</title>
     <link>https://docs.yodiwo.com/doc/</link>
-    <description>Recent content in Homepage on Yodiwo SDK &amp; API Documentation</description>
+    <description>Recent content in homepage on Yodiwo SDK &amp; API Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jan 2018 11:08:13 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 02 Feb 2018 13:01:18 +0000</lastBuildDate>
     
 	<atom:link href="https://docs.yodiwo.com/doc/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,10 +24,10 @@ Each created API key is globally unique, tied to the account of user that create
     
     <item>
       <title>Interconnection Concepts and Topology</title>
-      <link>https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/</link>
+      <link>https://docs.yodiwo.com/doc/platform/interconnection-concepts-and-topology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/</guid>
+      <guid>https://docs.yodiwo.com/doc/platform/interconnection-concepts-and-topology/</guid>
       <description>Introduction An abstract block diagram of the platform’s components and logical interconnections is shown here:
 The following block diagram shows the various entities that make up the Yodiwo ecosystem in more detail:
 It can be summarized as follows:
@@ -36,10 +36,10 @@ It can be summarized as follows:
     
     <item>
       <title>APIs</title>
-      <link>https://docs.yodiwo.com/doc/cyan/apis/</link>
+      <link>https://docs.yodiwo.com/doc/platform/apis/</link>
       <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.yodiwo.com/doc/cyan/apis/</guid>
+      <guid>https://docs.yodiwo.com/doc/platform/apis/</guid>
       <description>Plegma The Plegma API, from the greek “πλέγμα” meaning grid, mesh or lattice, is the main inter connection API between Alcyone and Nodes of all types.
 It provides the usual functions one would expect from such an API such as:
  bidirectional declaration and configuration of Things and Nodes bidirectional event passing and triggering  In addition, it includes extensions that allow:
@@ -149,10 +149,10 @@ Upon a successful connection the Node sends their list of Things (each with a gl
     
     <item>
       <title>Yodiwo Fog Gateway</title>
-      <link>https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/</link>
+      <link>https://docs.yodiwo.com/doc/platform/yodiwo-fog-gateway/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/</guid>
+      <guid>https://docs.yodiwo.com/doc/platform/yodiwo-fog-gateway/</guid>
       <description>Description The Fog gateway is a Yodiwo Node, as previously defined, with special features and capabilities.
 It is cross platform software based on the Microsoft .Net frame work and can run on any Windows PC, Linux, Android, iOS, or embedded ARM-based devices such as the Raspberry Pi running Linux or Windows IOT. It can also be provided as final hardware, either branded as Yodiwo or with the customer’s brand.</description>
     </item>
