@@ -21,9 +21,6 @@ enableGitInfo = true
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-[blackfriday]
-extensions = ["noEmptyLineBeforeBlock"]
-
 [[menu.shortcuts]]
 name = "<i class='fa fa-globe'></i> <label>Yodiwo</label>"
 url = "https://www.yodiwo.com"
