@@ -30,7 +30,7 @@ The basic architecture of Wisper based on the Node SDK is as follows:
 
 ![Alt Architecture based on SDK node](/assets/images/Architecture_NodeSDK.png)
 
-**Monolithic nodes**
+###### Monolithic nodes
 
 Developers (and Yodiwo) can choose to code directly against the Node SDK, resulting in monolithic, single-purpose applications, that may still use all of Yodiwo’s advanced features such as Graph Splitting, Cross-Node discovery, dynamic rerouting, etc.
 
@@ -53,7 +53,7 @@ Through Microsoft Xamarin all of above can also run on Android and iOS, retainin
 
  
 
-**Extensible nodes**
+###### Extensible nodes
 
 Yodiwo has also developed an open plugin framework and API on top of the Node SDK.
 

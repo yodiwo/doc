@@ -60,8 +60,7 @@ Nodes can simultaneously mix and match several features:
 - home ecosystem proxies (OpenHAB, Apple Homekit, GoogleNest, Samsung SmartThings, etc)
 
 
-
-***Pairing***
+###### Pairing
 
 A Node must be assigned to a known Yodiwo user and given a globally unique Node Key and Secret Key via a process known as Pairing.
 
@@ -69,7 +68,7 @@ API messages may only be exchanged with paired Nodes.
 
 After pairing the Yodiwo cloud service accepts, saves,maintains and presents (through Cyan) a list of *Things* from each Node. User state and context are retained across user sessions and can be used in Stories where they are interconnected with Services via Logic that the User defines and fine-tunes.
 
-***Types of nodes***
+###### Types of nodes
 
 A Yodiwo Node can be a monolithic entity created from scratch to provide specific features, or it can use a Plugin architecture to support live, on-the-fly, additions and removals of functionality bundles.
 
@@ -82,7 +81,7 @@ Yodiwo also provides many Node examples in various other languages and platforms
 - Java on Android
 - Objective C and Swift on iOS
 
-***Execution environment***
+###### Execution environment
 
 Nodes can run on:
 
@@ -118,7 +117,7 @@ In general any Thing:
 
 #### Other Entities
 
-***Sub-nodes***
+###### Sub-nodes
 
 Sub-nodes are groups of Things that belong to a Node but are in separate subcategory of it
 
@@ -127,7 +126,7 @@ For example, they can be used:
 - on nano agents which implement a minimal, easily portable API (called “Spike”) that provides non-IP communication with a Yodiwo Node
 - to group Things inside a wearable that belong to a Node running on a Smartphone into a different category
 
-***Endpoints***
+###### Endpoints
 
 Endpoints are identical but “physically” different Nodes. They share the same code, UUID and keys. 
 
@@ -168,7 +167,7 @@ Any operation can be cross-checked and validated:
 
 #### Thing Grouping & Thing Sharing
 
-***Thing Grouping***
+###### Thing Grouping
 
 A Yodiwo Thing may have a ***Type*** and belong in one or more *Hierachies*. 
 
@@ -194,7 +193,7 @@ Groups may also be used to perform large scale device management. A user may mas
 
 
 
-***Thing Sharing***
+###### Thing Sharing
 
 Users may share any Thing they own to other Users.
 
