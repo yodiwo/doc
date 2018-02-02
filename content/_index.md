@@ -1,23 +1,55 @@
 ---
-title : Homepage
+title : homepage
 ---
 
 
 
 
 
- <img src="/assets/images/Yodiwo_doc_logo.png" alt="Homepage Content" align="center">
+<center>![alt homepage](/assets/images/Yodiwo_doc_logo.png)</center>
 
 
 
-<div style="overflow-x:auto;">
+<link rel="stylesheet" href="{{% baseurl %}}/css/homepage.css">
 
-<table>
+<div class="row"><center>
 
-   <tr> <th><center>Cyan</center></th><th><center>Wisper</center></th><th><center>APIs</center></th><th><center>Integrators</center></th></tr>	
 
-<tr><td style="vertical-align:top"><p align="left"><b><a href="https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/">Interconnection Concepts and Topology </a></b></p><ul><li><a href="https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/#introduction">Introduction</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/#nodes">Nodes</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/#things*">Things</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/#other-entities">Other Entities</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/#keys-and-addressing">Key and Addressing</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/interconnection-concepts-and-topology/#thing-grouping-thing-sharing">Thing Grouping & Thing Sharing</a></li></ul><p align="left"><b><a href="https://docs.yodiwo.com/doc/cyan/apis/">APIs</a></b></p><ul><li><a href="https://docs.yodiwo.com/doc/cyan/apis/#plegma">Plegma</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/apis/#warlock">Warlock</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/apis/#fog-apis">Fog APIs</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/apis/#platform-extensibility-apis">Platform Extensibility APIs</a></li></ul><p align="left"><b><a href="https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/">Yodiwo Fog Gateway</a></b></p><ul><li><a href="https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/#architecture">Architecture</a></li><li><a href="https://docs.yodiwo.com/doc/cyan/yodiwo-fog-gateway/#installation-packaging">Installation & Packaging</a></li></ul></td><td style="vertical-align:top"><p align="left"><b><a href="https://docs.yodiwo.com/doc/wisper/yodiwo-wisper/">Yodiwo Wisper</a></b><br/></p><p align="left"><b><a href="https://docs.yodiwo.com/doc/wisper/wisper-families/">Wisper Families</a></b></p><ul><li><a href="https://docs.yodiwo.com/doc/wisper/wisper-families/wisper-pro/">Wisper Pro</a></li></ul></td><td style="vertical-align:top"><p align="left"><b><a href="https://docs.yodiwo.com/doc/apis/plegma/">Plegma</a></b></p><ul><li><a href="https://docs.yodiwo.com/doc/apis/plegma/getting-started/">Getting Started</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/pairing-overview/">Pairing Overview</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/messages/">API Messages</a></li><ul><li><a href="https://docs.yodiwo.com/doc/apis/plegma/messages/api-overview/">API Overview</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/messages/base-api-message-class/">Base API message class</a></li> <li><a href="https://docs.yodiwo.com/doc/apis/plegma/messages/things-ports/">Things & Ports</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/messages/things-mgmt-ctrl/">Things management & control</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/messages/message-event-passing/">Message & event passing</a></li></ul><li><a href="https://docs.yodiwo.com/doc/apis/plegma/rest/">Rest API</a></li><ul><li><a href="https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api/">Get available routes</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-get/">Get Things</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-things-set/">Set Things</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-events">Post events</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/rest/rest-api-port-states-request/">Sync with server's Post States</a></li></ul><li><a href="https://docs.yodiwo.com/doc/apis/plegma/mqtt/">MQTT</a></li><ul><li><a href="https://docs.yodiwo.com/doc/apis/plegma/mqtt/mqtt-overview/">MQTT support</a></li><li><a href="https://docs.yodiwo.com/doc/apis/plegma/mqtt/message-format/">Message Format</a></li></ul><li><a href="https://docs.yodiwo.com/doc/apis/plegma/websockets-overview/">Web Sockets Overview</a></li></ul></td> <td style="vertical-align:top">  <p align="left"><b><a href="https://docs.yodiwo.com/doc/integrators/direct-connection/">Direct Connection to Alcyone</a></b></p><ul><li><a href="https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/">Using RESTful HTTP requests</a></li><ul><li><a href="https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/#api-keys-for-rest">API keys for REST</a></li><li><a href="https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/#basic-http-requests-towards-alcyone">Basic HTTP requests towards Alcyone</a></li><li><a href="https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/#http-requests-via-graph-logic">HTTP requests via Graph logic</a></li><li><a href="https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/#http-requests-from-alcyone">HTTP requests from Alcyone</a></li></ul><li><a href="https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/">Using 3rd party MQTT brokers</a></li></ul><b><a href="https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/">Via the Plegma API</a></b><ul><li><a href="https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/">Plegma nodes credentials</a></li><li><a href="https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/">Plegma things creation and handling</a></li></ul></ul></td></tr>
+<section class="quarter container herehover">
 
- </table>
+<a href="{{% baseurl %}}platform"/><img src = "/assets/images/platform.png" class="img" ></a>
 
-</div>
+  <span class="open"> <h6>Platform</h6> <p>Platform overview</p> </span>
+  <span class="showmeonhover">{{% children page="platform" depth="2" style="li" %}}</span>
+
+</section> 
+
+   <section class="quarter container herehover">
+
+<a href="{{% baseurl %}}wisper/"> <img src = "/assets/images/wisper.png" class="img"> </a>
+
+<span class="open"> <h6>Wisper</h6> <p>Wisper family of edge gateways</p> </span>
+  <span class="showmeonhover">{{% children page="wisper" depth="2" style="li" %}}</span>
+
+</section> 
+
+  <section  class="quarter container herehover">
+
+  <a href="{{% baseurl %}}apis/"><img src = "/assets/images/Api.png" class="img"></a>
+
+   <span class="open"> <h6>APIs</h6><p>APIs reference and walkthroughs</p> </span>
+  <span class="showmeonhover"> {{% children page="apis" depth="2" style="li" %}}</span>
+
+</section> 
+
+  <section class="quarter container herehover">
+
+<a href="{{% baseurl %}}integrators/"><img src = "/assets/images/Integrators.png" class="img"></a>
+
+ <span class="open"> <h6>Integrators</h6><p>Integrator's Guide</p> </span>
+  <span class="showmeonhover">{{% children page="integrators" depth="3" style="li" %}}</span>
+
+</section> </center>
+
+</div> 
+

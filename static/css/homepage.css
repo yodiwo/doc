@@ -1,0 +1,100 @@
+/*Column responsive*/
+.quarter{
+	width: 25%;
+	float: left;
+	padding: 10px; 
+}
+
+[class*="container"] {
+	margin: ;
+	padding-bottom: 50px;
+	padding-top: 0px;
+	padding-right: 50px;
+	vertical-align: top;
+	font:  red;
+	color: #3a8a95;
+	line-height: 1.4rem; 
+	overflow:hidden; 
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Change the color depending on width*/
+@media only screen and (max-width: 500px) {
+    .body {
+        background-color: #eac98b;
+    }
+}
+ 
+     /* For mobile phones: */
+@media only screen and (max-width: 768px) {
+    [class*="quarter"] {
+        width: 100%;
+    }
+}
+/*Responsive Image */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*Hover - show on hover code */
+
+.showmeonhover { 
+    display: none;	
+}
+
+.herehover:hover .showmeonhover {
+    display: inline-block;
+	 text-align: left;
+}
+
+.herehover:hover .open {
+    display: none;
+}
+
+.herehover:hover {
+    text-align: center;
+	color: #f26c2b;
+}
+.herehover:hover .diplayonhover {
+	diplay: none;
+	color: transparent;
+}
+
+	/* Single animation */ 
+h6 {
+	font-size: 15px;
+  padding-top: 1px;
+	animation-duration: 3s;
+	animation-name: slidein;
+}
+
+p {
+	animation-duration: 3s;
+	animation-name: slidein;
+}
+ /* animation Code */
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* Gradient Text  */	
+herehover:hover{
+	background: -webkit-linear-gradient(#3a8a95, #f26c2b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
