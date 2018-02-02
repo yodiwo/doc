@@ -3,6 +3,9 @@ title: "Yodiwo Wisper"
 slug : "yodiwo-wisper"
 date: 2017-12-14T11:28:12+02:00
 weight: 10
+blackfriday:
+  extensions:
+    - noEmptyLineBeforeBlock
 ---
 
 #### Overview
