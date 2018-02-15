@@ -454,13 +454,15 @@ padding-top: 71px;
 <p>Upon a successful connection the Node sends their list of Things (each with a globally unique <strong>Thing Key</strong>) to the cloud, while it can also retrieve the Cloud’s previously synced Thing lists along with their configurations. As a result of this process, Cyan’s Designer Toolbox automatically presents the Node in its green section, populated with
 the latest version of the Node’s virtualized Things:</p>
 
-<p><img src="/assets/images/NodeGreenSection.png" alt="Alt Green Section" /></p>
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/NodeGreenSection.png" alt="Alt Green Section" /></p>
 
 <p>Things consist of one or more <em>Ports</em>, each of which sends or receives the minimum amount of data that can be exchanged and perform an operation related to the Thing.</p>
 
 <p>Zero-port Things are <strong>allowed</strong>. They are useful in that they offer configuration options. Changing their configuration from Cyan will <strong>trigger</strong> events on the Node they belong to. Configuration can be changed either from the Designer section (once dropped into the canvas) or from the Things Manager tables’ Action column</p>
 
-<p><img src="/assets/images/ConfChange.png" alt="" /></p>
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/ConfChange.png" alt="" /></p>
 
 <p>Multiple-port Things can trigger or be triggered on each Port individually or in multiples.</p>
 
@@ -470,7 +472,8 @@ the latest version of the Node’s virtualized Things:</p>
 
 <p>Sensor-type Things will appear as blocks that <strong>provide</strong> input <strong>to</strong> graphs. I.e. a device that virtualizes and presents beacon functionality will appear as:</p>
 
-<p><img src="/assets/images/SensorBlock.png" alt="Alt Sensor-type Block" /></p>
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/SensorBlock.png" alt="Alt Sensor-type Block" /></p>
 
 <p>When the Node sends an actual beacon to Alcyone, it will trigger its next connected block(s) as designed in graphs by the Developer of the IoT scenario.</p>
 
@@ -478,12 +481,14 @@ the latest version of the Node’s virtualized Things:</p>
 
 <p>One may need to synchronize handling between events that come from independent asynchronous sources. In this case a special sync block may be used:</p>
 
-<p><img src="/assets/images/SyncBarrier.png" alt="Alt Sync Barrier" /></p>
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/SyncBarrier.png" alt="Alt Sync Barrier" /></p>
 
 <p>Actuator-type Things will appear as blocks that <strong>receive</strong>
 input <strong>from</strong> graphs. I.e. a device that virtualizes and presents a torch functionality (e.g. a smartphone’s LED) will appear as:</p>
 
-<p><img src="/assets/images/Torch.png" alt="Alt Torch" /></p>
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/Torch.png" alt="Alt Torch" /></p>
 
 <p>This block receives Boolean events (or any other type that can automatically be converted to Boolean). Upon reception of the event, all Node endpoints that are currently active and connected to Alcyone will receive the event and be expected to immediately act on it.</p>
 
@@ -494,7 +499,8 @@ input <strong>from</strong> graphs. I.e. a device that virtualizes and presents 
 the same time”, then its actuations <strong>do not have a guaranteed order</strong>. They will all be served, in random order, resulting in toggles, overwrites or similar outcomes.</li>
 </ul>
 
-<p>Things that simultaneously offer Sensor and Actuator Ports functionality will still be automatically represented as two unique blocks. Same goes for Things with a single Input-Output Port such as a light switch that can be driven but whose output can also be used as an input to the graph:<img src="/assets/images/ThingswithSingle_In-Output.png" alt="" /></p>
+<p>Things that simultaneously offer Sensor and Actuator Ports functionality will still be automatically represented as two unique blocks. Same goes for Things with a single Input-Output Port such as a light switch that can be driven but whose output can also be used as an input to the graph:<img src="https://docs.yodiwo.com/doc/
+assets/images/ThingswithSingle_In-Output.png" alt="" /></p>
 
 <p>This is intentional and by design. Even if a Thing X sensor value is directly triggered by a Thing X’s actuator (as in a polling fashion), it needs to be shown clearly that:</p>
 
@@ -547,7 +553,7 @@ the same time”, then its actuations <strong>do not have a guaranteed order</st
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 23/01/2018
+        <i class='fa fa-calendar'></i> Last update on 15/02/2018
     </div>
     
 

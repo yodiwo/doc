@@ -520,7 +520,8 @@ padding-top: 71px;
 
 <p>Yodiwo’s custom MQTT broker accepts connections from Nodes at api.yodiwo.com (port 8883 for SSL/TLS encrypted connections).</p>
 
-<p>Nodes are expected to have completed <a href="https://ndocs.yodiwo.com/apis/plegma/pairing-overview/">Pairing</a> when attempting a connection to the Yodiwo MQTT broker since the assigned Node and Secret Keys will be used for the connection to the broker.</p>
+<p>Nodes are expected to have completed <a href="https://docs.yodiwo.com/doc/
+apis/plegma/pairing-overview/">Pairing</a> when attempting a connection to the Yodiwo MQTT broker since the assigned Node and Secret Keys will be used for the connection to the broker.</p>
 
 <p>Specifically:</p>
 
@@ -536,7 +537,8 @@ padding-top: 71px;
 
 <p>Payload of the published messages as well as of the messages received via subscriptions is exactly the same as previously described in REST.</p>
 
-<p>However messages are encapsulated in a wrapper that aims to provide support for synchronous operations. For more information see the <a href="https://ndocs.yodiwo.com/apis/plegma/mqtt/message-format/">next section</a></p>
+<p>However messages are encapsulated in a wrapper that aims to provide support for synchronous operations. For more information see the <a href="https://docs.yodiwo.com/doc/
+apis/plegma/mqtt/message-format/">next section</a></p>
 
 <p>Message encoding is in JSON although binary encoding may be supported at a later time.</p>
 
@@ -583,14 +585,16 @@ Any attempt to subscribe to a topic of a different format, or with an invalid No
 <li>{version} is an integer signifying the API&rsquo;s targeted version number</li>
 <li>{UserKey} is the string of the owner of the Node’s UserKey</li>
 <li>{NodeKey} is the string of the Node’s actual NodeKey</li>
-<li>&lt;apimsgname&gt; refers to the same message names as previously <a href="https://ndocs.yodiwo.com/apis/plegma/mqtt/mqtt-overview/#message-types-and-subtopics">shown</a></li>
+<li>&lt;apimsgname&gt; refers to the same message names as previously <a href="https://docs.yodiwo.com/doc/
+apis/plegma/mqtt/mqtt-overview/#message-types-and-subtopics">shown</a></li>
 </ul>
 
 <h4 id="outro">Outro</h4>
 
 <p>Summarizing for both publishing and subscribing directions:</p>
 
-<p><img src="/assets/images/mqtt-pubsub.png" alt="ALT" /></p>
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/mqtt-pubsub.png" alt="ALT" /></p>
 
 
     
@@ -613,7 +617,7 @@ Any attempt to subscribe to a topic of a different format, or with an invalid No
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 23/01/2018
+        <i class='fa fa-calendar'></i> Last update on 15/02/2018
     </div>
     
 

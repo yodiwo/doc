@@ -495,7 +495,8 @@ padding-top: 71px;
     
     
 
-<p>Nodes implement the Plegma API to allow communication and interaction with our cloud, but their main purpose is to expose and manage Things, the entities that actually do stuff. In this section we describe how to create them and the Ports they enclose, while in the <a href="https://ndocs.yodiwo.com/apis/plegma/messages/things-mgmt-ctrl/">Things management &amp; control</a> section we&rsquo;ll talk about how to sync them with our cloud.</p>
+<p>Nodes implement the Plegma API to allow communication and interaction with our cloud, but their main purpose is to expose and manage Things, the entities that actually do stuff. In this section we describe how to create them and the Ports they enclose, while in the <a href="https://docs.yodiwo.com/doc/
+apis/plegma/messages/things-mgmt-ctrl/">Things management &amp; control</a> section we&rsquo;ll talk about how to sync them with our cloud.</p>
 
 <p>So without further delay..</p>
 
@@ -743,7 +744,8 @@ typedef struct Yodiwo_Plegma_Port
 <ul>
 <li><p>State: this should hold the last saved State of this Port (for Ports that this saving makes sense). It is a string encoding of the previously discussed Type</p></li>
 
-<li><p>RevNum: The Revision number of the last State&rsquo;s update (each State is unique and assigned a monotonically increasing number; this number is maintained by the Cloud server and used in PortEvent messages as discussed <a href="https://ndocs.yodiwo.com/apis/plegma/messages/message-event-passing/">here</a>)</p></li>
+<li><p>RevNum: The Revision number of the last State&rsquo;s update (each State is unique and assigned a monotonically increasing number; this number is maintained by the Cloud server and used in PortEvent messages as discussed <a href="https://docs.yodiwo.com/doc/
+apis/plegma/messages/message-event-passing/">here</a>)</p></li>
 
 <li><p>ConfFlags: bitmap of configuration flags per port</p>
 
@@ -761,7 +763,8 @@ typedef struct Yodiwo_Plegma_Port
 </code></pre></li>
 </ul>
 
-<p>Please see <a href="https://ndocs.yodiwo.com/apis/plegma/messages/message-event-passing/">Message &amp; event passing</a> for more information on the whys and hows of this</p>
+<p>Please see <a href="https://docs.yodiwo.com/doc/
+apis/plegma/messages/message-event-passing/">Message &amp; event passing</a> for more information on the whys and hows of this</p>
 
 <h4 id="examples">Examples</h4>
 
@@ -1016,7 +1019,7 @@ NodeService.AddThing(context, thing);
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 23/01/2018
+        <i class='fa fa-calendar'></i> Last update on 15/02/2018
     </div>
     
 
