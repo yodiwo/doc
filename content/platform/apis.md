@@ -31,11 +31,11 @@ Automatically generated formal API reference is also provided at:
 
 The API is of course transport and language agnostic and the following connection methods are currently supported for Plegma Nodes:
 
-![Alt Plegma Diagram](/assets/images/PlegmaNodesDiagram.png)
+![Alt Plegma Diagram]({{% baseurl %}}assets/images/PlegmaNodesDiagram.png)
 
 The block diagram of the API frontend stack is shown below:
 
-![Alt API Diagram](/assets/images/APIDiagram.png)
+![Alt API Diagram]({{% baseurl %}}assets/images/APIDiagram.png)
 
 This is the message flow between Nodes and Alcyone, but it’s
 not necessary to only carry Plegma messages. Other Yodiwo APIs may be

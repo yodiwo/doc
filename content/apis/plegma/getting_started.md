@@ -7,7 +7,7 @@ weight: 10
 
 Welcome to the Yodiwo Platform! We are an IoT Platform-as-a-Service (PaaS) provider with a unique connectivity framework, based on the first IoT Editor that uses graphs to codelessly interconnect models of Devices and existing Apps with each other.
 
-![Alt our Cyan environment](/assets/images/simplegraph-smaller.png)
+![Alt our Cyan environment]({{% baseurl %}}assets/images/simplegraph-smaller.png)
 <center><figcaption>our Cyan environment</figcaption></center>
 
 #### Nodes and Things
@@ -25,11 +25,11 @@ Among the reasons for an end device to require a gateway:
 
 The purpose of this API guide is to help you make your node show up and present itself and its Things here:
 
-![](/assets/images/stencil-node.png)
+![]({{% baseurl %}}assets/images/stencil-node.png)
 
 After that Users will be able to place said Things from this Node into their graphical stories and have the Yodiwo Cloud exchange messages between them
 
-A Node is assigned to a known Yodiwo user and given a globally unique Node Key and a Secret Key via a process known as [Pairing](https://ndocs.yodiwo.com/apis/plegma/pairing-overview/). The Node and Secret keys are used to authenticate the Node to connection-based protocols and are included in all REST messages.
+A Node is assigned to a known Yodiwo user and given a globally unique Node Key and a Secret Key via a process known as [Pairing]({{% baseurl %}}apis/plegma/pairing-overview/). The Node and Secret keys are used to authenticate the Node to connection-based protocols and are included in all REST messages.
 
 After pairing is successfully completed, the Node is free to start exchanging Plegma API messages with the Cloud. A Node may use the Plegma API to:
 

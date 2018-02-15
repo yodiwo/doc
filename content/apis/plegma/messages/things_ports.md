@@ -4,7 +4,7 @@ slug : "things-ports"
 weight: 30
 ---
 
-Nodes implement the Plegma API to allow communication and interaction with our cloud, but their main purpose is to expose and manage Things, the entities that actually do stuff. In this section we describe how to create them and the Ports they enclose, while in the [Things management & control](https://ndocs.yodiwo.com/apis/plegma/messages/things-mgmt-ctrl/) section we'll talk about how to sync them with our cloud.
+Nodes implement the Plegma API to allow communication and interaction with our cloud, but their main purpose is to expose and manage Things, the entities that actually do stuff. In this section we describe how to create them and the Ports they enclose, while in the [Things management & control]({{% baseurl %}}apis/plegma/messages/things-mgmt-ctrl/) section we'll talk about how to sync them with our cloud.
 
 So without further delay..
 
@@ -240,7 +240,7 @@ In addition to those values, if using a custom model for the Port's parent Thing
 
 * State: this should hold the last saved State of this Port (for Ports that this saving makes sense). It is a string encoding of the previously discussed Type
 
-* RevNum: The Revision number of the last State's update (each State is unique and assigned a monotonically increasing number; this number is maintained by the Cloud server and used in PortEvent messages as discussed [here](https://ndocs.yodiwo.com/apis/plegma/messages/message-event-passing/))
+* RevNum: The Revision number of the last State's update (each State is unique and assigned a monotonically increasing number; this number is maintained by the Cloud server and used in PortEvent messages as discussed [here]({{% baseurl %}}apis/plegma/messages/message-event-passing/))
 
 * ConfFlags: bitmap of configuration flags per port
 
@@ -256,7 +256,7 @@ In addition to those values, if using a custom model for the Port's parent Thing
             IsTrigger = 2
         }
 
-Please see [Message & event passing](https://ndocs.yodiwo.com/apis/plegma/messages/message-event-passing/) for more information on the whys and hows of this
+Please see [Message & event passing]({{% baseurl %}}apis/plegma/messages/message-event-passing/) for more information on the whys and hows of this
 
 #### Examples
 - - - -

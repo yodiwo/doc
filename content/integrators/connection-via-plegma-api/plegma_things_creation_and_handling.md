@@ -9,13 +9,13 @@ A node’s main purpose is to maintain and present a list of Things, each of whi
 Upon a successful connection the Node sends their list of Things (each with a globally unique **Thing Key**) to the cloud, while it can also retrieve the Cloud’s previously synced Thing lists along with their configurations. As a result of this process, Cyan’s Designer Toolbox automatically presents the Node in its green section, populated with
 the latest version of the Node’s virtualized Things: 
 
-![Alt Green Section](/assets/images/NodeGreenSection.png)
+![Alt Green Section]({{% baseurl %}}assets/images/NodeGreenSection.png)
 
 Things consist of one or more *Ports*, each of which sends or receives the minimum amount of data that can be exchanged and perform an operation related to the Thing.
 
 Zero-port Things are **allowed**. They are useful in that they offer configuration options. Changing their configuration from Cyan will **trigger** events on the Node they belong to. Configuration can be changed either from the Designer section (once dropped into the canvas) or from the Things Manager tables’ Action column
 
-![](/assets/images/ConfChange.png)
+![]({{% baseurl %}}assets/images/ConfChange.png)
 
 Multiple-port Things can trigger or be triggered on each Port individually or in multiples.
 
@@ -25,7 +25,7 @@ Nodes can present their Things at connection time, or update, create or delete t
 
 Sensor-type Things will appear as blocks that **provide** input **to** graphs. I.e. a device that virtualizes and presents beacon functionality will appear as: 
 
-![Alt Sensor-type Block](/assets/images/SensorBlock.png)
+![Alt Sensor-type Block]({{% baseurl %}}assets/images/SensorBlock.png)
 
  When the Node sends an actual beacon to Alcyone, it will trigger its next connected block(s) as designed in graphs by the Developer of the IoT scenario.
 
@@ -33,12 +33,12 @@ The same Thing block may appear in many different graphs and be connected to man
 
 One may need to synchronize handling between events that come from independent asynchronous sources. In this case a special sync block may be used:
 
-![Alt Sync Barrier](/assets/images/SyncBarrier.png)
+![Alt Sync Barrier]({{% baseurl %}}assets/images/SyncBarrier.png)
 
 Actuator-type Things will appear as blocks that **receive**
 input **from** graphs. I.e. a device that virtualizes and presents a torch functionality (e.g. a smartphone’s LED) will appear as:
 
-![Alt Torch](/assets/images/Torch.png)
+![Alt Torch]({{% baseurl %}}assets/images/Torch.png)
 
 This block receives Boolean events (or any other type that can automatically be converted to Boolean). Upon reception of the event, all Node endpoints that are currently active and connected to Alcyone will receive the event and be expected to immediately act on it.
 
@@ -47,7 +47,7 @@ This block receives Boolean events (or any other type that can automatically be 
 - If an actuator is placed on different graphs, driven by different asynchronous inputs, and multiple points write to it “at
   the same time”, then its actuations **do not have a guaranteed order**. They will all be served, in random order, resulting in toggles, overwrites or similar outcomes.
 
-Things that simultaneously offer Sensor and Actuator Ports functionality will still be automatically represented as two unique blocks. Same goes for Things with a single Input-Output Port such as a light switch that can be driven but whose output can also be used as an input to the graph:![](/assets/images/ThingswithSingle_In-Output.png)
+Things that simultaneously offer Sensor and Actuator Ports functionality will still be automatically represented as two unique blocks. Same goes for Things with a single Input-Output Port such as a light switch that can be driven but whose output can also be used as an input to the graph:![]({{% baseurl %}}assets/images/ThingswithSingle_In-Output.png)
 
 This is intentional and by design. Even if a Thing X sensor value is directly triggered by a Thing X’s actuator (as in a polling fashion), it needs to be shown clearly that:
 

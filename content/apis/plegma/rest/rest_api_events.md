@@ -92,4 +92,4 @@ public void PostRestMsg(Tuple<string, string> target_msg)
 
 
 #### Documentation
-Posts a new trigger to the cloud server. The message contains an array of port events that the cloud server should act on. Look into [API event passing](https://ndocs.yodiwo.com/apis/plegma/messages/message-event-passing/) for more info.
+Posts a new trigger to the cloud server. The message contains an array of port events that the cloud server should act on. Look into [API event passing]({{% baseurl %}}apis/plegma/messages/message-event-passing/) for more info.

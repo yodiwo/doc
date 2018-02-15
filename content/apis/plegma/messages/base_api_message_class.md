@@ -101,7 +101,7 @@ This base class contains just the sequence number of the message:
 
 {{% fa-panel theme="info" header="Node-to-Cloud RPC" icon="fa-info-circle" %}}You can also use RPC mechanisms towards our Cloud servers. Take a look at the reference RPC-over-MQTT example source code that you'll find in our [github page](https://github.com/yodiwo/plegma) {{% /fa-panel %}}
 
-{{% fa-panel theme="warning" header="Synchronous requests" icon="fa-exclamation-circle" %}}For protocols that do not inherently support synchronous, blocking calls (like [MQTT](https://ndocs.yodiwo.com/apis/plegma/mqtt/mqtt-overview/)) or , implementation of a synchronous Req/Rsp mechanism is left to a protocol wrapper instead. For more information have a look at the [respective protocol help sections](https://ndocs.yodiwo.com/apis/plegma/websockets-overview/) {{% /fa-panel %}}
+{{% fa-panel theme="warning" header="Synchronous requests" icon="fa-exclamation-circle" %}}For protocols that do not inherently support synchronous, blocking calls (like [MQTT]({{% baseurl %}}apis/plegma/mqtt/mqtt-overview/)) or , implementation of a synchronous Req/Rsp mechanism is left to a protocol wrapper instead. For more information have a look at the [respective protocol help sections]({{% baseurl %}}apis/plegma/websockets-overview/) {{% /fa-panel %}}
 
 
 #### GenericRsp

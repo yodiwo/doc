@@ -23,4 +23,4 @@ Sends a Things Set request to the cloud server. Route parameters include the Nod
 
 The server will reply with the body of a GenericRsp response.
 
-For more information check out [Things management & control](https://ndocs.yodiwo.com/apis/plegma/messages/things-mgmt-ctrl/)
+For more information check out [Things management & control]({{% baseurl %}}apis/plegma/messages/things-mgmt-ctrl/)

@@ -6,7 +6,7 @@ title : homepage
 
 
 
-<center>![alt homepage](/assets/images/Yodiwo_doc_logo.png)</center>
+<center>![alt homepage]({{% baseurl %}}assets/images/Yodiwo_doc_logo.png)</center>
 
 
 

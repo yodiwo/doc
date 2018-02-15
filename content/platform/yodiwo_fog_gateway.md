@@ -28,7 +28,7 @@ The Yodiwo Fog gateway ( Wisper ) uses many of the mentioned Node capabilities:
 
 The basic architecture of Wisper based on the Node SDK is as follows:
 
-![Alt Architecture based on SDK node](/assets/images/Architecture_NodeSDK.png)
+![Alt Architecture based on SDK node]({{% baseurl %}}assets/images/Architecture_NodeSDK.png)
 
 ###### Monolithic nodes
 

@@ -23,4 +23,4 @@ Sends a Port States request to the cloud server. Route parameters include the No
 
 The server will reply with a Port States Response.
 
-For more information check out [State synchronization](https://ndocs.yodiwo.com/apis/plegma/messages/message-event-passing/)
+For more information check out [State synchronization]({{% baseurl %}}apis/plegma/messages/message-event-passing/)

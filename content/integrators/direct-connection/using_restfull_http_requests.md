@@ -13,7 +13,7 @@ Any entity can send HTTPS requests towards cyan and if a proper graph exists, th
 
 Authentication happens via the use of API keys, created by the user in Cyan’s User Profile Manager: 
 
-![Alt Authentication via API keys](/assets/images/Prof_manager.png)
+![Alt Authentication via API keys]({{% baseurl %}}assets/images/Prof_manager.png)
 
 Each created API key is globally unique, tied to the account of user that created it, and can be individually enabled and disabled or have its quota tracked and/or enforced.
 
@@ -35,7 +35,7 @@ Currently allowed methods are GET and POST.
 
 All requests with valid API keys will reach Alcyone and trigger graphs through the following block:
 
-![Alt Configuration Block](/assets/images/ConfBlock1.1.2.png)
+![Alt Configuration Block]({{% baseurl %}}assets/images/ConfBlock1.1.2.png)
 
 
 
@@ -47,16 +47,16 @@ A subpath may beset as well although it’s not mandatory. If set, it acts as a 
 
 - value mapping block (static dictionary): 
 
-![Alt Value Mapping Block](/assets/images/ValueMappingblock1.1.2.png)
+![Alt Value Mapping Block]({{% baseurl %}}assets/images/ValueMappingblock1.1.2.png)
 
 - key-value store block (run-time dictionary):
 
-![Alt Value Mapping Block](/assets/images/KeyValueStore1.1.2.png)
+![Alt Value Mapping Block]({{% baseurl %}}assets/images/KeyValueStore1.1.2.png)
 
 - a database query to extract a further runtime
   decision on how to handle the request:
 
-![Alt Value Mapping Block](/assets/images/Databasequery1.1.2.png)
+![Alt Value Mapping Block]({{% baseurl %}}assets/images/Databasequery1.1.2.png)
 
 The rest of the configuration parameters are optional and will be presented shortly.
 
@@ -66,7 +66,7 @@ The URL subpath will be then provided as the value of the first port, while eith
 
 So a final graph of the simplest case of “take values from a sensor and store them to a DB” could be:
 
-![Alt Value Mapping Block](/assets/images/FinalGraph1.1.2.png)
+![Alt Value Mapping Block]({{% baseurl %}}assets/images/FinalGraph1.1.2.png)
 
 When a sensor device has data to send, it can use an API key and send the appropriate HTTPS POST request to Yodiwo. It will trigger the graph, its JSON data will get deserialized, an SQL query constructed out of the values and then fed to the ‘Query’ port of the MYSQL block.
 
@@ -74,7 +74,7 @@ When a sensor device has data to send, it can use an API key and send the approp
 
 Let’s extend this so that the returned HTTP Response provides info about whether the SQL insert operation succeeded or not:
 
-![](/assets/images/Graph1.1.3.png)
+![]({{% baseurl %}}assets/images/Graph1.1.3.png)
 
 The operation remains the same until the DB query result is fed into a VALUE MAPPING block (it could be a triggered constant instead), for example converting status True to 200 and anything else to 406. From there the integer status code can be fed to and trigger the REST IN RESPONSE block for the final HTTP response to the original request.
 
@@ -82,9 +82,9 @@ The only thing that needs to change is to configure the REST IN block to not aut
 
 For this we set the ‘Send custom response’ switch to ON and set a unique Group ID (any integer number) that will be matched to the configuration of the REST IN RESPONSE block:
 
-![](/assets/images/ResponseBlock1.1.3.png)
+![]({{% baseurl %}}assets/images/ResponseBlock1.1.3.png)
 
-![](/assets/images/ResponseBlock21.1.3.png)
+![]({{% baseurl %}}assets/images/ResponseBlock21.1.3.png)
 
 
 
@@ -98,7 +98,7 @@ This can be used to:
 - connect to 3rd party services,
 - or just send normal events to edge devices that have implemented an HTTP(s) server
 
-![](/assets/images/block1.1.4.png)
+![]({{% baseurl %}}assets/images/block1.1.4.png)
 
 The block receives the body of the message as input; the rest of the parameters are configured via the inspector area where the user specifies:
 

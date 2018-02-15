@@ -42,14 +42,14 @@ Security is maintained on both cases; more information about the pairing process
 -    Nodes and node credentials (node and secret keys) can:
      -    be created directly in the Things Manager section:
 
-       ![Alt Node Creation](/assets/images/node-creation.png)          
+       ![Alt Node Creation]({{% baseurl %}}assets/images/node-creation.png)          
 
      -    be created in bulk through a Warlock API client
 
      - be created via a graph in Cyan itself, using the Create Node and Create API Key blocks found in the Cyan Designer Toolbox “Platform” section:
 
 
-<table><td> <img src="/assets/images/createnode.png" alt="Create Node"> </td> <td><img src="/assets/images/createapi.png" alt="Create API" )></td></table>
+<table><td> <img src="{{% baseurl %}}assets/images/createnode.png" alt="Create Node"> </td> <td><img src="{{% baseurl %}}assets/images/createapi.png" alt="Create API" )></td></table>
 
 Similar to how API keys can be created to enable REST services (discussed later in this document), API keys can also be linked to Nodes and be used for allowing edge devices to connect to the Cloud Backend through the Plegma API.
 In this case the Node does not need to know / keep the Master Key generated through the pairing process, and can instead just use the linked API Key.
@@ -62,11 +62,11 @@ Linked API keys can be generated:
 -	through use of the Warlock API
   - automatically through the graph, using the previously mentioned blocks
 
-![Alt Graph](/assets/images/Graph3.1.png)
+![Alt Graph]({{% baseurl %}}assets/images/Graph3.1.png)
 
 -  or manually through Cyan's UI:
 
-  ​	![Alt Manually Key](/assets/images/ManuallyKey.png)
+  ​	![Alt Manually Key]({{% baseurl %}}assets/images/ManuallyKey.png)
 
   ​	<figcaption><center>Generate API keys Manually</center></figcaption>
 

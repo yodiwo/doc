@@ -9,10 +9,10 @@ Yodiwo already provides its 1st party MQTT broker (at api.yodiwo.com:8883) for P
 
 So to publish any message, the MQTT out block can be configured and used:
 
-![Alt MQTT out block](/assets/images/MsgPublish.png)
+![Alt MQTT out block]({{% baseurl %}}assets/images/MsgPublish.png)
 
 Conversely, to subscribe to topics, listen to messages and have them trigger graphs, insert and configure use the MQTT input block:
 
 
 
-![Alt MQQT input block](/assets/images/MQTT_InputBlock.png)
+![Alt MQQT input block]({{% baseurl %}}assets/images/MQTT_InputBlock.png)

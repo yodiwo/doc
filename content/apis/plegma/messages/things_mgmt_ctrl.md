@@ -171,7 +171,7 @@ typedef struct Yodiwo_Plegma_ThingsSet
 
 The message's fields are:
 
-* `Operation`: Operation that specifies how the array of Things that the message contains is to be interpreted; see [below](https://ndocs.yodiwo.com/apis/plegma/messages/things-mgmt-ctrl/#things-operations) for more info
+* `Operation`: Operation that specifies how the array of Things that the message contains is to be interpreted; see [below]({{% baseurl %}}apis/plegma/messages/things-mgmt-ctrl/#things-operations) for more info
 
 * `Status`: specifies whether the parsing of the request was successful and hence this message contains valid data
 

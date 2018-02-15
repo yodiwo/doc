@@ -11,7 +11,7 @@ MQTT doesn't really need an introduction, as it's a well-known, low-latency, sim
 
 Yodiwo’s custom MQTT broker accepts connections from Nodes at api.yodiwo.com (port 8883 for SSL/TLS encrypted connections).
 
-Nodes are expected to have completed [Pairing](https://ndocs.yodiwo.com/apis/plegma/pairing-overview/) when attempting a connection to the Yodiwo MQTT broker since the assigned Node and Secret Keys will be used for the connection to the broker.
+Nodes are expected to have completed [Pairing]({{% baseurl %}}apis/plegma/pairing-overview/) when attempting a connection to the Yodiwo MQTT broker since the assigned Node and Secret Keys will be used for the connection to the broker.
 
 Specifically:
 
@@ -23,7 +23,7 @@ Specifically:
 - - - -
 Payload of the published messages as well as of the messages received via subscriptions is exactly the same as previously described in REST.
 
-However messages are encapsulated in a wrapper that aims to provide support for synchronous operations. For more information see the [next section](https://ndocs.yodiwo.com/apis/plegma/mqtt/message-format/)
+However messages are encapsulated in a wrapper that aims to provide support for synchronous operations. For more information see the [next section]({{% baseurl %}}apis/plegma/mqtt/message-format/)
 
 Message encoding is in JSON although binary encoding may be supported at a later time.
 
@@ -62,11 +62,11 @@ where
 * {version} is an integer signifying the API's targeted version number
 * {UserKey} is the string of the owner of the Node’s UserKey
 * {NodeKey} is the string of the Node’s actual NodeKey
-* &lt;apimsgname&gt; refers to the same message names as previously [shown](https://ndocs.yodiwo.com/apis/plegma/mqtt/mqtt-overview/#message-types-and-subtopics)
+* &lt;apimsgname&gt; refers to the same message names as previously [shown]({{% baseurl %}}apis/plegma/mqtt/mqtt-overview/#message-types-and-subtopics)
 
 
 #### Outro
 
 Summarizing for both publishing and subscribing directions:
 
-![ALT](/assets/images/mqtt-pubsub.png)
+![ALT]({{% baseurl %}}assets/images/mqtt-pubsub.png)

@@ -9,12 +9,12 @@ weight : 5
 An abstract block diagram of the platform’s components and
 logical interconnections is shown here:
 
-![Alt Yodiwo Cloud Platform](/assets/images/Yodiwo_CloudPlatform2.1.png)
+![Alt Yodiwo Cloud Platform]({{% baseurl %}}assets/images/Yodiwo_CloudPlatform2.1.png)
 
 The following block diagram shows the various entities that make
 up the Yodiwo ecosystem in more detail:
 
-![Alt Yodiwo Ecosystem](/assets/images/Yodiwo_Ecosystem2.1.png)
+![Alt Yodiwo Ecosystem]({{% baseurl %}}assets/images/Yodiwo_Ecosystem2.1.png)
 
 It can be summarized as follows:
 
