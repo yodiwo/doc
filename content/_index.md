@@ -24,12 +24,12 @@ title : homepage
 
 </section> 
 
-   <section class="quarter container herehover">
+  <section class="quarter container herehover">
 
-<a href="{{% baseurl %}}wisper/"> <img src = "{{%baseurl%}}assets/images/wisper.png" class="img"> </a>
+<a href="{{% baseurl %}}integrators/"><img src = "{{%baseurl%}}assets/images/Integrators.png" class="img"></a>
 
-<span class="open"> <h6>Wisper</h6> <p>Wisper family of edge gateways</p> </span>
-  <span class="showmeonhover">{{% children page="wisper" depth="2" style="li" %}}</span>
+ <span class="open"> <h6>Cyan</h6><p>Integrator's Guide</p> </span>
+  <span class="showmeonhover">{{% children page="cyan" depth="3" style="li" %}}</span>
 
 </section> 
 
@@ -42,12 +42,12 @@ title : homepage
 
 </section> 
 
-  <section class="quarter container herehover">
+ <section class="quarter container herehover">
 
-<a href="{{% baseurl %}}integrators/"><img src = "{{%baseurl%}}assets/images/Integrators.png" class="img"></a>
+<a href="{{% baseurl %}}wisper/"> <img src = "{{%baseurl%}}assets/images/wisper.png" class="img"> </a>
 
- <span class="open"> <h6>Integrators</h6><p>Integrator's Guide</p> </span>
-  <span class="showmeonhover">{{% children page="integrators" depth="3" style="li" %}}</span>
+<span class="open"> <h6>Wisper</h6> <p>Wisper family of edge gateways</p> </span>
+  <span class="showmeonhover">{{% children page="wisper" depth="2" style="li" %}}</span>
 
 </section> </center>
 
