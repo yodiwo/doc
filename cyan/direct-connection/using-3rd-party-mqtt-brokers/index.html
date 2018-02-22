@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.34" />
-<title>Base API message class :: Yodiwo SDK &amp; API Documentation</title>
+<title>Using 3rd party MQTT brokers :: Yodiwo SDK &amp; API Documentation</title>
 <link rel="shortcut icon" href="/doc/images/favicon.png" type="image/x-icon" />
 <link href="/doc/css/font-awesome.min.css" rel="stylesheet">
 <link href="/doc/css/nucleus.css" rel="stylesheet">
@@ -106,7 +106,7 @@ padding-top: 71px;
 
     
   </head>
-  <body data-url="/doc/apis/plegma/messages/base-api-message-class/">
+  <body data-url="/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/">
     
       <header>
   <div class="logo">
@@ -179,16 +179,18 @@ assets/images/logo.png" alt="Yodiwo">
         </div></li>
         </ul>
     </li>
-    <li data-nav-id="/doc/cyan/" class="dd-item haschildren
+    <li data-nav-id="/doc/cyan/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/doc/cyan/">Cyan</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/doc/cyan/">Cyan</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/doc/cyan/direct-connection/" class="dd-item haschildren
+    <li data-nav-id="/doc/cyan/direct-connection/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/doc/cyan/direct-connection/">Direct Connection to Alcyone</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/doc/cyan/direct-connection/">Direct Connection to Alcyone</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/doc/cyan/direct-connection/using-restful-http-requests/" class="dd-item">
@@ -197,12 +199,17 @@ assets/images/logo.png" alt="Yodiwo">
             Using RESTful HTTP requests
           </a>
         </div></li>
-      <li data-nav-id="/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/" class="dd-item">
+      <li data-nav-id="/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/" class="dd-item active">
         <div>
           <a href="/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/">
             Using 3rd party MQTT brokers
           </a>
-        </div></li>
+        </div> 
+<ul>
+
+</ul>
+
+ </li>
         </ul>
     </li>
     <li data-nav-id="/doc/cyan/connection-via-plegma-api/" class="dd-item haschildren
@@ -227,18 +234,16 @@ assets/images/logo.png" alt="Yodiwo">
     </li>
         </ul>
     </li>
-    <li data-nav-id="/doc/apis/" class="dd-item parent haschildren
+    <li data-nav-id="/doc/apis/" class="dd-item haschildren
         ">
       <div>
-      <a href="/doc/apis/">Yodiwo APIs</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/doc/apis/">Yodiwo APIs</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/doc/apis/plegma/" class="dd-item parent haschildren
+    <li data-nav-id="/doc/apis/plegma/" class="dd-item haschildren
         ">
       <div>
-      <a href="/doc/apis/plegma/">Plegma</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/doc/apis/plegma/">Plegma</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/doc/apis/plegma/getting-started/" class="dd-item">
@@ -253,11 +258,10 @@ assets/images/logo.png" alt="Yodiwo">
             Pairing Overview
           </a>
         </div></li>
-    <li data-nav-id="/doc/apis/plegma/messages/" class="dd-item parent haschildren
+    <li data-nav-id="/doc/apis/plegma/messages/" class="dd-item haschildren
         ">
       <div>
-      <a href="/doc/apis/plegma/messages/">API Messages</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/doc/apis/plegma/messages/">API Messages</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/doc/apis/plegma/messages/api-overview/" class="dd-item">
@@ -266,37 +270,12 @@ assets/images/logo.png" alt="Yodiwo">
             API Overview
           </a>
         </div></li>
-      <li data-nav-id="/doc/apis/plegma/messages/base-api-message-class/" class="dd-item active">
+      <li data-nav-id="/doc/apis/plegma/messages/base-api-message-class/" class="dd-item">
         <div>
           <a href="/doc/apis/plegma/messages/base-api-message-class/">
             Base API message class
           </a>
-        </div> 
-<ul>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#apimsg">ApiMsg</a>
-</li>
-
-<li class="dd-item"> 
-
-
-
-
-
-
-<a href="#genericrsp">GenericRsp</a>
-</li>
-
-</ul>
-
- </li>
+        </div></li>
       <li data-nav-id="/doc/apis/plegma/messages/things-ports/" class="dd-item">
         <div>
           <a href="/doc/apis/plegma/messages/things-ports/">
@@ -430,32 +409,19 @@ assets/images/logo.png" alt="Yodiwo">
     <option value="/doc/platform/" >
    Platform</option>
     <option value="/doc/cyan/" >
-   Cyan</option>
-    <option value="/doc/apis/" >
-   Yodiwo APIs</option> 
-    <option value="/doc/apis/plegma/" >
+   Cyan</option> 
+    <option value="/doc/cyan/direct-connection/" >
   - 
-   Plegma</option> 
-      <option value="/doc/apis/plegma/getting-started/" >-- Getting Started</option>
-      <option value="/doc/apis/plegma/pairing-overview/" >-- Pairing Overview</option>
-    <option value="/doc/apis/plegma/messages/" >
-  -- 
-   API Messages</option> 
-      <option value="/doc/apis/plegma/messages/api-overview/" >--- API Overview</option>
-      <option value="/doc/apis/plegma/messages/base-api-message-class/"  selected>--- Base API message class</option>
-      <option value="/doc/apis/plegma/messages/things-ports/" >--- Things &amp; Ports</option>
-      <option value="/doc/apis/plegma/messages/things-mgmt-ctrl/" >--- Things management &amp; control</option>
-      <option value="/doc/apis/plegma/messages/message-event-passing/" >--- Message &amp; event passing</option>
+   Direct Connection to Alcyone</option> 
+      <option value="/doc/cyan/direct-connection/using-restful-http-requests/" >-- Using RESTful HTTP requests</option>
+      <option value="/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/"  selected>-- Using 3rd party MQTT brokers</option>
   
-    <option value="/doc/apis/plegma/rest/" >
-  -- 
-   Rest API</option>
-    <option value="/doc/apis/plegma/mqtt/" >
-  -- 
-   MQTT</option>
-      <option value="/doc/apis/plegma/websockets-overview/" >-- Web Sockets Overview</option>
+    <option value="/doc/cyan/connection-via-plegma-api/" >
+  - 
+   Via the Plegma API</option>
   
-  
+    <option value="/doc/apis/" >
+   Yodiwo APIs</option>
     <option value="/doc/wisper/" >
    Wisper</option>
 
@@ -480,195 +446,29 @@ assets/images/logo.png" alt="Yodiwo">
       </div>
     
 
-    <h1>Base API message class</h1>
+    <h1>Using 3rd party MQTT brokers</h1>
     
     
     
-    
+    <p>Yodiwo already provides its 1st party MQTT broker (at api.yodiwo.com:8883) for Plegma API connections, but any existing 3rd party broker can be used instead.</p>
 
-<h4 id="apimsg">ApiMsg</h4>
+<p>So to publish any message, the MQTT out block can be configured and used:</p>
 
-<hr />
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/MsgPublish.png" alt="Alt MQTT out block" /></p>
 
-<p>Virtually all Plegma API messages inherit from this <code>ApiMsg</code> abstract class:</p>
+<p>Conversely, to subscribe to topics, listen to messages and have them trigger graphs, insert and configure use the MQTT input block:</p>
 
-<div id="code1_container">
-<div class="block-code block-show-code" type="section.type">
-  <div class="code-tabs">
-    <div data-lang="csharp" class="tab on">
-      <a href="javascript: showCode('code1_container', 'csharp');">
-        <span>
-          C#
-        </span>
-      </a>
-      <span>.</span>
-    </div>
-    <div data-lang="java" class="tab off">
-      <a href="javascript: showCode('code1_container', 'java');">
-        <span>
-          Java
-        </span>
-      </a>
-      <span>.</span>
-    </div>
-    <div data-lang="c" class="tab off">
-      <a href="javascript: showCode('code1_container', 'c');">
-        <span>
-          C
-        </span>
-      </a><span class="">·</span>
-    </div>
-    <div data-lang="objc" class="tab off">
-      <a href="javascript: showCode('code1_container', 'objc');">
-        <span>
-          Objective-C
-        </span>
-      </a>
-    </div>
-  </div>
-  <pre id="csharp">
-    <code>
-namespace Yodiwo.API.Plegma
-{
-  public abstract class ApiMsg
-  {
-    public int SeqNo;
-  }
-}
-    </code>
-</pre>
-<pre id="java" style="display:none;">
-    <code>
-package com.yodiwo.PlegmaApi;
-
-public abstract class ApiMsg {
-    public int SeqNo;
-}
-    </code>
-</pre>
-<pre id="c" style="display:none;">
-    <code>
-typedef struct Yodiwo_API_Plegma_ApiMsg
-{
-  int32_t SeqNo;
-} Yodiwo_API_Plegma_ApiMsg_t;
-    </code>
-</pre>
-<pre id="objc" style="display:none;">
-    <code>
-@interface APIMsg : JSONModel
-
-@property (nonatomic) NSInteger SeqNo;
-
-@end
-    </code>
-</pre>
-</div>
-</div>
-
-<p>This base class contains just the sequence number of the message:</p>
-
-<ul>
-<li><code>SeqNo</code>: the unique Id of this particular message.
-
-<ul>
-<li>it is mandatory for the Cloud to set this to a unique, monotonically increasing number in every message towards Nodes, so that you can identify lost messages (after all, embedded Nodes are allowed to have their own sleep schedules)</li>
-<li>While it is not mandatory for Nodes to set this field in the messages they send to the Cloud, it is advised, so that cloud code can perform rejection of duplicate messages.
-However, even if you implement sequence numbering for messages, you can bypass it for individual messages by setting <code>SeqNo</code> to 0 for these messages. Those messages will always be handled by the cloud, without checking sequence numbers.</li>
-</ul></li>
-</ul>
-
-<p><i>Suffixes</i> in all Plegma API messages provide information about the kind of message. In message and with a singular exception, all messages are blocking ones and expect a response, even if the latter is a generic &ldquo;ack&rdquo;-type one.</p>
-
-<ul>
-<li><b>Req</b> means that the sender (either the node or the cloud server) sends actionable data and expects an answer in the form of an Rsp message.</li>
-<li><b>Rsp</b> means that the message is a response to a preceding message, either containing actual data or acting as an Acknowledge message.</li>
-<li><b>Get</b> is a call to action. It contains no actionable information itself but contains a request for the receiver to send something back. The sender blocks until the reply is received.</li>
-<li><b>Set</b> is either the reply to a previous Get-type message, or a new message that directly sends new information. The latter case still expects an ACK which is usually a <code>GenericRsp</code> message.</li>
-<li><b>Msg</b> is an asynchronous message originating at any time from the Node or from the Cloud that does not expect an answer. There are precious few of those, currently limited to status-updated events</li>
-</ul>
-
-<div class="panel panel-info">
-	<div class="panel-heading"><i class="fa fa-info-circle" aria-hidden="true"></i>&ensp;Node-to-Cloud RPC</div>
-	<div class="panel-body">You can also use RPC mechanisms towards our Cloud servers. Take a look at the reference RPC-over-MQTT example source code that you&rsquo;ll find in our <a href="https://github.com/yodiwo/plegma">github page</a></div>
-	
-</div>
-
-
-<div class="panel panel-warning">
-	<div class="panel-heading"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&ensp;Synchronous requests</div>
-	<div class="panel-body"><p>For protocols that do not inherently support synchronous, blocking calls (like <a href="https://docs.yodiwo.com/doc/
-apis/plegma/mqtt/mqtt-overview/">MQTT</a>) or , implementation of a synchronous Req/Rsp mechanism is left to a protocol wrapper instead. For more information have a look at the <a href="https://docs.yodiwo.com/doc/
-apis/plegma/websockets-overview/">respective protocol help sections</a></p>
-</div>
-	
-</div>
-
-
-<h4 id="genericrsp">GenericRsp</h4>
-
-<hr />
-
-<p>As mentioned, synchronous request-type messages require responses, and sometimes those are generic ACK-type response that offer little more than confirmation of whether a message was successfully parsed. For those there is the <code>GenericRsp</code> message:</p>
-
-<div id="code2_container">
-<div class="block-code block-show-code" type="section.type">
-  <div class="code-tabs">
-    <div data-lang="csharp" class="tab on">
-      <a href="javascript: showCode('code2_container', 'csharp');">
-        <span>
-          C#
-        </span>
-      </a>
-      <span>.</span>
-    </div>
-    <div data-lang="java" class="tab off">
-      <a href="javascript: showCode('code2_container', 'java');">
-        <span>
-          Java
-        </span>
-      </a>
-    </div>
-  </div>
-  <pre id="csharp">
-    <code>
-package com.yodiwo.PlegmaApi;
-
-public abstract class ApiMsg {
-    public int SeqNo;
-}
-    </code>
-</pre>
-<pre id="java" style="display:none;">
-    <code>
-    public class GenericRsp extends ApiMsg {
-    {
-        public Boolean IsSuccess;
-        public int StatusCode;
-        public String Message;
-    
-        public GenericRsp() {
-        }
-    } 
-   </code>
-</pre>
-</pre>
-</div>
-</div>
-
-<ul>
-<li><code>IsSuccess</code>: basic boolean (ok or not) feedbck on received message</li>
-<li><code>StatusCode</code>: generic integer, the meaning of which, if any, depends on actual message exchange</li>
-<li><code>Message</code>: human readable text containing status for received message</li>
-</ul>
+<p><img src="https://docs.yodiwo.com/doc/
+assets/images/MQTT_InputBlock.png" alt="Alt MQQT input block" /></p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/doc/apis/plegma/messages/api-overview/" title="API Overview"> <i class="fa fa-chevron-left"></i><label>API Overview</label></a>
-    <a class="nav nav-next" href="/doc/apis/plegma/messages/things-ports/" title="Things &amp; Ports" style="margin-right: 0px;"><label>Things &amp; Ports</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/doc/cyan/direct-connection/using-restful-http-requests/" title="Using RESTful HTTP requests"> <i class="fa fa-chevron-left"></i><label>Using RESTful HTTP requests</label></a>
+    <a class="nav nav-next" href="/doc/cyan/connection-via-plegma-api/" title="Via the Plegma API" style="margin-right: 0px;"><label>Via the Plegma API</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -683,12 +483,12 @@ public abstract class ApiMsg {
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 15/02/2018
+        <i class='fa fa-calendar'></i> Last update on 22/02/2018
     </div>
     
 
     <div class="github-link">
-      <a href="https://github.com/yodiwo/doc/edit/master/content/apis/plegma/messages/base_api_message_class.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/yodiwo/doc/edit/master/content/cyan/direct-connection/using_3rd_party_mqtt_brokers.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

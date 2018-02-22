@@ -6,17 +6,17 @@
     <description>Recent content in homepage on Yodiwo SDK &amp; API Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Feb 2018 10:32:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Feb 2018 12:54:04 +0200</lastBuildDate>
     
 	<atom:link href="https://docs.yodiwo.com/doc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using RESTful HTTP requests</title>
-      <link>https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/</link>
+      <link>https://docs.yodiwo.com/doc/cyan/direct-connection/using-restful-http-requests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/</guid>
+      <guid>https://docs.yodiwo.com/doc/cyan/direct-connection/using-restful-http-requests/</guid>
       <description>Any entity can send HTTPS requests towards cyan and if a proper graph exists, the requests will trigger it and have it executed.
 API keys for REST Authentication happens via the use of API keys, created by the user in Cyan’s User Profile Manager:
 Each created API key is globally unique, tied to the account of user that created it, and can be individually enabled and disabled or have its quota tracked and/or enforced.</description>
@@ -114,10 +114,10 @@ Nodes are expected to have completed Pairing when attempting a connection to the
     
     <item>
       <title>Plegma Nodes Credentials</title>
-      <link>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/</link>
+      <link>https://docs.yodiwo.com/doc/cyan/connection-via-plegma-api/plegma-nodes-credentials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/</guid>
+      <guid>https://docs.yodiwo.com/doc/cyan/connection-via-plegma-api/plegma-nodes-credentials/</guid>
       <description>Plegma Nodes must be assigned a Node Key and a Secret Key, using either of the following:
  a pairing process
  a platform-aided provisioning process
@@ -129,10 +129,10 @@ Nodes are expected to have completed Pairing when attempting a connection to the
     
     <item>
       <title>Using 3rd party MQTT brokers</title>
-      <link>https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/</link>
+      <link>https://docs.yodiwo.com/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/</guid>
+      <guid>https://docs.yodiwo.com/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/</guid>
       <description>Yodiwo already provides its 1st party MQTT broker (at api.yodiwo.com:8883) for Plegma API connections, but any existing 3rd party broker can be used instead.
 So to publish any message, the MQTT out block can be configured and used:
 Conversely, to subscribe to topics, listen to messages and have them trigger graphs, insert and configure use the MQTT input block:</description>
@@ -140,10 +140,10 @@ Conversely, to subscribe to topics, listen to messages and have them trigger gra
     
     <item>
       <title>Plegma Things Creation and Handling</title>
-      <link>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/</link>
+      <link>https://docs.yodiwo.com/doc/cyan/connection-via-plegma-api/plegma-things-creation-and-handling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/</guid>
+      <guid>https://docs.yodiwo.com/doc/cyan/connection-via-plegma-api/plegma-things-creation-and-handling/</guid>
       <description>A node’s main purpose is to maintain and present a list of Things, each of which models and virtualizes a real digital function, either physical or logical.
 Upon a successful connection the Node sends their list of Things (each with a globally unique Thing Key) to the cloud, while it can also retrieve the Cloud’s previously synced Thing lists along with their configurations. As a result of this process, Cyan’s Designer Toolbox automatically presents the Node in its green section, populated with the latest version of the Node’s virtualized Things:</description>
     </item>
@@ -301,6 +301,15 @@ this is a text   Show source code   {{% alert info %}}**this** is a text{{% /ale
       
       <guid>https://docs.yodiwo.com/doc/_header/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://docs.yodiwo.com/doc/testpage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.yodiwo.com/doc/testpage/</guid>
+      <description> Designer  This is a short description about Designer and HERE is a link, allowing users to learn more about it.  Device Manager This is a description about Device Manager. And this is a link .   Graph Manager Description     Designer   Device Manager   Graph Manager   Database Manager   User Profile  My Web Apps  Timeline  </description>
     </item>
     
   </channel>

@@ -7,18 +7,18 @@
 	"content": "Cyan makes the life of IoT developers easier, by offering a graph based IoT application development and deployment environment, which allows dispersed network devices of diverse technologies to be seamlessly connected with analytics, storage systems, mobile and web applications. Imaging doing all these via a Graphical User Interface.\n"
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/integrators/direct-connection/using-restful-http-requests/",
+	"uri": "https://docs.yodiwo.com/doc/cyan/direct-connection/using-restful-http-requests/",
 	"title": "Using RESTful HTTP requests",
 	"tags": [],
 	"description": "",
 	"content": " Any entity can send HTTPS requests towards cyan and if a proper graph exists, the requests will trigger it and have it executed.\nAPI keys for REST Authentication happens via the use of API keys, created by the user in Cyan’s User Profile Manager:\nEach created API key is globally unique, tied to the account of user that created it, and can be individually enabled and disabled or have its quota tracked and/or enforced.\nBasic HTTP requests towards Alcyone HTTPS requests towards Alcyone must follow the following URL convention:\n[https://cyan.yodiwo.com/hooks/restin//]\nUse of a valid API key is mandatory, otherwise there will be an immediate 403 – Forbidden response.\nThe subpath definition is optional and can be used to easily disambiguate between requests (explained later in this section).\nData can be sent either as URL parameters or within the HTTP Request’s body, in JSON or x-www-form-url encoded key-value pairs.\nCurrently allowed methods are GET and POST.\nAll requests with valid API keys will reach Alcyone and trigger graphs through the following block:\nWhen creating a graph with the REST IN block the user must set the block’s configuration to match the intended and expected HTTPS request from the device.\nThe expected method must be chosen.\nA subpath may beset as well although it’s not mandatory. If set, it acts as a filter and only HTTP requests that have a  suffix matching it will trigger the block. If not set, all valid requests will trigger the block and their subpath suffix will be output on the “URL SUBPATH” output. This can then be driven to:\n value mapping block (static dictionary):   key-value store block (run-time dictionary):   a database query to extract a further runtime decision on how to handle the request:  The rest of the configuration parameters are optional and will be presented shortly.\nUpon sending a valid HTTPS request from a device, the graph will be triggered by the REST IN block(s) whose parameters match the request.\nThe URL subpath will be then provided as the value of the first port, while either of the other two ports will provide the request’s data, depending on how they were sent(key-value form encoded pairs or raw JSON).\nSo a final graph of the simplest case of “take values from a sensor and store them to a DB” could be:\nWhen a sensor device has data to send, it can use an API key and send the appropriate HTTPS POST request to Yodiwo. It will trigger the graph, its JSON data will get deserialized, an SQL query constructed out of the values and then fed to the ‘Query’ port of the MYSQL block.\nHTTP Requests via graph logic Let’s extend this so that the returned HTTP Response provides info about whether the SQL insert operation succeeded or not:\nThe operation remains the same until the DB query result is fed into a VALUE MAPPING block (it could be a triggered constant instead), for example converting status True to 200 and anything else to 406. From there the integer status code can be fed to and trigger the REST IN RESPONSE block for the final HTTP response to the original request.\nThe only thing that needs to change is to configure the REST IN block to not automatically reply with 200 OK to incoming requests but instead produce responses through the graph.\nFor this we set the ‘Send custom response’ switch to ON and set a unique Group ID (any integer number) that will be matched to the configuration of the REST IN RESPONSE block:\nHTTP Requests from Alcyone So far we’ve been receiving sensor-type events into Alcyone. We can also use the HTTP OUT block for a return path, to send out events towards external entities.\nThis can be used to:\n extend Alcyone by sending requests to other system components, connect to 3rd party services, or just send normal events to edge devices that have implemented an HTTP(s) server  The block receives the body of the message as input; the rest of the parameters are configured via the inspector area where the user specifies:\n  URL; http:// or https:// can be used for non-secure or secure connections   HTTP method; GET, POST, PUT currently supported Headers to add Data format; currently supported: JSON, form data, SOAP, XML, raw text   "
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/wisper/",
-	"title": "Wisper",
+	"uri": "https://docs.yodiwo.com/doc/cyan/",
+	"title": "Cyan",
 	"tags": [],
 	"description": "",
-	"content": "Put wisper overview here\n"
+	"content": "The goal of IoT System Integrators is to find optimal solutions for creating IoT Applications, getting data in and out of cloud platforms, executing Logic on this data which drives and affects actuators.\nHence it is important to discuss connectivity for edge devices while also providing info about how logic is executed For Yodiwo\u0026rsquo;s Alcyone IoT platform, there are two main ways to achieve edge nodes to/from platform connectivity: (though each can be further subdivided into more options)\n via the Plegma API, via pairing Nodes to a Yodiwo account and presenting Things to Cyan directly, via the use of pre-existing communication-enabling blocks and API Keys tied to a Yodiwo account  Both will be thoroughly analysed in the next sections.\n"
 },
 {
 	"uri": "https://docs.yodiwo.com/doc/apis/",
@@ -28,11 +28,11 @@
 	"content": "Insert APIs overview here\n"
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/integrators/",
-	"title": "Integrators",
+	"uri": "https://docs.yodiwo.com/doc/wisper/",
+	"title": "Wisper",
 	"tags": [],
 	"description": "",
-	"content": "The goal of IoT System Integrators is to find optimal solutions for creating IoT Applications, getting data in and out of cloud platforms, executing Logic on this data which drives and affects actuators.\nHence it is important to discuss connectivity for edge devices while also providing info about how logic is executed For Yodiwo\u0026rsquo;s Alcyone IoT platform, there are two main ways to achieve edge nodes to/from platform connectivity: (though each can be further subdivided into more options)\n via the Plegma API, via pairing Nodes to a Yodiwo account and presenting Things to Cyan directly, via the use of pre-existing communication-enabling blocks and API Keys tied to a Yodiwo account  Both will be thoroughly analysed in the next sections.\n"
+	"content": "Put wisper overview here\n"
 },
 {
 	"uri": "https://docs.yodiwo.com/doc/platform/interconnection-concepts-and-topology/",
@@ -84,7 +84,7 @@
 	"content": "Quick overview and guides to get you started with our Plegma API and framework and help you create Things that can access the Yodiwo IoT Cloud Services. Hopefully you\u0026rsquo;ll be up and running soon!.\n"
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/integrators/direct-connection/",
+	"uri": "https://docs.yodiwo.com/doc/cyan/direct-connection/",
 	"title": "Direct Connection to Alcyone",
 	"tags": [],
 	"description": "",
@@ -105,28 +105,28 @@
 	"content": " Overview MQTT doesn\u0026rsquo;t really need an introduction, as it\u0026rsquo;s a well-known, low-latency, simple and lightweight publish-subscribe protocol with implementations for most platforms, including Android, iOS, Linux, minimal embedded systems\nYodiwo’s custom MQTT broker accepts connections from Nodes at api.yodiwo.com (port 8883 for SSL/TLS encrypted connections).\nNodes are expected to have completed Pairing when attempting a connection to the Yodiwo MQTT broker since the assigned Node and Secret Keys will be used for the connection to the broker.\nSpecifically:\n the MQTT Client ID is mandated to be equal to the MQTT username the MQTT username must be set to the Node’s assigned NodeKey string the MQTT password must be set to the Node’s Secret key  Message types and subtopics Payload of the published messages as well as of the messages received via subscriptions is exactly the same as previously described in REST.\nHowever messages are encapsulated in a wrapper that aims to provide support for synchronous operations. For more information see the next section\nMessage encoding is in JSON although binary encoding may be supported at a later time.\nThe supported subtopics are:\n nodeinforeq nodeinforsp thingsreq thingsrsp porteventmsg portstatereq portstatersp  Subscribing to messages After a successful connection the Node need only subscribe to one topic family which encompasses Yodiwo’s API messages as previously outlined and presented in detail in the API reference. The node must subscribe to topics of the following format:\n/api/out/{version}/{NodeKey}/#\nwhere:\n {version} is an integer signifying the API\u0026rsquo;s targeted version number {NodeKey} is the string of the Node’s actual NodeKey Any attempt to subscribe to a topic of a different format, or with an invalid NodeKey that does not match the connection’s Username and Client ID will be rejected.  A Node is allowed to individually subscribe to each message it is interested in, as long as it follows the topic’s prefix format.\nPublishing messages The node may publish data using the following topics:\n/api/in/{version}/{UserKey}/{NodeKey}/\u0026lt;apimsgname\u0026gt;\nwhere\n {version} is an integer signifying the API\u0026rsquo;s targeted version number {UserKey} is the string of the owner of the Node’s UserKey {NodeKey} is the string of the Node’s actual NodeKey \u0026lt;apimsgname\u0026gt; refers to the same message names as previously shown  Outro Summarizing for both publishing and subscribing directions:\n"
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-nodes-credentials/",
+	"uri": "https://docs.yodiwo.com/doc/cyan/connection-via-plegma-api/plegma-nodes-credentials/",
 	"title": "Plegma Nodes Credentials",
 	"tags": [],
 	"description": "",
 	"content": "Plegma Nodes must be assigned a Node Key and a Secret Key, using either of the following:\n a pairing process\n a platform-aided provisioning process\n direct key generation from Cyan’s UI\n custom use of the Warlock API\n  This should be the integrator’s choice that is dependent on the intended final application:\n Pairing implies that each end-user is a separate Yodiwo account holder, i.e. the end device (node) is the same for multiple end-users, each of which must pair it to their own Yodiwo account.\n The rest of the provisioning methods imply that the end user is not and need not be aware of this process. Use of the platform happens under-the-hood and serves the application’s, service’s or OEM’s connectivity needs.\n  Yodiwo provides tools for both options:\n Pairing agents are provided for all major platforms where Node Plegma API agents are provided. Pairing can:\n be either completely stand-alone for platforms that can offer a user-login GUI\n or, for GUI-less devices, be remotely assisted by a GUI-capable device where the end-user can complete a login procedure.\n   Security is maintained on both cases; more information about the pairing process can be found in [TODO: Dlt or Link]\n Nodes and node credentials (node and secret keys) can:\n be created directly in the Things Manager section:   be created in bulk through a Warlock API client\n be created via a graph in Cyan itself, using the Create Node and Create API Key blocks found in the Cyan Designer Toolbox “Platform” section:\n      Similar to how API keys can be created to enable REST services (discussed later in this document), API keys can also be linked to Nodes and be used for allowing edge devices to connect to the Cloud Backend through the Plegma API. In this case the Node does not need to know / keep the Master Key generated through the pairing process, and can instead just use the linked API Key.\nThis also allows the integrator to better control node access, since API keys can be individually enabled/disabled (without being removed) and can have their Quota tracked.\nLinked API keys can be generated:\n through use of the Warlock API  automatically through the graph, using the previously mentioned blocks    or manually through Cyan\u0026rsquo;s UI:  ​ ​ Generate API keys Manually\n​\n"
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/integrators/direct-connection/using-3rd-party-mqtt-brokers/",
+	"uri": "https://docs.yodiwo.com/doc/cyan/direct-connection/using-3rd-party-mqtt-brokers/",
 	"title": "Using 3rd party MQTT brokers",
 	"tags": [],
 	"description": "",
 	"content": "Yodiwo already provides its 1st party MQTT broker (at api.yodiwo.com:8883) for Plegma API connections, but any existing 3rd party broker can be used instead.\nSo to publish any message, the MQTT out block can be configured and used:\nConversely, to subscribe to topics, listen to messages and have them trigger graphs, insert and configure use the MQTT input block:\n"
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/",
+	"uri": "https://docs.yodiwo.com/doc/cyan/connection-via-plegma-api/",
 	"title": "Via the Plegma API",
 	"tags": [],
 	"description": "",
 	"content": "As discussed a device that implements Yodiwo’s Plegma is called a Yodiwo Node. The Plegma API offers significantly powerful ways to:\n Modelling Things and automatically presenting them to the Cyan Workflow Editor or any other Warlock API Client Bidirectional event passing State syncing Persistent and retrievable configuration for Things On-the-fly Thing generation, removal or updates from either side (cloud or nodes) Sharing of Things between accounts Grouping of Things; multiple Things easily deployed in IoT scenarios and configured in bulk Simultaneous connections from multiple endpoints  "
 },
 {
-	"uri": "https://docs.yodiwo.com/doc/integrators/connection-via-plegma-api/plegma-things-creation-and-handling/",
+	"uri": "https://docs.yodiwo.com/doc/cyan/connection-via-plegma-api/plegma-things-creation-and-handling/",
 	"title": "Plegma Things Creation and Handling",
 	"tags": [],
 	"description": "",
@@ -305,5 +305,12 @@
 	"title": "homepage",
 	"tags": [],
 	"description": "",
-	"content": "\n\n\nPlatform Platform overview\n  Interconnection Concepts and Topology     APIs     Yodiwo Fog Gateway     \n\n\nWisper Wisper family of edge gateways\n  Yodiwo Wisper     Wisper Families  \n Wisper Pro   \n\n\n\nAPIsAPIs reference and walkthroughs\n  Plegma    Getting Started   Pairing Overview   API Messages   Rest API   MQTT   Web Sockets Overview    \n\n\nIntegratorsIntegrator\u0026rsquo;s Guide\n  Direct Connection to Alcyone    Using RESTful HTTP requests     Using 3rd party MQTT brokers    \n Via the Plegma API  \n Plegma Nodes Credentials   \n Plegma Things Creation and Handling     \n\n \n\n"
+	"content": "\n\n\nPlatform Platform overview\n  Interconnection Concepts and Topology     APIs     Yodiwo Fog Gateway     \n\n\nCyanIntegrator\u0026rsquo;s Guide\n  Direct Connection to Alcyone    Using RESTful HTTP requests     Using 3rd party MQTT brokers    \n Via the Plegma API  \n Plegma Nodes Credentials   \n Plegma Things Creation and Handling     \n\n\n\nAPIsAPIs reference and walkthroughs\n  Plegma    Getting Started   Pairing Overview   API Messages   Rest API   MQTT   Web Sockets Overview    \n\n\nWisper Wisper family of edge gateways\n  Yodiwo Wisper     Wisper Families  \n Wisper Pro   \n\n \n\n"
+},
+{
+	"uri": "https://docs.yodiwo.com/doc/testpage/",
+	"title": "test",
+	"tags": [],
+	"description": "",
+	"content": " Designer  This is a short description about Designer and HERE is a link, allowing users to learn more about it.  Device Manager This is a description about Device Manager. And this is a link .   Graph Manager Description     Designer   Device Manager   Graph Manager   Database Manager   User Profile  My Web Apps  Timeline  "
 }]

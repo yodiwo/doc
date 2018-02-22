@@ -1,0 +1,201 @@
+
+	
+
+.icon-bar a {
+    position: fixed; 
+    right: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 150px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 15px 15px; /* Rounded corners on the top right and bottom right side */
+	opacity: 0.4;
+	overflow: hidden;
+}
+
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+	opacity: 1;
+	right: 0;
+}
+.icon-bar .hidden {
+	display: none;
+}
+
+
+#wand{
+    top: 160px;
+    background-color: #09425a;
+}
+#wand:hover .hidden  {
+	display: inline;
+}
+#wrench {
+    top: 220px;
+    background-color: #09425a;
+}
+#wrench:hover .hidden  {
+	display: inline;
+}
+#folder {
+    top: 280px;
+    background-color: #09425a;
+}
+#folder:hover .hidden  {
+	display: inline;
+}
+#database {
+    top: 340px;
+    background-color: #09425a;
+}
+#database:hover .hidden  {
+	display: inline;
+}
+#users {
+    top: 400px;
+    background-color: #09425a;
+}
+#users:hover .hidden  {
+	display: inline;
+}
+#rocket {
+    top: 460px;
+    background-color: #09425a;
+}
+#rocket:hover .hidden  {
+	display: inline;
+}
+#calendar {
+    top: 520px;
+    background-color: #09425a;
+}
+#calendar:hover .hidden  {
+	display: inline;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-height: 600px) {
+  .icon-bar a {
+	padding: 10px;
+	font-size: 14px;	
+	height: auto;
+	display: flex;
+	right: -122px;
+}
+#wand {
+    top: 100px;
+    background-color: #09425a;
+}
+#wand:hover .hidden  {
+	display: inline;
+}
+#wrench {
+    top: 140px;
+    background-color: #09425a;
+}
+#wrench:hover .hidden  {
+	display: inline;
+}
+#folder {
+    top: 180px;
+    background-color: #09425a;
+}
+#folder:hover .hidden  {
+	display: inline;
+}
+#database {
+    top: 220px;
+    background-color: #09425a;
+}
+#database:hover .hidden  {
+	display: inline;
+}
+#users {
+    top: 260px;
+    background-color: #09425a;
+}
+#users:hover .hidden  {
+	display: inline;
+}
+#rocket {
+    top: 300px;
+    background-color: #09425a;
+}
+#rocket:hover .hidden  {
+	display: inline;
+}
+#calendar {
+    top: 340px;
+    background-color: #09425a;
+}
+#calendar:hover .hidden  {
+	display: inline;
+}
+
+@media only screen and (max-height: 380px) {
+  .icon-bar a {
+	padding: 8px;
+	font-size: 12px;	
+	height: auto;
+	display: flex;
+	right: -125px;
+}
+#designer {
+    top: 70px;
+    background-color: #09425a;
+}
+#designer:hover .hidden  {
+	display: inline;
+}
+#wrench {
+    top: 100px;
+    background-color: #09425a;
+}
+#wrench:hover .hidden  {
+	display: inline;
+}
+#folder {
+    top: 130px;
+    background-color: #09425a;
+}
+#folder:hover .hidden  {
+	display: inline;
+}
+#database {
+    top: 160px;
+    background-color: #09425a;
+}
+#database:hover .hidden  {
+	display: inline;
+}
+#users {
+    top: 190px;
+    background-color: #09425a;
+}
+#users:hover .hidden  {
+	display: inline;
+}
+#rocket {
+    top: 220px;
+    background-color: #09425a;
+}
+#rocket:hover .hidden  {
+	display: inline;
+}
+#calendar {
+    top: 250px;
+    background-color: #09425a;
+}
+#calendar:hover .hidden  {
+	display: inline;
+}	
+	
+}	
