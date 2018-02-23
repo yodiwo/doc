@@ -8,7 +8,7 @@ weight : 10
 
 #### Plegma
 
-The Plegmass API, from the greek “πλέγμα” meaning grid, mesh or lattice, is the main inter connection API between Alcyone and Nodes of all types.
+The Plegma API, from the greek “πλέγμα” meaning grid, mesh or lattice, is the main inter connection API between Alcyone and Nodes of all types.
 
 It provides the usual functions one would expect from such an API such as:
 
